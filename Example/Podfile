@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Loggie_Example' do
+  pod 'Loggie', :path => '../'
+
+  target 'Loggie_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
