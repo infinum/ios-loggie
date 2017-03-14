@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Loggie/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'Loggie' => ['Loggie/Assets/*.png']
+  #  'Loggie' => ['Loggie/Assets/**/*']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

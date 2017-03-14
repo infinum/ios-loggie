@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import Loggie
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        URLProtocol.registerClass(LoggieURLProtocol.self)
+
+        webView.delegate = self
+
+        let url = URL(string: "https://google.com")!
+        let request = URLRequest(url: url)
+        webView.loadRequest(request)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+}
 
+extension ViewController: UIWebViewDelegate {
+
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        LoggieManager.shared.showLogs(from: self)
+    }
 }
 

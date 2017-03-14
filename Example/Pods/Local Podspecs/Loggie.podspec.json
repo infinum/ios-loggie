@@ -1,0 +1,22 @@
+{
+  "name": "Loggie",
+  "version": "0.1.0",
+  "summary": "A short description of Loggie.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Filip Beć/Loggie",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Filip Beć": "filip.bec@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Filip Beć/Loggie.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Loggie/Classes/**/*"
+}
