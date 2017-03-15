@@ -37,20 +37,20 @@ internal class LogListTableViewCell: UITableViewCell {
         allLabels.forEach { $0.text = nil }
     }
 
-    internal func configure(with item: LoggieRequest) {
-        httpMethodLabel.text = item.request.httpMethod
-        pathLabel.text = item.request.url?.path
-        hostLabel.text = item.request.url?.host
+    internal func configure(with log: Log) {
+        httpMethodLabel.text = log.request.httpMethod
+        pathLabel.text = log.request.url?.path
+        hostLabel.text = log.request.url?.host
 
-        if let startTime = item.startTime {
+        if let startTime = log.startTime {
             timeLabel.text = DateFormatter.localizedString(from: startTime, dateStyle: .none, timeStyle: .medium)
         }
 
-        if let duration = item.duration {
-            durationLabel.text = String(format: "%dms", Int(duration * 100.0))
+        if let duration = log.duration {
+            durationLabel.text = log.durationString
         }
 
-        if let statusCode = item.response?.statusCode {
+        if let statusCode = log.response?.statusCode {
             statusCodeLabel.text = String(statusCode)
             if LogListTableViewCell.successStatusCodes.contains(statusCode) {
                 statusCodeLabel.textColor = UIColor(red: 55.0/255.0, green: 188.0/255.0, blue: 155.0/255.0, alpha: 1.0)

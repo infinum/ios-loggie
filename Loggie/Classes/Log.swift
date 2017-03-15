@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoggieRequest: NSObject {
+public class Log: NSObject {
 
     public var request: URLRequest
     public var response: HTTPURLResponse?
@@ -23,6 +23,13 @@ public class LoggieRequest: NSObject {
             return nil
         }
         return end.timeIntervalSince(start)
+    }
+
+    public var durationString: String? {
+        guard let _duration = duration else {
+            return nil
+        }
+        return String(format: "%dms", Int(_duration * 100.0))
     }
 
     public init(request: URLRequest) {

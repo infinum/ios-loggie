@@ -10,12 +10,12 @@ import UIKit
 
 public class LoggieURLProtocol: URLProtocol {
 
-    private static let HeaderKey = "Loggie"
-
     private var connection: NSURLConnection?
 
+    fileprivate static let HeaderKey = "Loggie"
+
     fileprivate var loggieManager = LoggieManager.shared
-    fileprivate var loggieRequest: LoggieRequest?
+    fileprivate var log: Log?
 
     // MARK: - URLProtocol
 
@@ -41,8 +41,8 @@ public class LoggieURLProtocol: URLProtocol {
         LoggieURLProtocol.setProperty(true, forKey: LoggieURLProtocol.HeaderKey, in: request)
         connection = NSURLConnection(request: request as URLRequest, delegate: self)
 
-        loggieRequest = LoggieRequest(request: request as URLRequest)
-        loggieRequest?.startTime = Date()
+        log = Log(request: request as URLRequest)
+        log?.startTime = Date()
     }
 
     public override func stopLoading() {
@@ -55,37 +55,47 @@ public class LoggieURLProtocol: URLProtocol {
 extension LoggieURLProtocol: NSURLConnectionDataDelegate {
 
     public func connection(_ connection: NSURLConnection, didReceive response: URLResponse) {
-        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
         if let httpUrlResponse = response as? HTTPURLResponse {
-            loggieRequest?.response = httpUrlResponse
+            log?.response = httpUrlResponse
         }
     }
 
     public func connection(_ connection: NSURLConnection, didReceive data: Data) {
         client?.urlProtocol(self, didLoad: data)
-        if loggieRequest?.data == nil {
-            loggieRequest?.data = data
+        if log?.data == nil {
+            log?.data = data
         } else {
-            loggieRequest?.data?.append(data)
+            log?.data?.append(data)
         }
     }
 
     public func connectionDidFinishLoading(_ connection: NSURLConnection) {
         client?.urlProtocolDidFinishLoading(self)
-        loggieRequest?.endTime = Date()
-        logRequest()
+        log?.endTime = Date()
+        saveLog()
     }
 
     public func connection(_ connection: NSURLConnection, didFailWithError error: Error) {
         client?.urlProtocol(self, didFailWithError: error)
-        loggieRequest?.error = error
-        loggieRequest?.endTime = Date()
-        logRequest()
+        log?.error = error
+        log?.endTime = Date()
+        saveLog()
     }
 
-    private func logRequest() {
-        if let request = loggieRequest {
-            loggieManager.add(request)
+    public func connection(_ connection: NSURLConnection, willSend request: URLRequest, redirectResponse response: URLResponse?) -> URLRequest? {
+        guard let _request = request as? NSMutableURLRequest, let _response = response else {
+            return request
+        }
+
+        LoggieURLProtocol.removeProperty(forKey: LoggieURLProtocol.HeaderKey, in: _request)
+        client?.urlProtocol(self, wasRedirectedTo: _request as URLRequest, redirectResponse: _response)
+        return _request as URLRequest
+    }
+
+    private func saveLog() {
+        if let log = log {
+            loggieManager.add(log)
         }
     }
 

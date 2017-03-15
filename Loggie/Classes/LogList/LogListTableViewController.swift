@@ -12,7 +12,7 @@ class LogListTableViewController: UITableViewController {
 
     private static let cellReuseIdentifier = "cell"
 
-    internal var logs = [LoggieRequest]() {
+    internal var logs = [Log]() {
         didSet {
             tableView.reloadData()
         }
@@ -61,11 +61,18 @@ class LogListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let log = logs[indexPath.row]
-        // show log details
+        showLogDetails(with: logs[indexPath.row])
     }
 
     // MARK: - Private
+
+    private func showLogDetails(with log: Log) {
+        let bundle = Bundle(for: type(of: self))
+        let storyboard = UIStoryboard(name: "LogDetails", bundle: bundle)
+        let viewController = storyboard.instantiateInitialViewController() as! LogDetailsViewController
+        viewController.log = log
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     @objc private func loggieDidUpdateLogs() {
         logs = LoggieManager.shared.logs

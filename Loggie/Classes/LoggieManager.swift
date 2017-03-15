@@ -16,14 +16,16 @@ public class LoggieManager: NSObject {
 
     public static var shared = LoggieManager()
 
-    public private(set) var logs = [LoggieRequest]() {
+    public private(set) var logs = [Log]() {
         didSet {
-            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: logs)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
+            }
         }
     }
 
-    internal func add(_ request: LoggieRequest) {
-        logs.append(request)
+    internal func add(_ log: Log) {
+        logs.insert(log, at: 0)
     }
 
     public func showLogs(from viewController: UIViewController) {
@@ -31,6 +33,7 @@ public class LoggieManager: NSObject {
         vc.logs = logs
 
         let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.isTranslucent = false
         viewController.present(navigationController, animated: true, completion: nil)
     }
 
