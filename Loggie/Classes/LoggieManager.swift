@@ -25,6 +25,8 @@ public class LoggieManager: NSObject {
         }
     }
 
+    private override init() {}
+
     public func showLogs(from viewController: UIViewController) {
         let vc = LogListTableViewController()
         vc.logs = logs
