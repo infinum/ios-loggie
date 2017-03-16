@@ -14,7 +14,8 @@ extension Notification.Name {
 
 public class LoggieManager: NSObject {
 
-    public static var shared = LoggieManager()
+    @objc(sharedManager)
+    public static let shared = LoggieManager()
 
     public private(set) var logs = [Log]() {
         didSet {
@@ -32,7 +33,6 @@ public class LoggieManager: NSObject {
         navigationController.navigationBar.isTranslucent = false
         viewController.present(navigationController, animated: true, completion: nil)
     }
-
 
     func add(_ log: Log) {
         logs.insert(log, at: 0)
