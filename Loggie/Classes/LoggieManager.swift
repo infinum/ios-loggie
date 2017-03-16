@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal extension Notification.Name {
+extension Notification.Name {
     static let LoggieDidUpdateLogs = Notification.Name("co.infinum.loggie-did-update-logs")
 }
 
@@ -24,10 +24,6 @@ public class LoggieManager: NSObject {
         }
     }
 
-    internal func add(_ log: Log) {
-        logs.insert(log, at: 0)
-    }
-
     public func showLogs(from viewController: UIViewController) {
         let vc = LogListTableViewController()
         vc.logs = logs
@@ -35,6 +31,11 @@ public class LoggieManager: NSObject {
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
         viewController.present(navigationController, animated: true, completion: nil)
+    }
+
+
+    func add(_ log: Log) {
+        logs.insert(log, at: 0)
     }
 
 }

@@ -12,7 +12,7 @@ class LogListTableViewController: UITableViewController {
 
     private static let cellReuseIdentifier = "cell"
 
-    internal var logs = [Log]() {
+    var logs = [Log]() {
         didSet {
             tableView.reloadData()
         }

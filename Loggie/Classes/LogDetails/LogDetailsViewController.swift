@@ -8,15 +8,13 @@
 
 import UIKit
 
-internal class LogDetailsViewController: UIViewController {
+class LogDetailsViewController: UIViewController {
 
     private enum Kind: Int {
         case overview = 0
         case request = 1
         case response = 2
     }
-
-    internal var log: Log!
 
     private var kind: Kind = .overview {
         didSet {
@@ -33,6 +31,9 @@ internal class LogDetailsViewController: UIViewController {
     }
 
     fileprivate var sections = [LogDetailsSection]()
+
+    var log: Log!
+
     @IBOutlet weak private var tableView: UITableView!
 
     override func viewDidLoad() {

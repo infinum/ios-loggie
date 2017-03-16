@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class LogListTableViewCell: UITableViewCell {
+class LogListTableViewCell: UITableViewCell {
 
     private static let successStatusCodes = Array(200..<300)
 
@@ -37,7 +37,7 @@ internal class LogListTableViewCell: UITableViewCell {
         allLabels.forEach { $0.text = nil }
     }
 
-    internal func configure(with log: Log) {
+    func configure(with log: Log) {
         httpMethodLabel.text = log.request.httpMethod
         pathLabel.text = log.request.url?.path
         hostLabel.text = log.request.url?.host

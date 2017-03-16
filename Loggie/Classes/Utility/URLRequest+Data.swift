@@ -8,9 +8,9 @@
 
 import UIKit
 
-internal extension URLRequest {
+extension URLRequest {
 
-    internal var data: Data? {
+    var data: Data? {
         if let body = httpBody {
             return body
         } else if let stream = httpBodyStream {

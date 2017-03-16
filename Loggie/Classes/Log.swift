@@ -42,7 +42,7 @@ public class Log: NSObject {
         self.request = request
     }
 
-    internal func logDetailsItem(with data: Data, contentType: String?) -> LogDetailsItem? {
+    func logDetailsItem(with data: Data, contentType: String?) -> LogDetailsItem? {
         var dataDecoder: DataDecoder?
         for decoder in Log.dataDecoders {
             if decoder.canDecode(data, contentType: contentType) {
@@ -55,7 +55,7 @@ public class Log: NSObject {
         return _dataDecoder.decode(data, contentType: contentType)
     }
 
-    internal func bodySection(with item: LogDetailsItem) -> LogDetailsSection {
+    func bodySection(with item: LogDetailsItem) -> LogDetailsSection {
         let section = LogDetailsSection(headerTitle: "Body")
         section.items.append(item)
         return section
