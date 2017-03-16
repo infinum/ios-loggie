@@ -23,16 +23,10 @@ extension Log {
         }
 
         if let body = data {
-            let bodySection = LogDetailsSection(headerTitle: "Body")
-            sections.append(bodySection)
-
-            if let jsonObject = try? JSONSerialization.jsonObject(with: body, options: [.allowFragments]),
-                let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted]) {
-                let jsonString = String(data: jsonData, encoding: .utf8)
-                bodySection.items.append(.raw(jsonString))
-            } else {
-                let bodyString = String(data: body, encoding: .utf8)
-                bodySection.items.append(.raw(bodyString))
+            let contentType = response?.allHeaderFields["Content-Type"] as? String
+            let item = logDetailsItem(with: body, contentType: contentType)
+            if let item = item {
+                sections.append(bodySection(with: item))
             }
         }
 

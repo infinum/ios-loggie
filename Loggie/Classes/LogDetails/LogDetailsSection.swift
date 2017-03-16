@@ -9,8 +9,10 @@
 import UIKit
 
 enum LogDetailsItem {
+
     case subtitle(String?, String?)
-    case raw(String?)
+    case text(String?)
+    case image(UIImage?)
 }
 
 class LogDetailsSection: NSObject {

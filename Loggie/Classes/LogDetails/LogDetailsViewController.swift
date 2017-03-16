@@ -87,13 +87,17 @@ extension LogDetailsViewController: UITableViewDataSource {
 
         switch item {
         case .subtitle(let title, let subtitle):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LogDetailsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "subtitleCell", for: indexPath) as! LogDetailsTableViewCell
             cell.titleLabel.text = title
             cell.subtitleLabel.text = subtitle
             return cell
-        case .raw(let text):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "rawCell", for: indexPath) as! LogDetailsTableViewCell
+        case .text(let text):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as! LogDetailsTableViewCell
             cell.titleLabel.text = text
+            return cell
+        case .image(let image):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! LogDetailsImageTableViewCell
+            cell.customImageView.image = image
             return cell
         }
     }

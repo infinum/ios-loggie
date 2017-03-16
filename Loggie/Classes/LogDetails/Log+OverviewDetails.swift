@@ -34,7 +34,7 @@ extension Log {
         if let durationString = durationString {
             section.items.append(.subtitle("Duration", durationString))
         }
-        if let requestData = request.httpBody {
+        if let requestData = request.data {
             let sizeString = ByteCountFormatter.string(fromByteCount: Int64(requestData.count), countStyle: .memory)
             section.items.append(.subtitle("Request size", sizeString))
         }

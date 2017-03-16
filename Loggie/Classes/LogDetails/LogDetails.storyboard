@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="pz0-Kw-UyR" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subtitleCell" id="pz0-Kw-UyR" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pz0-Kw-UyR" id="Naf-1S-lUt">
@@ -63,7 +63,7 @@
                                             <outlet property="titleLabel" destination="oSM-8y-rzI" id="WOk-9h-oqh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="rawCell" id="7zp-Fl-Jrd" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textCell" id="7zp-Fl-Jrd" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zp-Fl-Jrd" id="wdq-h2-SiA">
@@ -86,6 +86,28 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="Fgx-R6-8mR" id="EAQ-Ms-9oU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageCell" id="7eT-QO-Mxz" customClass="LogDetailsImageTableViewCell" customModule="Loggie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="375" height="34"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eT-QO-Mxz" id="N8Y-dt-yWL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Y5c-ru-74P">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="33.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y5c-ru-74P" firstAttribute="top" secondItem="N8Y-dt-yWL" secondAttribute="top" id="3DQ-H5-awr"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y5c-ru-74P" secondAttribute="trailing" id="5t9-hu-lOh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y5c-ru-74P" secondAttribute="bottom" id="OYD-ci-J3M"/>
+                                                <constraint firstItem="Y5c-ru-74P" firstAttribute="leading" secondItem="N8Y-dt-yWL" secondAttribute="leading" id="qVl-XL-ofR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="customImageView" destination="Y5c-ru-74P" id="nrI-Lr-Kjo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
