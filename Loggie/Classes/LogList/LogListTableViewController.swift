@@ -41,7 +41,7 @@ class LogListTableViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         let bundle = Bundle(for: type(of: self))
         let cellNib = UINib(nibName: "LogListTableViewCell", bundle: bundle)
-        tableView.register(cellNib, forCellReuseIdentifier: "cell")
+        tableView.register(cellNib, forCellReuseIdentifier: LogListTableViewController.cellReuseIdentifier)
     }
 
     // MARK: - Table view data source
@@ -55,10 +55,12 @@ class LogListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LogListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: LogListTableViewController.cellReuseIdentifier, for: indexPath) as! LogListTableViewCell
         cell.configure(with: logs[indexPath.row])
         return cell
     }
+
+    // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showLogDetails(with: logs[indexPath.row])
