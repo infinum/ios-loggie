@@ -307,10 +307,10 @@
 				887E3BF3CA568DF787D6D953F8C467F9 /* Log.swift */,
 				36004C460E926D110254CF1AB9C4B9C9 /* LoggieManager.swift */,
 				62FF4D70CE0C3FCA22751DC1B4C57B52 /* LoggieURLProtocol.swift */,
+				CF03DDF11E7AAF57001887E6 /* DataDecoder.swift */,
 				BDCFBA7D7E33765A62367FF7F85D8E6B /* LogDetails */,
 				BB67D2653537848F08FC6156B9F165A2 /* LogList */,
 				1AA514CE286CB8D84407C34869F5AB17 /* Utility */,
-				CF03DDF11E7AAF57001887E6 /* DataDecoder.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

@@ -47,6 +47,7 @@ public class Log: NSObject {
         for decoder in Log.dataDecoders {
             if decoder.canDecode(data, contentType: contentType) {
                 dataDecoder = decoder
+                break
             }
         }
         guard let _dataDecoder = dataDecoder else {
