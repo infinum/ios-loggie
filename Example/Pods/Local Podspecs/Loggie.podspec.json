@@ -1,6 +1,6 @@
 {
   "name": "Loggie",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "A short description of Loggie.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "platforms": {

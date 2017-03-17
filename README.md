@@ -1,6 +1,6 @@
 # Loggie
 
-[![CI Status](http://img.shields.io/travis/Filip Beć/Loggie.svg?style=flat)](https://travis-ci.org/Filip Beć/Loggie)
+[![CI Status](http://img.shields.io/travis/infinum/iOS-Loggie.svg?style=flat)](https://travis-ci.org/infinum/iOS-Loggie)
 [![Version](https://img.shields.io/cocoapods/v/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 [![License](https://img.shields.io/cocoapods/l/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 [![Platform](https://img.shields.io/cocoapods/p/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
