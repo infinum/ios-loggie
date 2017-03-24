@@ -27,10 +27,10 @@ public class LoggieManager: NSObject {
 
     private override init() {}
 
-    @objc(showLogsFromViewController:)
-    public func showLogs(from viewController: UIViewController) {
+    @objc(showLogsFromViewController:filter:)
+    public func showLogs(from viewController: UIViewController, filter: ((Log) -> Bool)? = nil) {
         let vc = LogListTableViewController()
-        vc.logs = logs
+        vc.filter = filter
 
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
@@ -38,7 +38,7 @@ public class LoggieManager: NSObject {
     }
 
     func add(_ log: Log) {
-        logs.insert(log, at: 0)
+        logs.append(log)
     }
 
 }

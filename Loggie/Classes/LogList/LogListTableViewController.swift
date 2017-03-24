@@ -12,9 +12,15 @@ class LogListTableViewController: UITableViewController {
 
     private static let cellReuseIdentifier = "cell"
 
-    var logs = [Log]() {
+    private var logs = [Log]() {
         didSet {
             tableView.reloadData()
+        }
+    }
+
+    var filter: ((Log) -> Bool)? = nil {
+        didSet {
+            updateLogs()
         }
     }
 
@@ -34,6 +40,7 @@ class LogListTableViewController: UITableViewController {
             name: .LoggieDidUpdateLogs,
             object: nil
         )
+        updateLogs()
     }
 
     private func setupTableView() {
@@ -68,6 +75,15 @@ class LogListTableViewController: UITableViewController {
 
     // MARK: - Private
 
+    private func updateLogs() {
+        let _logs: [Log] = LoggieManager.shared.logs.reversed()
+        if let filter = filter {
+            logs = _logs.filter(filter)
+        } else {
+            logs = _logs
+        }
+    }
+
     private func showLogDetails(with log: Log) {
         let bundle = Bundle(for: type(of: self))
         let storyboard = UIStoryboard(name: "LogDetails", bundle: bundle)
@@ -77,7 +93,7 @@ class LogListTableViewController: UITableViewController {
     }
 
     @objc private func loggieDidUpdateLogs() {
-        logs = LoggieManager.shared.logs
+        updateLogs()
     }
 
     @objc private func closeButtonActionHandler() {
