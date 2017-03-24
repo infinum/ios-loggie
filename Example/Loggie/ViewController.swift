@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 extension ViewController: UIWebViewDelegate {
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        LoggieManager.shared.showLogs(from: self)
+        LoggieManager.shared.showLogs(from: self, filter: { $0.request.url?.host == "www.google.com" })
     }
 }
 
