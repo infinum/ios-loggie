@@ -71,6 +71,12 @@ pod "Loggie"
 
 Filip Beć, filip.bec@gmail.com
 
+## Credits
+
+Maintained and sponsored by [Infinum](http://www.infinum.co).
+
+![Infinum logo](https://cloud.githubusercontent.com/assets/1422973/24369980/9c36b0a6-12da-11e7-898a-b711ed7ca52f.png)
+
 ## License
 
 Loggie is available under the MIT license. See the LICENSE file for more info.
