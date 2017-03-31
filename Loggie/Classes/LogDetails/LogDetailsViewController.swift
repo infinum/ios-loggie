@@ -93,8 +93,8 @@ extension LogDetailsViewController: UITableViewDataSource {
             cell.subtitleLabel.text = subtitle
             return cell
         case .text(let text):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as! LogDetailsTableViewCell
-            cell.titleLabel.text = text
+            let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as! LogDetailsTextTableViewCell
+            cell.textView.text = text
             return cell
         case .image(let image):
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! LogDetailsImageTableViewCell

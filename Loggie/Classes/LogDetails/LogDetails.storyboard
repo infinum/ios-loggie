@@ -63,33 +63,34 @@
                                             <outlet property="titleLabel" destination="oSM-8y-rzI" id="WOk-9h-oqh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textCell" id="7zp-Fl-Jrd" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="34"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textCell" rowHeight="60" id="7zp-Fl-Jrd" customClass="LogDetailsTextTableViewCell" customModule="Loggie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zp-Fl-Jrd" id="wdq-h2-SiA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgx-R6-8mR">
-                                                    <rect key="frame" x="16" y="8" width="343" height="17.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4zq-Gk-OCb">
+                                                    <rect key="frame" x="8" y="10" width="359" height="39.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Fgx-R6-8mR" firstAttribute="leading" secondItem="wdq-h2-SiA" secondAttribute="leading" constant="16" id="9b9-vD-z5S"/>
-                                                <constraint firstAttribute="bottom" secondItem="Fgx-R6-8mR" secondAttribute="bottom" constant="8" id="O5e-sq-91r"/>
-                                                <constraint firstAttribute="trailing" secondItem="Fgx-R6-8mR" secondAttribute="trailing" constant="16" id="d83-TF-b0Z"/>
-                                                <constraint firstItem="Fgx-R6-8mR" firstAttribute="top" secondItem="wdq-h2-SiA" secondAttribute="top" constant="8" id="mpF-Bd-Uo6"/>
+                                                <constraint firstItem="4zq-Gk-OCb" firstAttribute="leading" secondItem="wdq-h2-SiA" secondAttribute="leading" constant="8" id="PoB-92-Mcp"/>
+                                                <constraint firstAttribute="trailing" secondItem="4zq-Gk-OCb" secondAttribute="trailing" constant="8" id="coN-tx-Jy1"/>
+                                                <constraint firstAttribute="bottom" secondItem="4zq-Gk-OCb" secondAttribute="bottom" constant="10" id="ezg-WX-g9g"/>
+                                                <constraint firstItem="4zq-Gk-OCb" firstAttribute="top" secondItem="wdq-h2-SiA" secondAttribute="top" constant="10" id="ubk-fR-Rza"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="titleLabel" destination="Fgx-R6-8mR" id="EAQ-Ms-9oU"/>
+                                            <outlet property="textView" destination="4zq-Gk-OCb" id="hJU-fa-UNg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageCell" id="7eT-QO-Mxz" customClass="LogDetailsImageTableViewCell" customModule="Loggie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="150" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eT-QO-Mxz" id="N8Y-dt-yWL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>

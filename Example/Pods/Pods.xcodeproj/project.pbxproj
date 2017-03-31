@@ -27,6 +27,7 @@
 		C4FAAAC79DE33CBFF4127CDC8239CEAF /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 544BFFCA20BD7106C063DB0588596235 /* LogDetails.storyboard */; };
 		C8A0541607817CE876CF4F08D665E53D /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0CB2FFE3843BA4D1E4381EFF8878BE /* URLSessionConfiguration+Loggie.swift */; };
 		CDBDCE33364E0354BA476ACE7EAD2F4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		CF32F9C61E8E7843009A48C5 /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F9C51E8E7843009A48C5 /* LogDetailsTextTableViewCell.swift */; };
 		D01442DB978A16B2ADF2FA646A4886D2 /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63DBB96685036AAD035B5A40C6CFAC /* LogDetailsViewController.swift */; };
 		DB8F94177F6BF19162E9D4BD417BD799 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
 		E2E6D5B3EFCA5CDF289F70777CD66A8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
@@ -50,21 +51,21 @@
 		07242ECD14AF66B50882835174DB6204 /* Loggie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Loggie-dummy.m"; sourceTree = "<group>"; };
 		0CFC0E45092DF0E57C36D03971FA5723 /* Pods-Loggie_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loggie_Example-dummy.m"; sourceTree = "<group>"; };
 		111987BDF76529C8455450FF6AEB5D4E /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
-		12E02D99DE613B37298B3042751F3F10 /* Pods_Loggie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loggie_Example.framework; path = "Pods-Loggie_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E02D99DE613B37298B3042751F3F10 /* Pods_Loggie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loggie_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17514F1F58C5923DA3AEC0C6B41DF836 /* Loggie-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loggie-prefix.pch"; sourceTree = "<group>"; };
 		34C0E215B0F4243875DAFE8C98F0C9A4 /* Loggie.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loggie.xcconfig; sourceTree = "<group>"; };
 		36101675D8CAB8C8E8A27FF16E5C54EC /* Pods-Loggie_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loggie_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3C3B5001BFB25DB940589BA431DBB50E /* Pods-Loggie_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loggie_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4893EB8C2378B020A94AFEC945D026E5 /* LogListTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
-		544BFFCA20BD7106C063DB0588596235 /* LogDetails.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; path = LogDetails.storyboard; sourceTree = "<group>"; };
-		5665BB1CC96880C5BA88851864EBAABE /* Loggie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Loggie.modulemap; sourceTree = "<group>"; };
-		5C2B814B0B952AA9B63AB90653975C11 /* Loggie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Loggie.framework; path = Loggie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		544BFFCA20BD7106C063DB0588596235 /* LogDetails.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
+		5665BB1CC96880C5BA88851864EBAABE /* Loggie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Loggie.modulemap; sourceTree = "<group>"; };
+		5C2B814B0B952AA9B63AB90653975C11 /* Loggie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loggie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF26A3D8850711BB1C35153075E12DD /* Loggie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loggie-umbrella.h"; sourceTree = "<group>"; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		64116781E14EA754EBF5B0E9338F9AB9 /* LogListTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
 		66D769BE7B84FAE585899638E48784A8 /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
-		674B012E710F026506962B8F597D29F5 /* Pods-Loggie_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Loggie_Tests.modulemap"; sourceTree = "<group>"; };
-		67FF9B8F4EFD548C9DA47C52A7525D3E /* Pods-Loggie_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Loggie_Example.modulemap"; sourceTree = "<group>"; };
+		674B012E710F026506962B8F597D29F5 /* Pods-Loggie_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Loggie_Tests.modulemap"; sourceTree = "<group>"; };
+		67FF9B8F4EFD548C9DA47C52A7525D3E /* Pods-Loggie_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Loggie_Example.modulemap"; sourceTree = "<group>"; };
 		6937BEDD9D2FEFEE0FE2D47D1C0F0BE3 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		6AD78EFDF8E175B27E06447C6426881C /* Pods-Loggie_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loggie_Example-resources.sh"; sourceTree = "<group>"; };
 		705C2FBF65BBCCD0D3CF7BE3AD8994C8 /* Pods-Loggie_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +74,7 @@
 		8671F50953FCD21CEDE906FEBB1E33FC /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
 		87592B55250411BD0C4FF9BE60C35950 /* DataDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		932AA3935290D586B3FE5B26A7863C2B /* Pods-Loggie_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loggie_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95242BD8070142052DC7DFE611D87127 /* LogDetailsSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
 		9D6502C13C3B30904413316F40DB87AA /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		9EF4E7DEF897F519DE4F386265A26FA7 /* LoggieManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		BCBA37EC2ADA0D16A1AEF7A2B1F89A54 /* Pods-Loggie_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loggie_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		BE43777C74E7907D5829133E4E7B893B /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
 		C78FB76CED8D9DA8F5C3C38D78816B53 /* Pods-Loggie_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loggie_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CF32F9C51E8E7843009A48C5 /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
 		D10F2AE1F1D902FCDA14FDE56F860D57 /* Pods-Loggie_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loggie_Tests-dummy.m"; sourceTree = "<group>"; };
 		D1D1006435F69986A284421184552907 /* Pods-Loggie_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loggie_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D85797183D7B181AAE3E33B9F6123032 /* Pods-Loggie_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 		E539BA5EE398D4C3B61BE4F4F1548024 /* Pods-Loggie_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E558D03AE66DFD4143818A7D19A21CED /* Pods-Loggie_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E57E13EFACBCC196FBBFEA923BA186AD /* Pods-Loggie_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loggie_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EDAD58392608AEB873B0E2BAB018C0C2 /* Pods_Loggie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loggie_Tests.framework; path = "Pods-Loggie_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDAD58392608AEB873B0E2BAB018C0C2 /* Pods_Loggie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loggie_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59D676A2E74900E6B8C8D68968513B1 /* Log+RequestDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +134,6 @@
 			children = (
 				15AFFB4D51DA79ED7620F7BF65F4C236 /* Classes */,
 			);
-			name = Loggie;
 			path = Loggie;
 			sourceTree = "<group>";
 		};
@@ -142,7 +143,6 @@
 				7612C5F67F8D32C0B50F06CA53A425C2 /* LogDetails */,
 				57BC186FBF33F8158316DE696A90F0B8 /* LogList */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -160,7 +160,6 @@
 			children = (
 				9D07D224E5249BA35EC88DE2972A4E44 /* Classes */,
 			);
-			name = Loggie;
 			path = Loggie;
 			sourceTree = "<group>";
 		};
@@ -185,7 +184,6 @@
 			children = (
 				A14ABD70DDD456BC7B1C39EB7E43AA6D /* LogListTableViewCell.xib */,
 			);
-			name = LogList;
 			path = LogList;
 			sourceTree = "<group>";
 		};
@@ -199,7 +197,6 @@
 				AB63DBB96685036AAD035B5A40C6CFAC /* LogDetailsViewController.swift */,
 				7D4E840AA5BAB1307F76F8768187CCE8 /* Cells */,
 			);
-			name = LogDetails;
 			path = LogDetails;
 			sourceTree = "<group>";
 		};
@@ -209,7 +206,6 @@
 				7CE99E3AEE34D79884AE2A3BA41C717C /* URLRequest+Data.swift */,
 				DD0CB2FFE3843BA4D1E4381EFF8878BE /* URLSessionConfiguration+Loggie.swift */,
 			);
-			name = Utility;
 			path = Utility;
 			sourceTree = "<group>";
 		};
@@ -219,7 +215,6 @@
 				4893EB8C2378B020A94AFEC945D026E5 /* LogListTableViewCell.swift */,
 				64116781E14EA754EBF5B0E9338F9AB9 /* LogListTableViewController.swift */,
 			);
-			name = LogList;
 			path = LogList;
 			sourceTree = "<group>";
 		};
@@ -228,7 +223,6 @@
 			children = (
 				544BFFCA20BD7106C063DB0588596235 /* LogDetails.storyboard */,
 			);
-			name = LogDetails;
 			path = LogDetails;
 			sourceTree = "<group>";
 		};
@@ -236,9 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				BE43777C74E7907D5829133E4E7B893B /* LogDetailsImageTableViewCell.swift */,
+				CF32F9C51E8E7843009A48C5 /* LogDetailsTextTableViewCell.swift */,
 				9D6502C13C3B30904413316F40DB87AA /* LogDetailsTableViewCell.swift */,
 			);
-			name = Cells;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -292,7 +286,6 @@
 				680232CD8302AF7042A63FF0229837CB /* LogList */,
 				6063EE54876D67170AD68368A1FD9C95 /* Utility */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -491,6 +484,7 @@
 				53109F7A7C9B1EDA101471437648D3A1 /* Log.swift in Sources */,
 				F93ECA568EDC41AC90B3682DF65CEE12 /* LogDetailsImageTableViewCell.swift in Sources */,
 				2B6F4E383C588ED416F18656EFF73576 /* LogDetailsSection.swift in Sources */,
+				CF32F9C61E8E7843009A48C5 /* LogDetailsTextTableViewCell.swift in Sources */,
 				F46CF5DB76C962F85BB3336C7E3D6BCC /* LogDetailsTableViewCell.swift in Sources */,
 				D01442DB978A16B2ADF2FA646A4886D2 /* LogDetailsViewController.swift in Sources */,
 				4BAA562CC17C88D3C0240169D2DA1B21 /* Loggie-dummy.m in Sources */,

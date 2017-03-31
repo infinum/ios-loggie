@@ -12,8 +12,4 @@ class LogDetailsImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var customImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
 }
