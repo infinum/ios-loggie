@@ -10,12 +10,12 @@ import UIKit
 
 public class LoggieURLProtocol: URLProtocol {
 
-    private var connection: NSURLConnection?
+    private var dataTask: URLSessionDataTask?
 
-    fileprivate static let HeaderKey = "Loggie"
+    private static let HeaderKey = "Loggie"
 
-    fileprivate var loggieManager = LoggieManager.shared
-    fileprivate var log: Log?
+    private var loggieManager = LoggieManager.shared
+    private var log: Log?
 
     // MARK: - URLProtocol
 
@@ -35,62 +35,38 @@ public class LoggieURLProtocol: URLProtocol {
     }
 
     public override func startLoading() {
-        guard let request = request as? NSMutableURLRequest else {
-            return
-        }
-        LoggieURLProtocol.setProperty(true, forKey: LoggieURLProtocol.HeaderKey, in: request)
-        connection = NSURLConnection(request: request as URLRequest, delegate: self)
+        let canonicalRequest = LoggieURLProtocol.canonicalRequest(for: request)
+        let mutableRequest = (canonicalRequest as NSURLRequest).mutableCopy() as! NSMutableURLRequest
 
-        log = Log(request: request as URLRequest)
+        LoggieURLProtocol.setProperty(true, forKey: LoggieURLProtocol.HeaderKey, in: mutableRequest)
+
+        log = Log(request: mutableRequest as URLRequest)
         log?.startTime = Date()
+
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        dataTask = session.dataTask(with: (mutableRequest as URLRequest), completionHandler: { (data, response, error) in
+            self.log?.endTime = Date()
+            self.log?.error = error
+            self.log?.data = data
+            self.log?.response = response as? HTTPURLResponse
+
+            if let response = response {
+                self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+            }
+
+            if let data = data {
+                self.client!.urlProtocol(self, didLoad: data)
+            }
+
+            self.client?.urlProtocolDidFinishLoading(self)
+            self.saveLog()
+        })
+        dataTask?.resume()
     }
 
     public override func stopLoading() {
-        connection?.cancel()
-        connection = nil
-    }
-
-}
-
-extension LoggieURLProtocol: NSURLConnectionDataDelegate {
-
-    public func connection(_ connection: NSURLConnection, didReceive response: URLResponse) {
-        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
-        if let httpUrlResponse = response as? HTTPURLResponse {
-            log?.response = httpUrlResponse
-        }
-    }
-
-    public func connection(_ connection: NSURLConnection, didReceive data: Data) {
-        client?.urlProtocol(self, didLoad: data)
-        if log?.data == nil {
-            log?.data = data
-        } else {
-            log?.data?.append(data)
-        }
-    }
-
-    public func connectionDidFinishLoading(_ connection: NSURLConnection) {
-        client?.urlProtocolDidFinishLoading(self)
-        log?.endTime = Date()
-        saveLog()
-    }
-
-    public func connection(_ connection: NSURLConnection, didFailWithError error: Error) {
-        client?.urlProtocol(self, didFailWithError: error)
-        log?.error = error
-        log?.endTime = Date()
-        saveLog()
-    }
-
-    public func connection(_ connection: NSURLConnection, willSend request: URLRequest, redirectResponse response: URLResponse?) -> URLRequest? {
-        guard let _request = request as? NSMutableURLRequest, let _response = response else {
-            return request
-        }
-
-        LoggieURLProtocol.removeProperty(forKey: LoggieURLProtocol.HeaderKey, in: _request)
-        client?.urlProtocol(self, wasRedirectedTo: _request as URLRequest, redirectResponse: _response)
-        return _request as URLRequest
+        dataTask?.cancel()
+        dataTask = nil
     }
 
     private func saveLog() {
