@@ -39,6 +39,8 @@ class LogDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         kind = .overview
+
+        setupShareButton()
         setupTableView()
 
         let titleComponents = [log.request.httpMethod, log.request.url?.path]
@@ -49,12 +51,30 @@ class LogDetailsViewController: UIViewController {
 
     // MARK: - Private
 
+    private func setupShareButton() {
+        let shareButton = UIBarButtonItem(
+            barButtonSystemItem: .action,
+            target: self,
+            action: #selector(shareButtonActionHandler(_:))
+        )
+        navigationItem.rightBarButtonItem = shareButton
+    }
+
     private func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 40.0
     }
 
     // MARK: - Actions
+
+    @objc private func shareButtonActionHandler(_ sender: UIBarButtonItem) {
+        let activityItems: [Any] = [log.stringReprezentation]
+        let activityController = UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: nil
+        )
+        present(activityController, animated: true, completion: nil)
+    }
 
     @IBAction func segmentedControlActionHandler(_ sender: UISegmentedControl) {
         guard let _kind = Kind(rawValue: sender.selectedSegmentIndex) else {

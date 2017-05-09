@@ -63,3 +63,89 @@ public class Log: NSObject {
     }
 
 }
+
+extension Log {
+
+    public var stringReprezentation: String {
+        var output: String = ""
+
+        // MARK: - Overview -
+
+        output += _formattedSectionTitle("OVERVIEW")
+
+        if let method = request.httpMethod {
+            output += _string(for: "METHOD", value: method)
+        }
+        if let responseStatus = response?.statusCode {
+            output += _string(for: "RESPONSE STATUS", value: String(responseStatus))
+        }
+        if let startTime = startTime {
+            let formatedDate = DateFormatter.localizedString(from: startTime, dateStyle: .medium, timeStyle: .medium)
+            output += _string(for: "REQUEST TIME", value: formatedDate)
+        }
+        if let endTime = endTime {
+            let formatedDate = DateFormatter.localizedString(from: endTime, dateStyle: .medium, timeStyle: .medium)
+            output += _string(for: "RESPONSE TIME", value: formatedDate)
+        }
+        if let durationString = durationString {
+            output += _string(for: "DURATION", value: durationString)
+        }
+        if let requestData = request.data {
+            let sizeString = ByteCountFormatter.string(fromByteCount: Int64(requestData.count), countStyle: .memory)
+            output += _string(for: "REQUEST SIZE", value: sizeString)
+        }
+        if let responseData = data {
+            let sizeString = ByteCountFormatter.string(fromByteCount: Int64(responseData.count), countStyle: .memory)
+            output += _string(for: "RESPONSE SIZE", value: sizeString)
+        }
+
+        // MARK: - REQUEST -
+
+        output += _formattedSectionTitle("REQUEST")
+
+        if let headers = request.allHTTPHeaderFields {
+            let headersString: String = headers.map({ (key, value) -> String in
+                return String(format: "%@: %@", key, value)
+            }).joined(separator: "\n")
+            output += _string(for: "HEADERS", value: headersString)
+        }
+
+        if let url = request.url, let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
+            let queryParamsString: String = queryItems.map({ queryItem -> String in
+                return String(format: "%@: %@", queryItem.name, queryItem.value ?? "")
+            }).joined(separator: "\n")
+            output += _string(for: "QUERY PARAMS", value: queryParamsString)
+        }
+
+        if let body = request.data, let jsonString = body.formattedJsonString {
+            output += _string(for: "BODY", value: jsonString)
+        }
+
+        // MARK: - RESPONSE -
+
+        output += _formattedSectionTitle("RESPONSE")
+
+        if let headers = response?.allHeaderFields as? [String: String] {
+            let headersString: String = headers.map({ (key, value) -> String in
+                return String(format: "%@: %@", key, value)
+            }).joined(separator: "\n")
+            output += _string(for: "HEADERS", value: headersString)
+        }
+
+        if let body = data, let jsonString = body.formattedJsonString {
+            output += _string(for: "BODY", value: jsonString)
+        }
+
+        return output
+    }
+
+    private func _string(for title: String, value: String) -> String {
+        return String(format: "\t%@:\n-----------------------\n%@\n\n", title, value)
+    }
+
+    private func _formattedSectionTitle(_ title: String) -> String {
+        let line = "-----------"
+        return [line, title, line].joined(separator: "\n") + "\n\n"
+    }
+
+}

@@ -26,14 +26,7 @@ class JSONDataDecoder: NSObject, DataDecoder {
     }
 
     func decode(_ data: Data, contentType: String?) -> LogDetailsItem {
-        guard let jsonObject = jsonObject(with: data) else {
-            return .text(nil)
-        }
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted]) else {
-            return .text(nil)
-        }
-        let jsonString = String(data: jsonData, encoding: .utf8)
-        return .text(jsonString)
+        return .text(data.formattedJsonString)
     }
 
     private func jsonObject(with data: Data) -> Any? {

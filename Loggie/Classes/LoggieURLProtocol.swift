@@ -55,7 +55,7 @@ public class LoggieURLProtocol: URLProtocol {
             }
 
             if let data = data {
-                self.client!.urlProtocol(self, didLoad: data)
+                self.client?.urlProtocol(self, didLoad: data)
             }
 
             self.client?.urlProtocolDidFinishLoading(self)
