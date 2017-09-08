@@ -14,7 +14,7 @@ extension URLRequest {
         if let body = httpBody {
             return body
         } else if let stream = httpBodyStream {
-            var body = NSMutableData()
+            let body = NSMutableData()
             var buffer = [UInt8](repeating: 0, count: 4096)
             stream.open()
             while stream.hasBytesAvailable {
