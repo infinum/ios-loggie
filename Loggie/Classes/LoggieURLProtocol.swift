@@ -44,11 +44,14 @@ public class LoggieURLProtocol: URLProtocol {
         log?.startTime = Date()
 
         let session = URLSession(configuration: URLSessionConfiguration.default)
-        dataTask = session.dataTask(with: (mutableRequest as URLRequest), completionHandler: { (data, response, error) in
+        dataTask = session.dataTask(with: (mutableRequest as URLRequest), completionHandler: { [weak self] (data, response, error) in
+            guard let `self` = self else { return }
+
             self.log?.endTime = Date()
             self.log?.error = error
             self.log?.data = data
             self.log?.response = response as? HTTPURLResponse
+            self.saveLog()
 
             if let response = response {
                 self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
@@ -59,7 +62,6 @@ public class LoggieURLProtocol: URLProtocol {
             }
 
             self.client?.urlProtocolDidFinishLoading(self)
-            self.saveLog()
         })
         dataTask?.resume()
     }
@@ -70,9 +72,7 @@ public class LoggieURLProtocol: URLProtocol {
     }
 
     private func saveLog() {
-        if let log = log {
-            loggieManager.add(log)
-        }
+        guard let log = log else { return }
+        loggieManager.add(log)
     }
-
 }

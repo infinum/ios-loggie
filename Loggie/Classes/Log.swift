@@ -43,17 +43,8 @@ public class Log: NSObject {
     }
 
     func logDetailsItem(with data: Data, contentType: String?) -> LogDetailsItem? {
-        var dataDecoder: DataDecoder?
-        for decoder in Log.dataDecoders {
-            if decoder.canDecode(data, contentType: contentType) {
-                dataDecoder = decoder
-                break
-            }
-        }
-        guard let _dataDecoder = dataDecoder else {
-            return nil
-        }
-        return _dataDecoder.decode(data, contentType: contentType)
+        guard let dataDecoder = Log.dataDecoders.filter({ $0.canDecode(data, contentType: contentType) }).first else { return nil }
+        return dataDecoder.decode(data, contentType: contentType)
     }
 
     func bodySection(with item: LogDetailsItem) -> LogDetailsSection {
@@ -66,55 +57,58 @@ public class Log: NSObject {
 
 extension Log {
 
-    public var stringReprezentation: String {
+    public var shareRepresentation: String {
         var output: String = ""
 
         // MARK: - Overview -
 
-        output += _formattedSectionTitle("OVERVIEW")
+        var overviewItems = [(String, String)]()
 
         if let method = request.httpMethod {
-            output += _string(for: "METHOD", value: method)
+            overviewItems.append(("Method", method))
         }
         if let responseStatus = response?.statusCode {
-            output += _string(for: "RESPONSE STATUS", value: String(responseStatus))
+            overviewItems.append(("Response status", String(responseStatus)))
         }
         if let startTime = startTime {
             let formatedDate = DateFormatter.localizedString(from: startTime, dateStyle: .medium, timeStyle: .medium)
-            output += _string(for: "REQUEST TIME", value: formatedDate)
+            overviewItems.append(("Request time", formatedDate))
         }
         if let endTime = endTime {
             let formatedDate = DateFormatter.localizedString(from: endTime, dateStyle: .medium, timeStyle: .medium)
-            output += _string(for: "RESPONSE TIME", value: formatedDate)
+            overviewItems.append(("Response time", formatedDate))
         }
         if let durationString = durationString {
-            output += _string(for: "DURATION", value: durationString)
+            overviewItems.append(("Duration", durationString))
         }
         if let requestData = request.data {
             let sizeString = ByteCountFormatter.string(fromByteCount: Int64(requestData.count), countStyle: .memory)
-            output += _string(for: "REQUEST SIZE", value: sizeString)
+            overviewItems.append(("Request size", sizeString))
         }
         if let responseData = data {
             let sizeString = ByteCountFormatter.string(fromByteCount: Int64(responseData.count), countStyle: .memory)
-            output += _string(for: "RESPONSE SIZE", value: sizeString)
+            overviewItems.append(("Response size", sizeString))
         }
+
+        let overviewItemsString = overviewItems.map { String(format: "%@: %@", $0.0, $0.1) }.joined(separator: "\n")
+        output += _string(for: "Overview", value: overviewItemsString)
 
         // MARK: - REQUEST -
 
-        output += _formattedSectionTitle("REQUEST")
+        output += _formattedSectionTitle("Request")
 
         if let headers = request.allHTTPHeaderFields {
-            let headersString: String = headers.map({ (key, value) -> String in
-                return String(format: "%@: %@", key, value)
-            }).joined(separator: "\n")
-            output += _string(for: "HEADERS", value: headersString)
+            output += _string(for: "Headers", value: headers.shareRepresentation)
         }
 
         if let url = request.url, let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
-            let queryParamsString: String = queryItems.map({ queryItem -> String in
-                return String(format: "%@: %@", queryItem.name, queryItem.value ?? "")
-            }).joined(separator: "\n")
-            output += _string(for: "QUERY PARAMS", value: queryParamsString)
+            let queryParamsString: String = queryItems
+                .map({ queryItem -> String in
+                    return String(format: "%@: %@", queryItem.name, queryItem.value ?? "")
+                })
+                .joined(separator: "\n")
+
+            output += _string(for: "Query params", value: queryParamsString)
         }
 
         if let body = request.data, let jsonString = body.formattedJsonString {
@@ -123,17 +117,14 @@ extension Log {
 
         // MARK: - RESPONSE -
 
-        output += _formattedSectionTitle("RESPONSE")
+        output += _formattedSectionTitle("Response")
 
         if let headers = response?.allHeaderFields as? [String: String] {
-            let headersString: String = headers.map({ (key, value) -> String in
-                return String(format: "%@: %@", key, value)
-            }).joined(separator: "\n")
-            output += _string(for: "HEADERS", value: headersString)
+            output += _string(for: "Headers", value: headers.shareRepresentation)
         }
 
         if let body = data, let jsonString = body.formattedJsonString {
-            output += _string(for: "BODY", value: jsonString)
+            output += _string(for: "Body", value: jsonString)
         }
 
         return output
@@ -144,8 +135,15 @@ extension Log {
     }
 
     private func _formattedSectionTitle(_ title: String) -> String {
-        let line = "-----------"
+        let line = "--------------------------------"
         return [line, title, line].joined(separator: "\n") + "\n\n"
     }
+}
 
+
+fileprivate extension Dictionary where Key == String, Value == String {
+
+    var shareRepresentation: String {
+        return self.map { String(format: "%@: %@", $0.key, $0.value) }.joined(separator: "\n")
+    }
 }

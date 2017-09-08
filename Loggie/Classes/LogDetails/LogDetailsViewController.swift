@@ -68,7 +68,7 @@ class LogDetailsViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func shareButtonActionHandler(_ sender: UIBarButtonItem) {
-        let activityItems: [Any] = [log.stringReprezentation]
+        let activityItems: [Any] = [log.shareRepresentation]
         let activityController = UIActivityViewController(
             activityItems: activityItems,
             applicationActivities: nil
@@ -77,9 +77,7 @@ class LogDetailsViewController: UIViewController {
     }
 
     @IBAction func segmentedControlActionHandler(_ sender: UISegmentedControl) {
-        guard let _kind = Kind(rawValue: sender.selectedSegmentIndex) else {
-            return
-        }
+        guard let _kind = Kind(rawValue: sender.selectedSegmentIndex) else { return }
         kind = _kind
     }
 
@@ -112,15 +110,16 @@ extension LogDetailsViewController: UITableViewDataSource {
             cell.titleLabel.text = title
             cell.subtitleLabel.text = subtitle
             return cell
+
         case .text(let text):
             let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as! LogDetailsTextTableViewCell
             cell.textView.text = text
             return cell
+
         case .image(let image):
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! LogDetailsImageTableViewCell
             cell.customImageView.image = image
             return cell
         }
     }
-
 }

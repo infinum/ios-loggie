@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
         webView.delegate = self
 
-        let url = URL(string: "https://google.com")!
+        let url = URL(string: "https://jsonplaceholder.typicode.com/users/1")!
         let request = URLRequest(url: url)
         webView.loadRequest(request)
     }
