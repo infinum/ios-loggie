@@ -46,9 +46,7 @@ class LogListTableViewCell: UITableViewCell {
             timeLabel.text = DateFormatter.localizedString(from: startTime, dateStyle: .none, timeStyle: .medium)
         }
 
-        if let duration = log.duration {
-            durationLabel.text = log.durationString
-        }
+        durationLabel.text = log.durationString
 
         if let statusCode = log.response?.statusCode {
             statusCodeLabel.text = String(statusCode)

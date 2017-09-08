@@ -37,6 +37,7 @@ public class LoggieManager: NSObject {
         viewController.present(navigationController, animated: true, completion: nil)
     }
 
+    @objc(addLog:)
     func add(_ log: Log) {
         logs.append(log)
     }
