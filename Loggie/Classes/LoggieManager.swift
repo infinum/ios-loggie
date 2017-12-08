@@ -12,10 +12,25 @@ extension Notification.Name {
     static let LoggieDidUpdateLogs = Notification.Name("co.infinum.loggie-did-update-logs")
 }
 
+public class LoggieAuthentication: NSObject {
+    public let username: String
+    public let password: String
+
+    public init(username: String, password: String) {
+        self.username = username
+        self.password = password
+    }
+}
+
+public typealias AuthenticationBlock = (() -> (LoggieAuthentication?))
+
 public class LoggieManager: NSObject {
 
     @objc(sharedManager)
     public static let shared = LoggieManager()
+
+    public var allowSelfSignedCertificates: Bool = false
+    public var authentication: AuthenticationBlock? = nil
 
     public private(set) var logs = [Log]() {
         didSet {
@@ -42,3 +57,4 @@ public class LoggieManager: NSObject {
     }
 
 }
+

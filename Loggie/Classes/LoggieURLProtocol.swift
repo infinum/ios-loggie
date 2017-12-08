@@ -14,7 +14,7 @@ public class LoggieURLProtocol: URLProtocol {
 
     private static let HeaderKey = "Loggie"
 
-    private var loggieManager = LoggieManager.shared
+    fileprivate var loggieManager = LoggieManager.shared
     private var log: Log?
 
     // MARK: - URLProtocol
@@ -43,7 +43,7 @@ public class LoggieURLProtocol: URLProtocol {
         log = Log(request: mutableRequest as URLRequest)
         log?.startTime = Date()
 
-        let session = URLSession(configuration: URLSessionConfiguration.default)
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
         dataTask = session.dataTask(with: (mutableRequest as URLRequest), completionHandler: { [weak self] (data, response, error) in
             guard let `self` = self else { return }
 
@@ -76,3 +76,41 @@ public class LoggieURLProtocol: URLProtocol {
         loggieManager.add(log)
     }
 }
+
+extension LoggieURLProtocol: URLSessionDelegate, URLSessionDataDelegate {
+
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        // allow self-signed certificates without certificate pinning
+        var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+        var credential: URLCredential? = nil
+
+
+        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust && loggieManager.allowSelfSignedCertificates) {
+
+            if let serverTrust = challenge.protectionSpace.serverTrust {
+                var secresult = SecTrustResultType.invalid
+                let status = SecTrustEvaluate(serverTrust, &secresult)
+
+                if (errSecSuccess == status) {
+                    disposition = .useCredential
+                    credential = URLCredential(trust:serverTrust)
+                }
+            }
+        }
+        completionHandler(disposition, credential)
+    }
+
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+        var credential: URLCredential? = nil
+
+        if challenge.previousFailureCount > 0 {
+            disposition = .rejectProtectionSpace
+        } else if let authentication = loggieManager.authentication, let authParams = authentication() {
+            credential = URLCredential(user: authParams.username, password: authParams.password, persistence: .none)
+            disposition = .useCredential
+        }
+        completionHandler(disposition, credential)
+    }
+}
+
