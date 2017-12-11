@@ -32,7 +32,6 @@ class JSONDataDecoder: NSObject, DataDecoder {
     private func jsonObject(with data: Data) -> Any? {
         return (try? JSONSerialization.jsonObject(with: data, options: [.allowFragments]))
     }
-
 }
 
 class PlainTextDataDecoder: NSObject, DataDecoder {
@@ -48,7 +47,6 @@ class PlainTextDataDecoder: NSObject, DataDecoder {
         let text = String(data: data, encoding: .utf8)
         return .text(text)
     }
-
 }
 
 class ImageDataDecoder: NSObject, DataDecoder {
@@ -67,5 +65,4 @@ class ImageDataDecoder: NSObject, DataDecoder {
         let image = UIImage(data: data)
         return .image(image)
     }
-
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Loggie'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'In-app network logging library.'
   s.homepage         = 'https://github.com/infinum/iOS-Loggie.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

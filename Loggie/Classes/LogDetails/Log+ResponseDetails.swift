@@ -32,5 +32,4 @@ extension Log {
 
         return sections
     }
-
 }

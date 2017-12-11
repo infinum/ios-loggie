@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Log Details View Controller-->
         <scene sceneID="HWr-Or-o43">
@@ -26,10 +31,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subtitleCell" id="pz0-Kw-UyR" customClass="LogDetailsTableViewCell" customModule="Loggie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pz0-Kw-UyR" id="Naf-1S-lUt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-8y-rzI">
@@ -64,10 +69,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textCell" rowHeight="60" id="7zp-Fl-Jrd" customClass="LogDetailsTextTableViewCell" customModule="Loggie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="89.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zp-Fl-Jrd" id="wdq-h2-SiA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4zq-Gk-OCb">
@@ -90,10 +95,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageCell" id="7eT-QO-Mxz" customClass="LogDetailsImageTableViewCell" customModule="Loggie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="149.5" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eT-QO-Mxz" id="N8Y-dt-yWL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Y5c-ru-74P">
@@ -123,7 +128,7 @@
                                     <navigationItem id="4f3-NO-KR8">
                                         <nil key="title"/>
                                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xNS-G5-aCM">
-                                            <rect key="frame" x="32.5" y="7" width="310" height="30"/>
+                                            <rect key="frame" x="75.5" y="7.5" width="224" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="Overview"/>
@@ -150,6 +155,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="optionsBar" destination="dm5-ry-Kyu" id="AQG-qE-v4j"/>
                         <outlet property="tableView" destination="iJR-sI-Ciu" id="3z8-xn-5ZX"/>
                     </connections>
                 </viewController>

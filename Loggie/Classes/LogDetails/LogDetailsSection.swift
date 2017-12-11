@@ -26,5 +26,4 @@ class LogDetailsSection: NSObject {
         self.headerTitle = headerTitle
         self.footerTitle = footerTitle
     }
-
 }

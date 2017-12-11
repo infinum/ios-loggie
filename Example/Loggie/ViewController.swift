@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         let request = URLRequest(url: url)
         webView.loadRequest(request)
     }
-
 }
 
 extension ViewController: UIWebViewDelegate {
@@ -31,6 +30,4 @@ extension ViewController: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         LoggieManager.shared.showLogs(from: self)
     }
-    
 }
-

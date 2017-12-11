@@ -34,12 +34,14 @@ class LogDetailsViewController: UIViewController {
 
     var log: Log!
 
+    @IBOutlet weak var optionsBar: UINavigationBar!
     @IBOutlet weak private var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         kind = .overview
 
+        setupOptionsBar()
         setupShareButton()
         setupTableView()
 
@@ -50,6 +52,11 @@ class LogDetailsViewController: UIViewController {
     }
 
     // MARK: - Private
+
+    private func setupOptionsBar() {
+        optionsBar.tintColor = navigationController?.navigationBar.tintColor
+        optionsBar.barTintColor = navigationController?.navigationBar.barTintColor
+    }
 
     private func setupShareButton() {
         let shareButton = UIBarButtonItem(

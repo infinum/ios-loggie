@@ -113,4 +113,3 @@ extension LoggieURLProtocol: URLSessionDelegate, URLSessionDataDelegate {
         completionHandler(disposition, credential)
     }
 }
-

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogListTableViewController: UITableViewController {
+public class LogListTableViewController: UITableViewController {
 
     private static let cellReuseIdentifier = "cell"
 
@@ -18,13 +18,13 @@ class LogListTableViewController: UITableViewController {
         }
     }
 
-    var filter: ((Log) -> Bool)? = nil {
+    public var filter: ((Log) -> Bool)? = nil {
         didSet {
             updateLogs()
         }
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Logs"
         setupTableView()
@@ -53,15 +53,15 @@ class LogListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return logs.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LogListTableViewController.cellReuseIdentifier, for: indexPath) as! LogListTableViewCell
         cell.configure(with: logs[indexPath.row])
         return cell
@@ -69,7 +69,7 @@ class LogListTableViewController: UITableViewController {
 
     // MARK: - Table view delegate
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showLogDetails(with: logs[indexPath.row])
     }
 
@@ -99,5 +99,4 @@ class LogListTableViewController: UITableViewController {
     @objc private func closeButtonActionHandler() {
         dismiss(animated: true, completion: nil)
     }
-    
 }

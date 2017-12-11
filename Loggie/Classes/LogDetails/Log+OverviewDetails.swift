@@ -44,5 +44,4 @@ extension Log {
         }
         return sections
     }
-
 }

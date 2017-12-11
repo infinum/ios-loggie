@@ -52,7 +52,6 @@ public class Log: NSObject {
         section.items.append(item)
         return section
     }
-
 }
 
 extension Log {
