@@ -25,12 +25,22 @@ URLProtocol.registerClass(LoggieURLProtocol.self)
 
 ```objective-c
 // Objective-C
-[URLProtocol registerClass:[LoggieURLProtocol classl]];
+[URLProtocol registerClass:[LoggieURLProtocol class]];
 ```
 
-**If you use `NSURLSession` you need to configure it with the `[NSURLSessionConfiguration loggieSessionConfiguration]` in Objective-C or `NSURLSessionConfiguration.loggie` in Swift.**
+2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`:
 
-At the point where you want to display network logs you can just put the following line:
+```swift
+// Swift
+URLSession(configuration: URLSessionConfiguration.loggie)
+```
+
+```objective-c
+// Objective-C
+[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration loggieSessionConfiguration]];
+```
+
+3. At the point where you want to display network logs, you can just put the following line:
 
 ```swift
 // Swift
@@ -42,7 +52,7 @@ LoggieManager.shared.showLogs(from: viewController)
 [[LoggieManager sharedManager] showLogsFromViewController:viewController filter:nil];
 ```
 
-You can create custom output or UI to show network logs. To get an array of all network logs just call:
+#### You can create custom output or UI to show network logs. To get an array of all network logs just call:
 
 ```swift
 // Swift
@@ -56,7 +66,8 @@ NSArray<Log *> *array = [[LoggieManager sharedManager] logs];
 
 If you would like to receive notifications when new logs are added to the list, your app can observe `LoggieDidUpdateLogs` notification.
 
-**Please make sure that `LogieURLProtocol` and `loggieSessionConfiguration` are not used in production builds.**
+## Important:
+Please make sure that `LogieURLProtocol` and `loggieSessionConfiguration` are not used in production builds.
 
 ## Installation
 
