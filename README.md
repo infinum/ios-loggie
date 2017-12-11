@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage
 
-1. Register custom `LoggieURLProtocol` in the `application:didFinishLaunchingWithOptions` method:
+### 1. Register custom `LoggieURLProtocol` in the `application:didFinishLaunchingWithOptions` method:
 
 ```swift
 // Swift
@@ -28,7 +28,7 @@ URLProtocol.registerClass(LoggieURLProtocol.self)
 [URLProtocol registerClass:[LoggieURLProtocol class]];
 ```
 
-2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`:
+### 2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`:
 
 ```swift
 // Swift
@@ -40,7 +40,7 @@ URLSession(configuration: URLSessionConfiguration.loggie)
 [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration loggieSessionConfiguration]];
 ```
 
-3. At the point where you want to display network logs, you can just put the following line:
+### 3. At the point where you want to display network logs, you can just put the following line:
 
 ```swift
 // Swift
