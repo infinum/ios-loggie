@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 public protocol ServerTrustPolicy: NSObjectProtocol {
     func evaluate(_ serverTrust: SecTrust, forHost host: String) -> Bool
     func trustIsValid(_ trust: SecTrust) -> Bool
@@ -187,7 +188,7 @@ public class DisableEvaluation: NSObject, ServerTrustPolicy {
 }
 
 /// Responsible for managing the mapping of `ServerTrustPolicy` objects to a given host.
-open class ServerTrustPolicyManager {
+open class ServerTrustPolicyManager: NSObject {
     /// The dictionary of policies mapped to a particular host.
     public let policies: [String: ServerTrustPolicy]
 
