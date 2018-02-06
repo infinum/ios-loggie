@@ -28,6 +28,14 @@ class ViewController: UIViewController {
 extension ViewController: UIWebViewDelegate {
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        showLogs()
+    }
+
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        showLogs()
+    }
+
+    private func showLogs() {
         LoggieManager.shared.showLogs(from: self)
     }
 }

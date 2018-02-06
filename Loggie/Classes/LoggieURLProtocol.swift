@@ -53,7 +53,9 @@ public class LoggieURLProtocol: URLProtocol {
             self.log?.response = response as? HTTPURLResponse
             self.saveLog()
 
-            if let response = response {
+            if let error = error {
+                self.client?.urlProtocol(self, didFailWithError: error)
+            } else if let response = response {
                 self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
             }
 
