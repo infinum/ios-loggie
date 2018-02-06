@@ -29,7 +29,7 @@ public class LoggieManager: NSObject {
     @objc(sharedManager)
     public static let shared = LoggieManager()
 
-    public var allowSelfSignedCertificates: Bool = false
+    public var serverTrustPolicyManager: ServerTrustPolicyManager? = nil
     public var authentication: AuthenticationBlock? = nil
 
     public private(set) var logs = [Log]() {
