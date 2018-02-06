@@ -12,21 +12,41 @@ extension Log {
 
     var responseDataSource: [LogDetailsSection] {
         var sections: [LogDetailsSection] = []
+        if let error = error as NSError? {
+            let errorSection = LogDetailsSection(headerTitle: "Error")
+            sections.append(errorSection)
 
-        if let headers = response?.allHeaderFields as? [String: String] {
-            let headersSection = LogDetailsSection(headerTitle: "Headers")
-            sections.append(headersSection)
+            errorSection.items = [
+                LogDetailsItem.subtitle("Code", String(error.code)),
+                LogDetailsItem.subtitle("Description", error.localizedDescription),
+                LogDetailsItem.subtitle("Failure reason", error.localizedFailureReason),
+                LogDetailsItem.subtitle("Recovery options", error.localizedRecoveryOptions?.joined(separator: ", ")),
+                LogDetailsItem.subtitle("Failure", error.localizedRecoverySuggestion)
+            ]
 
-            headersSection.items = headers.map({ (key, value) -> LogDetailsItem in
-                return LogDetailsItem.subtitle(key, value)
+            let userInfo = LogDetailsSection(headerTitle: "User info")
+            sections.append(userInfo)
+
+            userInfo.items = error.userInfo.map({ (key, value) -> LogDetailsItem in
+                return LogDetailsItem.subtitle(key, String(describing: value))
             })
-        }
 
-        if let body = data {
-            let contentType = response?.allHeaderFields["Content-Type"] as? String
-            let item = logDetailsItem(with: body, contentType: contentType)
-            if let item = item {
-                sections.append(bodySection(with: item))
+        } else {
+            if let headers = response?.allHeaderFields as? [String: String] {
+                let headersSection = LogDetailsSection(headerTitle: "Headers")
+                sections.append(headersSection)
+
+                headersSection.items = headers.map({ (key, value) -> LogDetailsItem in
+                    return LogDetailsItem.subtitle(key, value)
+                })
+            }
+
+            if let body = data {
+                let contentType = response?.allHeaderFields["Content-Type"] as? String
+                let item = logDetailsItem(with: body, contentType: contentType)
+                if let item = item {
+                    sections.append(bodySection(with: item))
+                }
             }
         }
 
