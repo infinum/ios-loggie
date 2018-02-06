@@ -63,6 +63,9 @@ extension Log {
 
         var overviewItems = [(String, String)]()
 
+        if let url = request.url {
+            overviewItems.append(("URL", url.absoluteString))
+        }
         if let method = request.httpMethod {
             overviewItems.append(("Method", method))
         }
