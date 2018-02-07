@@ -15,7 +15,7 @@ public protocol ServerTrustPolicy: NSObjectProtocol {
 
 public extension ServerTrustPolicy {
 
-    func trustIsValid(_ trust: SecTrust) -> Bool {
+    public func trustIsValid(_ trust: SecTrust) -> Bool {
         var isValid = false
 
         var result = SecTrustResultType.invalid
@@ -35,7 +35,7 @@ public extension ServerTrustPolicy {
 public class DefaultEvaluation: NSObject, ServerTrustPolicy {
     private let validateHost: Bool
 
-    init(validateHost: Bool) {
+    public init(validateHost: Bool) {
         self.validateHost = validateHost
     }
 
@@ -51,7 +51,7 @@ public class PinCertificates: NSObject, ServerTrustPolicy {
     private let validateCertificateChain: Bool
     private let validateHost: Bool
 
-    init(certificates: [SecCertificate], validateCertificateChain: Bool, validateHost: Bool) {
+    public init(certificates: [SecCertificate], validateCertificateChain: Bool, validateHost: Bool) {
         self.pinnedCertificates = certificates
         self.validateCertificateChain = validateCertificateChain
         self.validateHost = validateHost
@@ -102,7 +102,7 @@ public class PinPublicKeys: NSObject, ServerTrustPolicy {
     private let validateCertificateChain: Bool
     private let validateHost: Bool
 
-    init(publicKeys: [SecKey], validateCertificateChain: Bool, validateHost: Bool) {
+    public init(publicKeys: [SecKey], validateCertificateChain: Bool, validateHost: Bool) {
         self.pinnedPublicKeys = publicKeys
         self.validateCertificateChain = validateCertificateChain
         self.validateHost = validateHost
@@ -166,7 +166,7 @@ public class RevokedEvaluation: NSObject, ServerTrustPolicy {
     let validateHost: Bool
     let revocationFlags: CFOptionFlags
 
-    init(validateHost: Bool, revocationFlags: CFOptionFlags) {
+    public init(validateHost: Bool, revocationFlags: CFOptionFlags) {
         self.validateHost = validateHost
         self.revocationFlags = revocationFlags
     }
