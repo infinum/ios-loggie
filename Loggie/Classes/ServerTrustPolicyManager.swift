@@ -32,6 +32,74 @@ public extension ServerTrustPolicy {
     }
 }
 
+extension ServerTrustPolicy {
+
+    static func certificateData(for trust: SecTrust) -> [Data] {
+        var certificates: [SecCertificate] = []
+
+        for index in 0..<SecTrustGetCertificateCount(trust) {
+            if let certificate = SecTrustGetCertificateAtIndex(trust, index) {
+                certificates.append(certificate)
+            }
+        }
+
+        return certificateData(for: certificates)
+    }
+
+    static func certificateData(for certificates: [SecCertificate]) -> [Data] {
+        return certificates.map { SecCertificateCopyData($0) as Data }
+    }
+
+    static func certificates(from certificatesData: [Data]) -> [SecCertificate] {
+        return certificatesData.map({ data -> SecCertificate in
+            guard let certificate = SecCertificateCreateWithData(kCFAllocatorDefault, data as CFData) else {
+                preconditionFailure("Invalid certificate data")
+            }
+            return certificate
+        })
+    }
+
+    static func publicKeys(from certificatesData: [Data]) -> [SecKey] {
+        let certificates = PinPublicKeys.certificates(from: certificatesData)
+        return certificates.flatMap({ (cert) -> SecKey? in
+            guard let publicKey = PinPublicKeys.publicKey(for: cert) else {
+                preconditionFailure("Invalid public key")
+            }
+            return publicKey
+        })
+    }
+
+    static func publicKeys(for trust: SecTrust) -> [SecKey] {
+        var publicKeys: [SecKey] = []
+
+        for index in 0..<SecTrustGetCertificateCount(trust) {
+            if
+                let certificate = SecTrustGetCertificateAtIndex(trust, index),
+                let publicKey = publicKey(for: certificate)
+            {
+                publicKeys.append(publicKey)
+            }
+        }
+
+        return publicKeys
+    }
+
+    static func publicKey(for certificate: SecCertificate) -> SecKey? {
+        var publicKey: SecKey?
+
+        let policy = SecPolicyCreateBasicX509()
+        var trust: SecTrust?
+        let trustCreationStatus = SecTrustCreateWithCertificates(certificate, policy, &trust)
+
+        if let trust = trust, trustCreationStatus == errSecSuccess {
+            publicKey = SecTrustCopyPublicKey(trust)
+        }
+
+        return publicKey
+    }
+}
+
+
 public class DefaultEvaluation: NSObject, ServerTrustPolicy {
     private let validateHost: Bool
 
@@ -51,10 +119,16 @@ public class PinCertificates: NSObject, ServerTrustPolicy {
     private let validateCertificateChain: Bool
     private let validateHost: Bool
 
-    public init(certificates: [SecCertificate], validateCertificateChain: Bool, validateHost: Bool) {
+    @nonobjc public init(certificates: [SecCertificate], validateCertificateChain: Bool, validateHost: Bool) {
         self.pinnedCertificates = certificates
         self.validateCertificateChain = validateCertificateChain
         self.validateHost = validateHost
+    }
+
+    public init(certificatesData: [Data], validateCertificateChain: Bool, validateHost: Bool) {
+        self.validateCertificateChain = validateCertificateChain
+        self.validateHost = validateHost
+        self.pinnedCertificates = PinCertificates.certificates(from: certificatesData)
     }
 
     public func evaluate(_ serverTrust: SecTrust, forHost host: String) -> Bool {
@@ -66,8 +140,8 @@ public class PinCertificates: NSObject, ServerTrustPolicy {
             SecTrustSetAnchorCertificatesOnly(serverTrust, true)
             return trustIsValid(serverTrust)
         } else {
-            let serverCertificatesDataArray = certificateData(for: serverTrust)
-            let pinnedCertificatesDataArray = certificateData(for: pinnedCertificates)
+            let serverCertificatesDataArray = PinCertificates.certificateData(for: serverTrust)
+            let pinnedCertificatesDataArray = PinCertificates.certificateData(for: pinnedCertificates)
 
             for serverCertificateData in serverCertificatesDataArray {
                 for pinnedCertificateData in pinnedCertificatesDataArray {
@@ -79,22 +153,6 @@ public class PinCertificates: NSObject, ServerTrustPolicy {
         }
         return false
     }
-
-    private func certificateData(for trust: SecTrust) -> [Data] {
-        var certificates: [SecCertificate] = []
-
-        for index in 0..<SecTrustGetCertificateCount(trust) {
-            if let certificate = SecTrustGetCertificateAtIndex(trust, index) {
-                certificates.append(certificate)
-            }
-        }
-
-        return certificateData(for: certificates)
-    }
-
-    private func certificateData(for certificates: [SecCertificate]) -> [Data] {
-        return certificates.map { SecCertificateCopyData($0) as Data }
-    }
 }
 
 public class PinPublicKeys: NSObject, ServerTrustPolicy {
@@ -102,8 +160,14 @@ public class PinPublicKeys: NSObject, ServerTrustPolicy {
     private let validateCertificateChain: Bool
     private let validateHost: Bool
 
-    public init(publicKeys: [SecKey], validateCertificateChain: Bool, validateHost: Bool) {
+    @nonobjc public init(publicKeys: [SecKey], validateCertificateChain: Bool, validateHost: Bool) {
         self.pinnedPublicKeys = publicKeys
+        self.validateCertificateChain = validateCertificateChain
+        self.validateHost = validateHost
+    }
+
+    public init(certificatesData: [Data], validateCertificateChain: Bool, validateHost: Bool) {
+        self.pinnedPublicKeys = PinPublicKeys.publicKeys(from: certificatesData)
         self.validateCertificateChain = validateCertificateChain
         self.validateHost = validateHost
     }
@@ -119,7 +183,7 @@ public class PinPublicKeys: NSObject, ServerTrustPolicy {
         }
 
         if certificateChainEvaluationPassed {
-            outerLoop: for serverPublicKey in publicKeys(for: serverTrust) as [AnyObject] {
+            for serverPublicKey in PinPublicKeys.publicKeys(for: serverTrust) as [AnyObject] {
                 for pinnedPublicKey in pinnedPublicKeys as [AnyObject] {
                     if serverPublicKey.isEqual(pinnedPublicKey) {
                         return true
@@ -128,37 +192,6 @@ public class PinPublicKeys: NSObject, ServerTrustPolicy {
             }
         }
         return false
-    }
-
-    // MARK: - Private - Public Key Extraction
-
-    private func publicKeys(for trust: SecTrust) -> [SecKey] {
-        var publicKeys: [SecKey] = []
-
-        for index in 0..<SecTrustGetCertificateCount(trust) {
-            if
-                let certificate = SecTrustGetCertificateAtIndex(trust, index),
-                let publicKey = publicKey(for: certificate)
-            {
-                publicKeys.append(publicKey)
-            }
-        }
-
-        return publicKeys
-    }
-
-    private func publicKey(for certificate: SecCertificate) -> SecKey? {
-        var publicKey: SecKey?
-
-        let policy = SecPolicyCreateBasicX509()
-        var trust: SecTrust?
-        let trustCreationStatus = SecTrustCreateWithCertificates(certificate, policy, &trust)
-
-        if let trust = trust, trustCreationStatus == errSecSuccess {
-            publicKey = SecTrustCopyPublicKey(trust)
-        }
-
-        return publicKey
     }
 }
 
