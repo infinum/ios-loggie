@@ -1,8 +1,7 @@
 {
   "name": "Loggie",
-  "version": "0.0.2",
-  "summary": "A short description of Loggie.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.2.0",
+  "summary": "In-app network logging library.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
   "license": {
     "type": "MIT",
@@ -13,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "0.0.2"
+    "tag": "0.2.0"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "platforms": {

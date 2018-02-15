@@ -27,8 +27,13 @@ extension Log {
             let userInfo = LogDetailsSection(headerTitle: "User info")
             sections.append(userInfo)
 
-            userInfo.items = error.userInfo.map({ (key, value) -> LogDetailsItem in
-                return LogDetailsItem.subtitle(key, String(describing: value))
+            userInfo.items = error.userInfo.flatMap({ (arg) -> LogDetailsItem? in
+                #if swift(>=4.0)
+                    let key = arg.key
+                #else
+                    guard let key = arg.key as? String else { return nil }
+                #endif
+                return LogDetailsItem.subtitle(key, String(describing: arg.value))
             })
 
         } else {

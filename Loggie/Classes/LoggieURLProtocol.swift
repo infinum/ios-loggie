@@ -82,20 +82,21 @@ public class LoggieURLProtocol: URLProtocol {
 extension LoggieURLProtocol: URLSessionDelegate, URLSessionDataDelegate {
 
     public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        // allow self-signed certificates without certificate pinning
         var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
         var credential: URLCredential? = nil
 
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+            let host = challenge.protectionSpace.host
 
-        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust && loggieManager.allowSelfSignedCertificates) {
-
-            if let serverTrust = challenge.protectionSpace.serverTrust {
-                var secresult = SecTrustResultType.invalid
-                let status = SecTrustEvaluate(serverTrust, &secresult)
-
-                if (errSecSuccess == status) {
+            if
+                let serverTrustPolicy = loggieManager.serverTrustPolicyManager?.serverTrustPolicy(forHost: host),
+                let serverTrust = challenge.protectionSpace.serverTrust
+            {
+                if serverTrustPolicy.evaluate(serverTrust, forHost: host) {
                     disposition = .useCredential
-                    credential = URLCredential(trust:serverTrust)
+                    credential = URLCredential(trust: serverTrust)
+                } else {
+                    disposition = .cancelAuthenticationChallenge
                 }
             }
         }
@@ -106,11 +107,27 @@ extension LoggieURLProtocol: URLSessionDelegate, URLSessionDataDelegate {
         var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
         var credential: URLCredential? = nil
 
-        if challenge.previousFailureCount > 0 {
-            disposition = .rejectProtectionSpace
-        } else if let authentication = loggieManager.authentication, let authParams = authentication() {
-            credential = URLCredential(user: authParams.username, password: authParams.password, persistence: .none)
-            disposition = .useCredential
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+            let host = challenge.protectionSpace.host
+
+            if
+                let serverTrustPolicy = loggieManager.serverTrustPolicyManager?.serverTrustPolicy(forHost: host),
+                let serverTrust = challenge.protectionSpace.serverTrust
+            {
+                if serverTrustPolicy.evaluate(serverTrust, forHost: host) {
+                    disposition = .useCredential
+                    credential = URLCredential(trust: serverTrust)
+                } else {
+                    disposition = .cancelAuthenticationChallenge
+                }
+            }
+        } else {
+            if challenge.previousFailureCount > 0 {
+                disposition = .rejectProtectionSpace
+            } else if let authentication = loggieManager.authentication, let authParams = authentication() {
+                credential = URLCredential(user: authParams.username, password: authParams.password, persistence: .none)
+                disposition = .useCredential
+            }
         }
         completionHandler(disposition, credential)
     }

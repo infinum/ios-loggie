@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
     'Loggie/Classes/**/*.{xib}'
   ]
 
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'Security'
 end
