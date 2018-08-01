@@ -25,7 +25,7 @@ URLProtocol.registerClass(LoggieURLProtocol.self)
 
 ```objective-c
 // Objective-C
-[URLProtocol registerClass:[LoggieURLProtocol class]];
+[NSURLProtocol registerClass:[LoggieURLProtocol class]];
 ```
 
 ##### 2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`:
