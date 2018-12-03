@@ -35,7 +35,7 @@ public class Log: NSObject {
         guard let _duration = duration else {
             return nil
         }
-        return String(format: "%dms", Int(_duration * 100.0))
+        return String(format: "%dms", Int(_duration * 1000.0))
     }
 
     public init(request: URLRequest) {
