@@ -47,7 +47,7 @@ class LogDetailsViewController: UIViewController {
 
         let titleComponents = [log.request.httpMethod, log.request.url?.path]
         title = titleComponents
-            .flatMap { $0 }
+            .compactMap { $0 }
             .joined(separator: " ")
     }
 
@@ -68,7 +68,7 @@ class LogDetailsViewController: UIViewController {
     }
 
     private func setupTableView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40.0
     }
 
