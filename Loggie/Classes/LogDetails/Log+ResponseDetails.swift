@@ -27,7 +27,7 @@ extension Log {
             let userInfo = LogDetailsSection(headerTitle: "User info")
             sections.append(userInfo)
 
-            userInfo.items = error.userInfo.flatMap({ (arg) -> LogDetailsItem? in
+            userInfo.items = error.userInfo.compactMap({ (arg) -> LogDetailsItem? in
                 #if swift(>=4.0)
                     let key = arg.key
                 #else

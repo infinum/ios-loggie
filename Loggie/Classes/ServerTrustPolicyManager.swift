@@ -61,7 +61,7 @@ extension ServerTrustPolicy {
 
     static func publicKeys(from certificatesData: [Data]) -> [SecKey] {
         let certificates = PinPublicKeys.certificates(from: certificatesData)
-        return certificates.flatMap({ (cert) -> SecKey? in
+        return certificates.compactMap({ (cert) -> SecKey? in
             guard let publicKey = PinPublicKeys.publicKey(for: cert) else {
                 preconditionFailure("Invalid public key")
             }
