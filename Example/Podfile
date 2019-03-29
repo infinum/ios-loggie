@@ -1,12 +1,10 @@
-use_frameworks!
 platform :ios, '8.0'
+use_frameworks!
 
 target 'Loggie_Example' do
   pod 'Loggie', :path => '../'
+end
 
-  target 'Loggie_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'Loggie_Tests' do
+  pod 'Loggie', :path => '../'
 end
