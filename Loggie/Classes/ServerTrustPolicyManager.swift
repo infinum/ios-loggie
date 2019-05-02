@@ -15,7 +15,7 @@ public protocol ServerTrustPolicy: NSObjectProtocol {
 
 public extension ServerTrustPolicy {
 
-    public func trustIsValid(_ trust: SecTrust) -> Bool {
+    func trustIsValid(_ trust: SecTrust) -> Bool {
         var isValid = false
 
         var result = SecTrustResultType.invalid
