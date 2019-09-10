@@ -14,7 +14,8 @@ extension Data {
         guard let jsonObject = try? JSONSerialization.jsonObject(with: self, options: .allowFragments) else {
             return nil
         }
-        guard let formattedBody = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+        guard JSONSerialization.isValidJSONObject(jsonObject),
+            let formattedBody = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
             return nil
         }
         return String(data: formattedBody, encoding: .utf8)
