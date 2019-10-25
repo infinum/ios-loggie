@@ -11,10 +11,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Loggie/Classes/**/*.{swift}'
-  s.resources = [
-    'Loggie/Classes/**/*.{storyboard}',
-    'Loggie/Classes/**/*.{xib}'
-  ]
+  s.resource_bundles = {'LoggieResources' => ['Loggie/Classes/**/*.{storyboard,xib}']}
+  s.resources = ['Loggie/Classes/**/*.{xib,storyboard}']
 
   s.frameworks = 'UIKit', 'Security'
 end
