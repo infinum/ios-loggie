@@ -137,11 +137,15 @@ extension LogDetailsViewController: UITableViewDelegate {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(copyAction(for: indexPath))
         actionSheet.addAction(shareAction(for: indexPath))
+        actionSheet.addAction(cancelAction(for: indexPath))
 
         present(actionSheet, animated: true)
     }
+}
 
-    private func copyAction(for indexPath: IndexPath) -> UIAlertAction {
+private extension LogDetailsViewController {
+
+    func copyAction(for indexPath: IndexPath) -> UIAlertAction {
         return UIAlertAction(title: "Copy value", style: .default) { [weak self] (action) in
             guard let self = self else { return }
 
@@ -161,7 +165,7 @@ extension LogDetailsViewController: UITableViewDelegate {
         }
     }
 
-    private func shareAction(for indexPath: IndexPath) -> UIAlertAction {
+    func shareAction(for indexPath: IndexPath) -> UIAlertAction {
         return UIAlertAction(title: "Share value", style: .default) { [weak self] (action) in
             guard let self = self else { return }
 
@@ -184,5 +188,11 @@ extension LogDetailsViewController: UITableViewDelegate {
 
             self.tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+
+    func cancelAction(for indexPath: IndexPath) -> UIAlertAction {
+        return UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] (action) in
+            self?.tableView.deselectRow(at: indexPath, animated: true)
+        })
     }
 }
