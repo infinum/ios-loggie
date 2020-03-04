@@ -42,13 +42,9 @@ public class LoggieManager: NSObject {
 
     public private(set) var logs = [Log]() {
         didSet {
-            DispatchQueue.main.async {
-                NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
-            }
+            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: logs)
         }
     }
-    // Queue used for synchronous access to logs array
-    private let logQueue = DispatchQueue(label: "com.infinum.loggie.log-queue")
 
     private override init() {}
 
@@ -66,7 +62,7 @@ public class LoggieManager: NSObject {
 
     func add(_ log: Log) {
         // Avoid changing logs array from multiple threads (race condition)
-        logQueue.async { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             self?.logs.append(log)
         }
     }
