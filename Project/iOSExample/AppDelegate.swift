@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iOS Example
+//  iOSExample
 //
 //  Created by Mario Galijot on 23/10/2020.
 //

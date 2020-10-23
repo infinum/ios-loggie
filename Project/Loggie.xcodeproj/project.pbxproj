@@ -10,29 +10,55 @@
 		60345CEE254306DB00E24BD4 /* Loggie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60345CE4254306DB00E24BD4 /* Loggie.framework */; };
 		60345CF3254306DB00E24BD4 /* LoggieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345CF2254306DB00E24BD4 /* LoggieTests.swift */; };
 		60345CF5254306DB00E24BD4 /* Loggie.h in Headers */ = {isa = PBXBuildFile; fileRef = 60345CE7254306DB00E24BD4 /* Loggie.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60345D2B2543088500E24BD4 /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D112543088500E24BD4 /* LoggieManager.swift */; };
-		60345D2C2543088500E24BD4 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D132543088500E24BD4 /* DataDecoder.swift */; };
-		60345D2D2543088500E24BD4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D142543088500E24BD4 /* Log.swift */; };
-		60345D2E2543088500E24BD4 /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D162543088500E24BD4 /* LogListTableViewCell.swift */; };
-		60345D2F2543088500E24BD4 /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60345D172543088500E24BD4 /* LogListTableViewCell.xib */; };
-		60345D302543088500E24BD4 /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D182543088500E24BD4 /* LogListTableViewController.swift */; };
-		60345D312543088500E24BD4 /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D1B2543088500E24BD4 /* LogDetailsTextTableViewCell.swift */; };
-		60345D322543088500E24BD4 /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D1C2543088500E24BD4 /* LogDetailsImageTableViewCell.swift */; };
-		60345D332543088500E24BD4 /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D1D2543088500E24BD4 /* LogDetailsTableViewCell.swift */; };
-		60345D342543088500E24BD4 /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D1E2543088500E24BD4 /* Log+ResponseDetails.swift */; };
-		60345D352543088500E24BD4 /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60345D1F2543088500E24BD4 /* LogDetails.storyboard */; };
-		60345D362543088500E24BD4 /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D202543088500E24BD4 /* Log+OverviewDetails.swift */; };
-		60345D372543088500E24BD4 /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D212543088500E24BD4 /* LogDetailsViewController.swift */; };
-		60345D382543088500E24BD4 /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D222543088500E24BD4 /* LogDetailsSection.swift */; };
-		60345D392543088500E24BD4 /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D232543088500E24BD4 /* Log+RequestDetails.swift */; };
-		60345D3B2543088500E24BD4 /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D262543088500E24BD4 /* URLSessionConfiguration+Loggie.swift */; };
-		60345D3C2543088500E24BD4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D272543088500E24BD4 /* BundleExtensions.swift */; };
-		60345D3D2543088500E24BD4 /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D282543088500E24BD4 /* Data+FormattedJsonString.swift */; };
-		60345D3E2543088500E24BD4 /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D292543088500E24BD4 /* URLRequest+Data.swift */; };
-		60345D3F2543088500E24BD4 /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */; };
 		6073DF8E254343FB00AD06DA /* LoggieAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */; };
 		6073DF93254343FB00AD06DA /* LoggieAlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DF92254343FB00AD06DA /* LoggieAlamofireTests.swift */; };
 		6073DF95254343FB00AD06DA /* LoggieAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073DF87254343FB00AD06DA /* LoggieAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6073DFC72543451D00AD06DA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAD2543451D00AD06DA /* LoggieManager.swift */; };
+		6073DFC82543451D00AD06DA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAD2543451D00AD06DA /* LoggieManager.swift */; };
+		6073DFC92543451D00AD06DA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAF2543451D00AD06DA /* DataDecoder.swift */; };
+		6073DFCA2543451D00AD06DA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAF2543451D00AD06DA /* DataDecoder.swift */; };
+		6073DFCB2543451D00AD06DA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB02543451D00AD06DA /* Log.swift */; };
+		6073DFCC2543451D00AD06DA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB02543451D00AD06DA /* Log.swift */; };
+		6073DFCD2543451D00AD06DA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */; };
+		6073DFCE2543451D00AD06DA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */; };
+		6073DFCF2543451D00AD06DA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */; };
+		6073DFD02543451D00AD06DA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */; };
+		6073DFD12543451D00AD06DA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB42543451D00AD06DA /* LogListTableViewController.swift */; };
+		6073DFD22543451D00AD06DA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB42543451D00AD06DA /* LogListTableViewController.swift */; };
+		6073DFD32543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */; };
+		6073DFD42543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */; };
+		6073DFD52543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */; };
+		6073DFD62543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */; };
+		6073DFD72543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */; };
+		6073DFD82543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */; };
+		6073DFD92543451D00AD06DA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */; };
+		6073DFDA2543451D00AD06DA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */; };
+		6073DFDB2543451D00AD06DA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFBB2543451D00AD06DA /* LogDetails.storyboard */; };
+		6073DFDC2543451D00AD06DA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFBB2543451D00AD06DA /* LogDetails.storyboard */; };
+		6073DFDD2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */; };
+		6073DFDE2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */; };
+		6073DFDF2543451D00AD06DA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */; };
+		6073DFE02543451D00AD06DA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */; };
+		6073DFE12543451D00AD06DA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */; };
+		6073DFE22543451D00AD06DA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */; };
+		6073DFE32543451D00AD06DA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */; };
+		6073DFE42543451D00AD06DA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */; };
+		6073DFE52543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */; };
+		6073DFE62543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */; };
+		6073DFE72543451D00AD06DA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC22543451D00AD06DA /* BundleExtensions.swift */; };
+		6073DFE82543451D00AD06DA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC22543451D00AD06DA /* BundleExtensions.swift */; };
+		6073DFE92543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */; };
+		6073DFEA2543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */; };
+		6073DFEB2543451D00AD06DA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC42543451D00AD06DA /* URLRequest+Data.swift */; };
+		6073DFEC2543451D00AD06DA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC42543451D00AD06DA /* URLRequest+Data.swift */; };
+		6073DFED2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */; };
+		6073DFEE2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */; };
+		6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFF92543463200AD06DA /* AppDelegate.swift */; };
+		6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFFB2543463200AD06DA /* SceneDelegate.swift */; };
+		6073DFFE2543463200AD06DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFFD2543463200AD06DA /* ViewController.swift */; };
+		6073E0012543463200AD06DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFFF2543463200AD06DA /* Main.storyboard */; };
+		6073E0032543463300AD06DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0022543463300AD06DA /* Assets.xcassets */; };
+		6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0042543463300AD06DA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,32 +85,40 @@
 		60345CED254306DB00E24BD4 /* LoggieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60345CF2254306DB00E24BD4 /* LoggieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggieTests.swift; sourceTree = "<group>"; };
 		60345CF4254306DB00E24BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60345D112543088500E24BD4 /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
-		60345D132543088500E24BD4 /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
-		60345D142543088500E24BD4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		60345D162543088500E24BD4 /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
-		60345D172543088500E24BD4 /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
-		60345D182543088500E24BD4 /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
-		60345D1B2543088500E24BD4 /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
-		60345D1C2543088500E24BD4 /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
-		60345D1D2543088500E24BD4 /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		60345D1E2543088500E24BD4 /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
-		60345D1F2543088500E24BD4 /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
-		60345D202543088500E24BD4 /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
-		60345D212543088500E24BD4 /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
-		60345D222543088500E24BD4 /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
-		60345D232543088500E24BD4 /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		60345D262543088500E24BD4 /* URLSessionConfiguration+Loggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Loggie.swift"; sourceTree = "<group>"; };
-		60345D272543088500E24BD4 /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		60345D282543088500E24BD4 /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
-		60345D292543088500E24BD4 /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
-		60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
 		6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6073DF87254343FB00AD06DA /* LoggieAlamofire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggieAlamofire.h; sourceTree = "<group>"; };
 		6073DF88254343FB00AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggieAlamofireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6073DF92254343FB00AD06DA /* LoggieAlamofireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggieAlamofireTests.swift; sourceTree = "<group>"; };
 		6073DF94254343FB00AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6073DFAD2543451D00AD06DA /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
+		6073DFAF2543451D00AD06DA /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		6073DFB02543451D00AD06DA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
+		6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
+		6073DFB42543451D00AD06DA /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
+		6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
+		6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
+		6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
+		6073DFBB2543451D00AD06DA /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
+		6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
+		6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
+		6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
+		6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
+		6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Loggie.swift"; sourceTree = "<group>"; };
+		6073DFC22543451D00AD06DA /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
+		6073DFC42543451D00AD06DA /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
+		6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
+		6073DFF72543463200AD06DA /* iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6073DFF92543463200AD06DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6073DFFB2543463200AD06DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6073DFFD2543463200AD06DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6073E0002543463200AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6073E0022543463300AD06DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6073E0052543463300AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6073E0072543463300AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +152,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6073DFF42543463200AD06DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,6 +169,7 @@
 				60345CF1254306DB00E24BD4 /* LoggieTests */,
 				6073DF86254343FB00AD06DA /* LoggieAlamofire */,
 				6073DF91254343FB00AD06DA /* LoggieAlamofireTests */,
+				6073DFF82543463200AD06DA /* iOSExample */,
 				60345CE5254306DB00E24BD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +181,7 @@
 				60345CED254306DB00E24BD4 /* LoggieTests.xctest */,
 				6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */,
 				6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */,
+				6073DFF72543463200AD06DA /* iOSExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +189,7 @@
 		60345CE6254306DB00E24BD4 /* Loggie */ = {
 			isa = PBXGroup;
 			children = (
-				60345D102543088500E24BD4 /* Source */,
+				6073DFAC2543451D00AD06DA /* Source */,
 				60345CE7254306DB00E24BD4 /* Loggie.h */,
 				60345CE8254306DB00E24BD4 /* Info.plist */,
 			);
@@ -160,81 +203,6 @@
 				60345CF4254306DB00E24BD4 /* Info.plist */,
 			);
 			path = LoggieTests;
-			sourceTree = "<group>";
-		};
-		60345D102543088500E24BD4 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				60345D122543088500E24BD4 /* Core */,
-				60345DBC25431B1000E24BD4 /* URLLoadingSystem */,
-				60345D112543088500E24BD4 /* LoggieManager.swift */,
-				60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */,
-			);
-			path = Source;
-			sourceTree = SOURCE_ROOT;
-		};
-		60345D122543088500E24BD4 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				60345D132543088500E24BD4 /* DataDecoder.swift */,
-				60345D142543088500E24BD4 /* Log.swift */,
-				60345D152543088500E24BD4 /* LogList */,
-				60345D192543088500E24BD4 /* LogDetails */,
-				60345D252543088500E24BD4 /* Utility */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		60345D152543088500E24BD4 /* LogList */ = {
-			isa = PBXGroup;
-			children = (
-				60345D162543088500E24BD4 /* LogListTableViewCell.swift */,
-				60345D172543088500E24BD4 /* LogListTableViewCell.xib */,
-				60345D182543088500E24BD4 /* LogListTableViewController.swift */,
-			);
-			path = LogList;
-			sourceTree = "<group>";
-		};
-		60345D192543088500E24BD4 /* LogDetails */ = {
-			isa = PBXGroup;
-			children = (
-				60345D1A2543088500E24BD4 /* Cells */,
-				60345D1E2543088500E24BD4 /* Log+ResponseDetails.swift */,
-				60345D1F2543088500E24BD4 /* LogDetails.storyboard */,
-				60345D202543088500E24BD4 /* Log+OverviewDetails.swift */,
-				60345D212543088500E24BD4 /* LogDetailsViewController.swift */,
-				60345D222543088500E24BD4 /* LogDetailsSection.swift */,
-				60345D232543088500E24BD4 /* Log+RequestDetails.swift */,
-			);
-			path = LogDetails;
-			sourceTree = "<group>";
-		};
-		60345D1A2543088500E24BD4 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				60345D1B2543088500E24BD4 /* LogDetailsTextTableViewCell.swift */,
-				60345D1C2543088500E24BD4 /* LogDetailsImageTableViewCell.swift */,
-				60345D1D2543088500E24BD4 /* LogDetailsTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		60345D252543088500E24BD4 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				60345D262543088500E24BD4 /* URLSessionConfiguration+Loggie.swift */,
-				60345D272543088500E24BD4 /* BundleExtensions.swift */,
-				60345D282543088500E24BD4 /* Data+FormattedJsonString.swift */,
-				60345D292543088500E24BD4 /* URLRequest+Data.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		60345DBC25431B1000E24BD4 /* URLLoadingSystem */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = URLLoadingSystem;
 			sourceTree = "<group>";
 		};
 		6073DF86254343FB00AD06DA /* LoggieAlamofire */ = {
@@ -253,6 +221,96 @@
 				6073DF94254343FB00AD06DA /* Info.plist */,
 			);
 			path = LoggieAlamofireTests;
+			sourceTree = "<group>";
+		};
+		6073DFAC2543451D00AD06DA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFAD2543451D00AD06DA /* LoggieManager.swift */,
+				6073DFAE2543451D00AD06DA /* Core */,
+				6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */,
+				6073DFC62543451D00AD06DA /* URLLoadingSystem */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		6073DFAE2543451D00AD06DA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFAF2543451D00AD06DA /* DataDecoder.swift */,
+				6073DFB02543451D00AD06DA /* Log.swift */,
+				6073DFB12543451D00AD06DA /* LogList */,
+				6073DFB52543451D00AD06DA /* LogDetails */,
+				6073DFC02543451D00AD06DA /* Utility */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6073DFB12543451D00AD06DA /* LogList */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */,
+				6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */,
+				6073DFB42543451D00AD06DA /* LogListTableViewController.swift */,
+			);
+			path = LogList;
+			sourceTree = "<group>";
+		};
+		6073DFB52543451D00AD06DA /* LogDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFB62543451D00AD06DA /* Cells */,
+				6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */,
+				6073DFBB2543451D00AD06DA /* LogDetails.storyboard */,
+				6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */,
+				6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */,
+				6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */,
+				6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */,
+			);
+			path = LogDetails;
+			sourceTree = "<group>";
+		};
+		6073DFB62543451D00AD06DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */,
+				6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */,
+				6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6073DFC02543451D00AD06DA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */,
+				6073DFC22543451D00AD06DA /* BundleExtensions.swift */,
+				6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */,
+				6073DFC42543451D00AD06DA /* URLRequest+Data.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6073DFC62543451D00AD06DA /* URLLoadingSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = URLLoadingSystem;
+			sourceTree = "<group>";
+		};
+		6073DFF82543463200AD06DA /* iOSExample */ = {
+			isa = PBXGroup;
+			children = (
+				6073DFF92543463200AD06DA /* AppDelegate.swift */,
+				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
+				6073DFFD2543463200AD06DA /* ViewController.swift */,
+				6073DFFF2543463200AD06DA /* Main.storyboard */,
+				6073E0022543463300AD06DA /* Assets.xcassets */,
+				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
+				6073E0072543463300AD06DA /* Info.plist */,
+			);
+			path = iOSExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +407,23 @@
 			productReference = 6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6073DFF62543463200AD06DA /* iOSExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "iOSExample" */;
+			buildPhases = (
+				6073DFF32543463200AD06DA /* Sources */,
+				6073DFF42543463200AD06DA /* Frameworks */,
+				6073DFF52543463200AD06DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSExample;
+			productName = iOSExample;
+			productReference = 6073DFF72543463200AD06DA /* iOSExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -370,6 +445,9 @@
 					6073DF8C254343FB00AD06DA = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
+					6073DFF62543463200AD06DA = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 60345CDE254306DB00E24BD4 /* Build configuration list for PBXProject "Loggie" */;
@@ -389,6 +467,7 @@
 				60345CEC254306DB00E24BD4 /* LoggieTests */,
 				6073DF84254343FB00AD06DA /* LoggieAlamofire */,
 				6073DF8C254343FB00AD06DA /* LoggieAlamofireTests */,
+				6073DFF62543463200AD06DA /* iOSExample */,
 			);
 		};
 /* End PBXProject section */
@@ -398,8 +477,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60345D352543088500E24BD4 /* LogDetails.storyboard in Resources */,
-				60345D2F2543088500E24BD4 /* LogListTableViewCell.xib in Resources */,
+				6073DFDB2543451D00AD06DA /* LogDetails.storyboard in Resources */,
+				6073DFCF2543451D00AD06DA /* LogListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +493,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6073DFDC2543451D00AD06DA /* LogDetails.storyboard in Resources */,
+				6073DFD02543451D00AD06DA /* LogListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +505,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6073DFF52543463200AD06DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */,
+				6073E0032543463300AD06DA /* Assets.xcassets in Resources */,
+				6073E0012543463200AD06DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -431,24 +522,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60345D2C2543088500E24BD4 /* DataDecoder.swift in Sources */,
-				60345D2B2543088500E24BD4 /* LoggieManager.swift in Sources */,
-				60345D322543088500E24BD4 /* LogDetailsImageTableViewCell.swift in Sources */,
-				60345D3E2543088500E24BD4 /* URLRequest+Data.swift in Sources */,
-				60345D332543088500E24BD4 /* LogDetailsTableViewCell.swift in Sources */,
-				60345D3B2543088500E24BD4 /* URLSessionConfiguration+Loggie.swift in Sources */,
-				60345D2E2543088500E24BD4 /* LogListTableViewCell.swift in Sources */,
-				60345D372543088500E24BD4 /* LogDetailsViewController.swift in Sources */,
-				60345D3F2543088500E24BD4 /* LoggieURLProtocol.swift in Sources */,
-				60345D3D2543088500E24BD4 /* Data+FormattedJsonString.swift in Sources */,
-				60345D2D2543088500E24BD4 /* Log.swift in Sources */,
-				60345D382543088500E24BD4 /* LogDetailsSection.swift in Sources */,
-				60345D312543088500E24BD4 /* LogDetailsTextTableViewCell.swift in Sources */,
-				60345D3C2543088500E24BD4 /* BundleExtensions.swift in Sources */,
-				60345D302543088500E24BD4 /* LogListTableViewController.swift in Sources */,
-				60345D362543088500E24BD4 /* Log+OverviewDetails.swift in Sources */,
-				60345D342543088500E24BD4 /* Log+ResponseDetails.swift in Sources */,
-				60345D392543088500E24BD4 /* Log+RequestDetails.swift in Sources */,
+				6073DFC92543451D00AD06DA /* DataDecoder.swift in Sources */,
+				6073DFC72543451D00AD06DA /* LoggieManager.swift in Sources */,
+				6073DFED2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */,
+				6073DFD52543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */,
+				6073DFD72543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */,
+				6073DFCD2543451D00AD06DA /* LogListTableViewCell.swift in Sources */,
+				6073DFE92543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */,
+				6073DFDF2543451D00AD06DA /* LogDetailsViewController.swift in Sources */,
+				6073DFE52543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */,
+				6073DFEB2543451D00AD06DA /* URLRequest+Data.swift in Sources */,
+				6073DFCB2543451D00AD06DA /* Log.swift in Sources */,
+				6073DFE12543451D00AD06DA /* LogDetailsSection.swift in Sources */,
+				6073DFD32543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */,
+				6073DFD12543451D00AD06DA /* LogListTableViewController.swift in Sources */,
+				6073DFDD2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */,
+				6073DFD92543451D00AD06DA /* Log+ResponseDetails.swift in Sources */,
+				6073DFE32543451D00AD06DA /* Log+RequestDetails.swift in Sources */,
+				6073DFE72543451D00AD06DA /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +555,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6073DFCA2543451D00AD06DA /* DataDecoder.swift in Sources */,
+				6073DFC82543451D00AD06DA /* LoggieManager.swift in Sources */,
+				6073DFEE2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */,
+				6073DFD62543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */,
+				6073DFD82543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */,
+				6073DFCE2543451D00AD06DA /* LogListTableViewCell.swift in Sources */,
+				6073DFEA2543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */,
+				6073DFE02543451D00AD06DA /* LogDetailsViewController.swift in Sources */,
+				6073DFE62543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */,
+				6073DFEC2543451D00AD06DA /* URLRequest+Data.swift in Sources */,
+				6073DFCC2543451D00AD06DA /* Log.swift in Sources */,
+				6073DFE22543451D00AD06DA /* LogDetailsSection.swift in Sources */,
+				6073DFD42543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */,
+				6073DFD22543451D00AD06DA /* LogListTableViewController.swift in Sources */,
+				6073DFDE2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */,
+				6073DFDA2543451D00AD06DA /* Log+ResponseDetails.swift in Sources */,
+				6073DFE42543451D00AD06DA /* Log+RequestDetails.swift in Sources */,
+				6073DFE82543451D00AD06DA /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +581,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6073DF93254343FB00AD06DA /* LoggieAlamofireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6073DFF32543463200AD06DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6073DFFE2543463200AD06DA /* ViewController.swift in Sources */,
+				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
+				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +608,25 @@
 			targetProxy = 6073DF8F254343FB00AD06DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6073DFFF2543463200AD06DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6073E0002543463200AD06DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6073E0042543463300AD06DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6073E0052543463300AD06DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		60345CF6254306DB00E24BD4 /* Debug */ = {
@@ -629,7 +767,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.Loggie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.loggie;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -653,7 +791,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.Loggie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.loggie;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -714,7 +852,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieAlamofire;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-alamofire";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -739,7 +877,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieAlamofire;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-alamofire";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -750,6 +888,7 @@
 		6073DF98254343FC00AD06DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoggieAlamofireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -767,6 +906,7 @@
 		6073DF99254343FC00AD06DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoggieAlamofireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -775,6 +915,42 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieAlamofireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6073E0092543463300AD06DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-ios-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6073E00A2543463300AD06DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-ios-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,6 +1001,15 @@
 			buildConfigurations = (
 				6073DF98254343FC00AD06DA /* Debug */,
 				6073DF99254343FC00AD06DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "iOSExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6073E0092543463300AD06DA /* Debug */,
+				6073E00A2543463300AD06DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
