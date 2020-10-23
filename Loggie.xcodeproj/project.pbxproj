@@ -30,7 +30,6 @@
 		60345D3D2543088500E24BD4 /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D282543088500E24BD4 /* Data+FormattedJsonString.swift */; };
 		60345D3E2543088500E24BD4 /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D292543088500E24BD4 /* URLRequest+Data.swift */; };
 		60345D3F2543088500E24BD4 /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */; };
-		60345DB72543143D00E24BD4 /* ServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345DB62543143D00E24BD4 /* ServerTrustPolicyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		60345D282543088500E24BD4 /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
 		60345D292543088500E24BD4 /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
 		60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
-		60345DB62543143D00E24BD4 /* ServerTrustPolicyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +130,10 @@
 		60345D102543088500E24BD4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				60345D112543088500E24BD4 /* LoggieManager.swift */,
 				60345D122543088500E24BD4 /* Core */,
+				60345DBC25431B1000E24BD4 /* URLLoadingSystem */,
+				60345D112543088500E24BD4 /* LoggieManager.swift */,
 				60345D2A2543088500E24BD4 /* LoggieURLProtocol.swift */,
-				60345DB62543143D00E24BD4 /* ServerTrustPolicyManager.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -195,6 +193,13 @@
 				60345D292543088500E24BD4 /* URLRequest+Data.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		60345DBC25431B1000E24BD4 /* URLLoadingSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = URLLoadingSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +319,6 @@
 				60345D332543088500E24BD4 /* LogDetailsTableViewCell.swift in Sources */,
 				60345D3B2543088500E24BD4 /* URLSessionConfiguration+Loggie.swift in Sources */,
 				60345D2E2543088500E24BD4 /* LogListTableViewCell.swift in Sources */,
-				60345DB72543143D00E24BD4 /* ServerTrustPolicyManager.swift in Sources */,
 				60345D372543088500E24BD4 /* LogDetailsViewController.swift in Sources */,
 				60345D3F2543088500E24BD4 /* LoggieURLProtocol.swift in Sources */,
 				60345D3D2543088500E24BD4 /* Data+FormattedJsonString.swift in Sources */,

@@ -9,62 +9,78 @@
 import UIKit
 
 extension Notification.Name {
-    static let LoggieDidUpdateLogs = Notification.Name("co.infinum.loggie-did-update-logs")
+    static let LoggieDidUpdateLogs = Notification.Name("com.infinum.loggie-did-update-logs")
 }
 
-public class LoggieAuthentication: NSObject {
-    public let username: String
-    public let password: String
-
-    public init(username: String, password: String) {
-        self.username = username
-        self.password = password
-    }
+@objc
+public protocol LoggieDelegate {
+    
+    /// Asks a delegate to provide a `URLRequest`-specific `URLSession`,
+    /// using which a `Loggie` will be able to perform a `URLSessionTask`.
+    ///
+    /// Most of the apps tipically manage networking logic in one class, such as `Alamofire`'s `SessionManager`,
+    /// which is ideal place for implementing this protocol.
+    /// If you don't conform to this protocol & implement this method, `Loggie` will create (& retain) it's own `URLSession`,
+    /// instantiated with a `URLSessionConfiguration.default`.
+    ///
+    /// - Parameters:
+    ///   - loggie: An instance of a `LoggieManager` that is asking for a `URLSession` object.
+    ///   - urlRequest: `URLRequest` for which which a `Loggie` needs a `URLSession` which will execute it.
+    func loggie(_ loggie: LoggieManager, urlSessionForURLRequest urlRequest: URLRequest) -> URLSession
 }
 
-@objc public protocol LoggieClientCertificateDelegate: class {
-    func clientCertificate(forChallenge challenge: URLAuthenticationChallenge, inSession session: URLSession) -> URLCredential?
-}
-
-public typealias AuthenticationBlock = (() -> (LoggieAuthentication?))
-
-public class LoggieManager: NSObject {
-
+@objcMembers
+public final class LoggieManager: NSObject {
+    
+    // MARK: - Properties
+    
+    /// A **serial** queue, on which Loggie is appending new logs & posting a notification that `logs` have changed.
+    private let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
+    
+    /// An instance of `URLSession` which Loggie is using if there's no delegate to provide his own session.
+    private lazy var defaultURLSession: URLSession = .init(configuration: .default)
+    
+    /// A delegate used to provide a `URLSession` instance, using which Loggie will perform data requests.
+    ///
+    /// You should assign this delegate as soon as the app starts, so Loggie could use your, instead of Loggie's default, `URLSession` instance.
+    public weak var delegate: LoggieDelegate?
+    
+    /// An array containing all `Log`s being performed by Loggie since the call to
+    public private(set) var logs: [Log] = []
+    
     @objc(sharedManager)
     public static let shared = LoggieManager()
-
-    @objc
-    public weak var clientCertificateDelegate: LoggieClientCertificateDelegate? = nil
     
-    @objc
-    public var serverTrustPolicyManager: ServerTrustPolicyManager? = nil
-    public var authentication: AuthenticationBlock? = nil
-
-    public private(set) var logs = [Log]() {
-        didSet {
-            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: logs)
-        }
-    }
-
-    private override init() {}
-
     @discardableResult
     @objc(showLogsFromViewController:filter:)
     public func showLogs(from viewController: UIViewController, filter: ((Log) -> Bool)? = nil) -> UINavigationController {
         let vc = LogListTableViewController()
         vc.filter = filter
-
+        
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
         viewController.present(navigationController, animated: true, completion: nil)
         return navigationController
     }
-
+    
     func add(_ log: Log) {
         // Avoid changing logs array from multiple threads (race condition)
-        DispatchQueue.main.async { [weak self] in
-            self?.logs.append(log)
+        logsHandlingQueue.async { [weak self] in
+            guard let self = self else { return }
+            self.logs.append(log)
+            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
         }
+    }
+    
+    /// Registers a `LoggieURLProtocol` as a class that's capable of performing `URLRequest`s.
+    public static func prepare() {
+        URLProtocol.registerClass(LoggieURLProtocol.self);
     }
 }
 
+extension LoggieManager {
+    
+    public func urlSessionFor(urlRequest: URLRequest) -> URLSession {
+        return delegate?.loggie(self, urlSessionForURLRequest: urlRequest) ?? defaultURLSession
+    }
+}
