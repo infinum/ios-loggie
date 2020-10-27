@@ -3,124 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60345CEE254306DB00E24BD4 /* Loggie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60345CE4254306DB00E24BD4 /* Loggie.framework */; };
-		60345CF3254306DB00E24BD4 /* LoggieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60345CF2254306DB00E24BD4 /* LoggieTests.swift */; };
-		60345CF5254306DB00E24BD4 /* Loggie.h in Headers */ = {isa = PBXBuildFile; fileRef = 60345CE7254306DB00E24BD4 /* Loggie.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6073DF8E254343FB00AD06DA /* LoggieAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */; };
-		6073DF93254343FB00AD06DA /* LoggieAlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DF92254343FB00AD06DA /* LoggieAlamofireTests.swift */; };
-		6073DF95254343FB00AD06DA /* LoggieAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073DF87254343FB00AD06DA /* LoggieAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6073DFC72543451D00AD06DA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAD2543451D00AD06DA /* LoggieManager.swift */; };
-		6073DFC82543451D00AD06DA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAD2543451D00AD06DA /* LoggieManager.swift */; };
-		6073DFC92543451D00AD06DA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAF2543451D00AD06DA /* DataDecoder.swift */; };
-		6073DFCA2543451D00AD06DA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFAF2543451D00AD06DA /* DataDecoder.swift */; };
-		6073DFCB2543451D00AD06DA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB02543451D00AD06DA /* Log.swift */; };
-		6073DFCC2543451D00AD06DA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB02543451D00AD06DA /* Log.swift */; };
-		6073DFCD2543451D00AD06DA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */; };
-		6073DFCE2543451D00AD06DA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */; };
-		6073DFCF2543451D00AD06DA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */; };
-		6073DFD02543451D00AD06DA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */; };
-		6073DFD12543451D00AD06DA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB42543451D00AD06DA /* LogListTableViewController.swift */; };
-		6073DFD22543451D00AD06DA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB42543451D00AD06DA /* LogListTableViewController.swift */; };
-		6073DFD32543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */; };
-		6073DFD42543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */; };
-		6073DFD52543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */; };
-		6073DFD62543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */; };
-		6073DFD72543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */; };
-		6073DFD82543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */; };
-		6073DFD92543451D00AD06DA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */; };
-		6073DFDA2543451D00AD06DA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */; };
-		6073DFDB2543451D00AD06DA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFBB2543451D00AD06DA /* LogDetails.storyboard */; };
-		6073DFDC2543451D00AD06DA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFBB2543451D00AD06DA /* LogDetails.storyboard */; };
-		6073DFDD2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */; };
-		6073DFDE2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */; };
-		6073DFDF2543451D00AD06DA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */; };
-		6073DFE02543451D00AD06DA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */; };
-		6073DFE12543451D00AD06DA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */; };
-		6073DFE22543451D00AD06DA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */; };
-		6073DFE32543451D00AD06DA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */; };
-		6073DFE42543451D00AD06DA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */; };
-		6073DFE52543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */; };
-		6073DFE62543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */; };
-		6073DFE72543451D00AD06DA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC22543451D00AD06DA /* BundleExtensions.swift */; };
-		6073DFE82543451D00AD06DA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC22543451D00AD06DA /* BundleExtensions.swift */; };
-		6073DFE92543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */; };
-		6073DFEA2543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */; };
-		6073DFEB2543451D00AD06DA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC42543451D00AD06DA /* URLRequest+Data.swift */; };
-		6073DFEC2543451D00AD06DA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC42543451D00AD06DA /* URLRequest+Data.swift */; };
-		6073DFED2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */; };
-		6073DFEE2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */; };
 		6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFF92543463200AD06DA /* AppDelegate.swift */; };
 		6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFFB2543463200AD06DA /* SceneDelegate.swift */; };
-		6073DFFE2543463200AD06DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073DFFD2543463200AD06DA /* ViewController.swift */; };
 		6073E0012543463200AD06DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFFF2543463200AD06DA /* Main.storyboard */; };
 		6073E0032543463300AD06DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0022543463300AD06DA /* Assets.xcassets */; };
 		6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0042543463300AD06DA /* LaunchScreen.storyboard */; };
+		60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */; };
+		60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */; };
+		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
 		DA370A5158AEC6A63FBAB2DD /* Pods_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */; };
-		FA11CECAE86BCA491027AB47 /* Pods_LoggieAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		60345CEF254306DB00E24BD4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60345CDB254306DB00E24BD4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 60345CE3254306DB00E24BD4;
-			remoteInfo = Loggie;
-		};
-		6073DF8F254343FB00AD06DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60345CDB254306DB00E24BD4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6073DF84254343FB00AD06DA;
-			remoteInfo = LoggieAlamofire;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		60345CE4254306DB00E24BD4 /* Loggie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loggie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60345CE7254306DB00E24BD4 /* Loggie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Loggie.h; sourceTree = "<group>"; };
-		60345CE8254306DB00E24BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60345CED254306DB00E24BD4 /* LoggieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		60345CF2254306DB00E24BD4 /* LoggieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggieTests.swift; sourceTree = "<group>"; };
-		60345CF4254306DB00E24BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6073DF87254343FB00AD06DA /* LoggieAlamofire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggieAlamofire.h; sourceTree = "<group>"; };
-		6073DF88254343FB00AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggieAlamofireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6073DF92254343FB00AD06DA /* LoggieAlamofireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggieAlamofireTests.swift; sourceTree = "<group>"; };
-		6073DF94254343FB00AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6073DFAD2543451D00AD06DA /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
-		6073DFAF2543451D00AD06DA /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
-		6073DFB02543451D00AD06DA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
-		6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
-		6073DFB42543451D00AD06DA /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
-		6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
-		6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
-		6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
-		6073DFBB2543451D00AD06DA /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
-		6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
-		6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
-		6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
-		6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Loggie.swift"; sourceTree = "<group>"; };
-		6073DFC22543451D00AD06DA /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
-		6073DFC42543451D00AD06DA /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
-		6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
 		6073DFF72543463200AD06DA /* iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6073DFF92543463200AD06DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6073DFFB2543463200AD06DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6073DFFD2543463200AD06DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6073E0002543463200AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6073E0022543463300AD06DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6073E0052543463300AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6073E0072543463300AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
+		60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
+		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
 		6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 		87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,37 +38,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		60345CE1254306DB00E24BD4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60345CEA254306DB00E24BD4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60345CEE254306DB00E24BD4 /* Loggie.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF82254343FB00AD06DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA11CECAE86BCA491027AB47 /* Pods_LoggieAlamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF8A254343FB00AD06DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DF8E254343FB00AD06DA /* LoggieAlamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6073DFF42543463200AD06DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,10 +61,6 @@
 		60345CDA254306DB00E24BD4 = {
 			isa = PBXGroup;
 			children = (
-				60345CE6254306DB00E24BD4 /* Loggie */,
-				60345CF1254306DB00E24BD4 /* LoggieTests */,
-				6073DF86254343FB00AD06DA /* LoggieAlamofire */,
-				6073DF91254343FB00AD06DA /* LoggieAlamofireTests */,
 				6073DFF82543463200AD06DA /* iOSExample */,
 				60345CE5254306DB00E24BD4 /* Products */,
 				6F242830E1C2DF382D8E5535 /* Pods */,
@@ -198,126 +71,9 @@
 		60345CE5254306DB00E24BD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60345CE4254306DB00E24BD4 /* Loggie.framework */,
-				60345CED254306DB00E24BD4 /* LoggieTests.xctest */,
-				6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */,
-				6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */,
 				6073DFF72543463200AD06DA /* iOSExample.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		60345CE6254306DB00E24BD4 /* Loggie */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFAC2543451D00AD06DA /* Source */,
-				60345CE7254306DB00E24BD4 /* Loggie.h */,
-				60345CE8254306DB00E24BD4 /* Info.plist */,
-			);
-			path = Loggie;
-			sourceTree = "<group>";
-		};
-		60345CF1254306DB00E24BD4 /* LoggieTests */ = {
-			isa = PBXGroup;
-			children = (
-				60345CF2254306DB00E24BD4 /* LoggieTests.swift */,
-				60345CF4254306DB00E24BD4 /* Info.plist */,
-			);
-			path = LoggieTests;
-			sourceTree = "<group>";
-		};
-		6073DF86254343FB00AD06DA /* LoggieAlamofire */ = {
-			isa = PBXGroup;
-			children = (
-				6073DF87254343FB00AD06DA /* LoggieAlamofire.h */,
-				6073DF88254343FB00AD06DA /* Info.plist */,
-			);
-			path = LoggieAlamofire;
-			sourceTree = "<group>";
-		};
-		6073DF91254343FB00AD06DA /* LoggieAlamofireTests */ = {
-			isa = PBXGroup;
-			children = (
-				6073DF92254343FB00AD06DA /* LoggieAlamofireTests.swift */,
-				6073DF94254343FB00AD06DA /* Info.plist */,
-			);
-			path = LoggieAlamofireTests;
-			sourceTree = "<group>";
-		};
-		6073DFAC2543451D00AD06DA /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFAD2543451D00AD06DA /* LoggieManager.swift */,
-				6073DFAE2543451D00AD06DA /* Core */,
-				6073DFC52543451D00AD06DA /* LoggieURLProtocol.swift */,
-				6073DFC62543451D00AD06DA /* URLLoadingSystem */,
-			);
-			name = Source;
-			path = ../../Source;
-			sourceTree = "<group>";
-		};
-		6073DFAE2543451D00AD06DA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFAF2543451D00AD06DA /* DataDecoder.swift */,
-				6073DFB02543451D00AD06DA /* Log.swift */,
-				6073DFB12543451D00AD06DA /* LogList */,
-				6073DFB52543451D00AD06DA /* LogDetails */,
-				6073DFC02543451D00AD06DA /* Utility */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6073DFB12543451D00AD06DA /* LogList */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFB22543451D00AD06DA /* LogListTableViewCell.swift */,
-				6073DFB32543451D00AD06DA /* LogListTableViewCell.xib */,
-				6073DFB42543451D00AD06DA /* LogListTableViewController.swift */,
-			);
-			path = LogList;
-			sourceTree = "<group>";
-		};
-		6073DFB52543451D00AD06DA /* LogDetails */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFB62543451D00AD06DA /* Cells */,
-				6073DFBA2543451D00AD06DA /* Log+ResponseDetails.swift */,
-				6073DFBB2543451D00AD06DA /* LogDetails.storyboard */,
-				6073DFBC2543451D00AD06DA /* Log+OverviewDetails.swift */,
-				6073DFBD2543451D00AD06DA /* LogDetailsViewController.swift */,
-				6073DFBE2543451D00AD06DA /* LogDetailsSection.swift */,
-				6073DFBF2543451D00AD06DA /* Log+RequestDetails.swift */,
-			);
-			path = LogDetails;
-			sourceTree = "<group>";
-		};
-		6073DFB62543451D00AD06DA /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFB72543451D00AD06DA /* LogDetailsTextTableViewCell.swift */,
-				6073DFB82543451D00AD06DA /* LogDetailsImageTableViewCell.swift */,
-				6073DFB92543451D00AD06DA /* LogDetailsTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		6073DFC02543451D00AD06DA /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				6073DFC12543451D00AD06DA /* URLSessionConfiguration+Loggie.swift */,
-				6073DFC22543451D00AD06DA /* BundleExtensions.swift */,
-				6073DFC32543451D00AD06DA /* Data+FormattedJsonString.swift */,
-				6073DFC42543451D00AD06DA /* URLRequest+Data.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		6073DFC62543451D00AD06DA /* URLLoadingSystem */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = URLLoadingSystem;
 			sourceTree = "<group>";
 		};
 		6073DFF82543463200AD06DA /* iOSExample */ = {
@@ -325,7 +81,9 @@
 			children = (
 				6073DFF92543463200AD06DA /* AppDelegate.swift */,
 				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
-				6073DFFD2543463200AD06DA /* ViewController.swift */,
+				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
+				60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */,
+				60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */,
 				6073DFFF2543463200AD06DA /* Main.storyboard */,
 				6073E0022543463300AD06DA /* Assets.xcassets */,
 				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
@@ -342,105 +100,12 @@
 				BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */,
 				F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		60345CDF254306DB00E24BD4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60345CF5254306DB00E24BD4 /* Loggie.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF80254343FB00AD06DA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DF95254343FB00AD06DA /* LoggieAlamofire.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		60345CE3254306DB00E24BD4 /* Loggie */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60345CF8254306DB00E24BD4 /* Build configuration list for PBXNativeTarget "Loggie" */;
-			buildPhases = (
-				60345CDF254306DB00E24BD4 /* Headers */,
-				60345CE0254306DB00E24BD4 /* Sources */,
-				60345CE1254306DB00E24BD4 /* Frameworks */,
-				60345CE2254306DB00E24BD4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Loggie;
-			productName = Loggie;
-			productReference = 60345CE4254306DB00E24BD4 /* Loggie.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		60345CEC254306DB00E24BD4 /* LoggieTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60345CFB254306DB00E24BD4 /* Build configuration list for PBXNativeTarget "LoggieTests" */;
-			buildPhases = (
-				60345CE9254306DB00E24BD4 /* Sources */,
-				60345CEA254306DB00E24BD4 /* Frameworks */,
-				60345CEB254306DB00E24BD4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				60345CF0254306DB00E24BD4 /* PBXTargetDependency */,
-			);
-			name = LoggieTests;
-			productName = LoggieTests;
-			productReference = 60345CED254306DB00E24BD4 /* LoggieTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6073DF84254343FB00AD06DA /* LoggieAlamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6073DF9A254343FC00AD06DA /* Build configuration list for PBXNativeTarget "LoggieAlamofire" */;
-			buildPhases = (
-				2F1822626448203C6D5EA17B /* [CP] Check Pods Manifest.lock */,
-				6073DF80254343FB00AD06DA /* Headers */,
-				6073DF81254343FB00AD06DA /* Sources */,
-				6073DF82254343FB00AD06DA /* Frameworks */,
-				6073DF83254343FB00AD06DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LoggieAlamofire;
-			productName = LoggieAlamofire;
-			productReference = 6073DF85254343FB00AD06DA /* LoggieAlamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6073DF8C254343FB00AD06DA /* LoggieAlamofireTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6073DF9B254343FC00AD06DA /* Build configuration list for PBXNativeTarget "LoggieAlamofireTests" */;
-			buildPhases = (
-				6073DF89254343FB00AD06DA /* Sources */,
-				6073DF8A254343FB00AD06DA /* Frameworks */,
-				6073DF8B254343FB00AD06DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6073DF90254343FB00AD06DA /* PBXTargetDependency */,
-			);
-			name = LoggieAlamofireTests;
-			productName = LoggieAlamofireTests;
-			productReference = 6073DF8D254343FB00AD06DA /* LoggieAlamofireTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		6073DFF62543463200AD06DA /* iOSExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "iOSExample" */;
@@ -469,18 +134,6 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					60345CE3254306DB00E24BD4 = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
-					60345CEC254306DB00E24BD4 = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
-					6073DF84254343FB00AD06DA = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
-					6073DF8C254343FB00AD06DA = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
 					6073DFF62543463200AD06DA = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -499,48 +152,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60345CE3254306DB00E24BD4 /* Loggie */,
-				60345CEC254306DB00E24BD4 /* LoggieTests */,
-				6073DF84254343FB00AD06DA /* LoggieAlamofire */,
-				6073DF8C254343FB00AD06DA /* LoggieAlamofireTests */,
 				6073DFF62543463200AD06DA /* iOSExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		60345CE2254306DB00E24BD4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DFDB2543451D00AD06DA /* LogDetails.storyboard in Resources */,
-				6073DFCF2543451D00AD06DA /* LogListTableViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60345CEB254306DB00E24BD4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF83254343FB00AD06DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DFDC2543451D00AD06DA /* LogDetails.storyboard in Resources */,
-				6073DFD02543451D00AD06DA /* LogListTableViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF8B254343FB00AD06DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6073DFF52543463200AD06DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,28 +188,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSExample/Pods-iOSExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F1822626448203C6D5EA17B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LoggieAlamofire-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3D1C1145912648569D77E9FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,96 +213,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		60345CE0254306DB00E24BD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DFC92543451D00AD06DA /* DataDecoder.swift in Sources */,
-				6073DFC72543451D00AD06DA /* LoggieManager.swift in Sources */,
-				6073DFED2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */,
-				6073DFD52543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */,
-				6073DFD72543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */,
-				6073DFCD2543451D00AD06DA /* LogListTableViewCell.swift in Sources */,
-				6073DFE92543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */,
-				6073DFDF2543451D00AD06DA /* LogDetailsViewController.swift in Sources */,
-				6073DFE52543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */,
-				6073DFEB2543451D00AD06DA /* URLRequest+Data.swift in Sources */,
-				6073DFCB2543451D00AD06DA /* Log.swift in Sources */,
-				6073DFE12543451D00AD06DA /* LogDetailsSection.swift in Sources */,
-				6073DFD32543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */,
-				6073DFD12543451D00AD06DA /* LogListTableViewController.swift in Sources */,
-				6073DFDD2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */,
-				6073DFD92543451D00AD06DA /* Log+ResponseDetails.swift in Sources */,
-				6073DFE32543451D00AD06DA /* Log+RequestDetails.swift in Sources */,
-				6073DFE72543451D00AD06DA /* BundleExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60345CE9254306DB00E24BD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60345CF3254306DB00E24BD4 /* LoggieTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF81254343FB00AD06DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DFCA2543451D00AD06DA /* DataDecoder.swift in Sources */,
-				6073DFC82543451D00AD06DA /* LoggieManager.swift in Sources */,
-				6073DFEE2543451D00AD06DA /* LoggieURLProtocol.swift in Sources */,
-				6073DFD62543451D00AD06DA /* LogDetailsImageTableViewCell.swift in Sources */,
-				6073DFD82543451D00AD06DA /* LogDetailsTableViewCell.swift in Sources */,
-				6073DFCE2543451D00AD06DA /* LogListTableViewCell.swift in Sources */,
-				6073DFEA2543451D00AD06DA /* Data+FormattedJsonString.swift in Sources */,
-				6073DFE02543451D00AD06DA /* LogDetailsViewController.swift in Sources */,
-				6073DFE62543451D00AD06DA /* URLSessionConfiguration+Loggie.swift in Sources */,
-				6073DFEC2543451D00AD06DA /* URLRequest+Data.swift in Sources */,
-				6073DFCC2543451D00AD06DA /* Log.swift in Sources */,
-				6073DFE22543451D00AD06DA /* LogDetailsSection.swift in Sources */,
-				6073DFD42543451D00AD06DA /* LogDetailsTextTableViewCell.swift in Sources */,
-				6073DFD22543451D00AD06DA /* LogListTableViewController.swift in Sources */,
-				6073DFDE2543451D00AD06DA /* Log+OverviewDetails.swift in Sources */,
-				6073DFDA2543451D00AD06DA /* Log+ResponseDetails.swift in Sources */,
-				6073DFE42543451D00AD06DA /* Log+RequestDetails.swift in Sources */,
-				6073DFE82543451D00AD06DA /* BundleExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6073DF89254343FB00AD06DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6073DF93254343FB00AD06DA /* LoggieAlamofireTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6073DFF32543463200AD06DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6073DFFE2543463200AD06DA /* ViewController.swift in Sources */,
 				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
 				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
+				60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */,
+				60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */,
+				60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		60345CF0254306DB00E24BD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 60345CE3254306DB00E24BD4 /* Loggie */;
-			targetProxy = 60345CEF254306DB00E24BD4 /* PBXContainerItemProxy */;
-		};
-		6073DF90254343FB00AD06DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6073DF84254343FB00AD06DA /* LoggieAlamofire */;
-			targetProxy = 6073DF8F254343FB00AD06DA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6073DFFF2543463200AD06DA /* Main.storyboard */ = {
@@ -851,178 +369,6 @@
 			};
 			name = Release;
 		};
-		60345CF9254306DB00E24BD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Loggie/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.loggie;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		60345CFA254306DB00E24BD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Loggie/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.loggie;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		60345CFC254306DB00E24BD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoggieTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		60345CFD254306DB00E24BD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoggieTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6073DF96254343FC00AD06DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LoggieAlamofire/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-alamofire";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6073DF97254343FC00AD06DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC2FB108141BEA675011125B /* Pods-LoggieAlamofire.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LoggieAlamofire/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.infinum.loggie-alamofire";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6073DF98254343FC00AD06DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoggieAlamofireTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieAlamofireTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6073DF99254343FC00AD06DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoggieAlamofireTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.infinum.LoggieAlamofireTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		6073E0092543463300AD06DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */;
@@ -1069,42 +415,6 @@
 			buildConfigurations = (
 				60345CF6254306DB00E24BD4 /* Debug */,
 				60345CF7254306DB00E24BD4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		60345CF8254306DB00E24BD4 /* Build configuration list for PBXNativeTarget "Loggie" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60345CF9254306DB00E24BD4 /* Debug */,
-				60345CFA254306DB00E24BD4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		60345CFB254306DB00E24BD4 /* Build configuration list for PBXNativeTarget "LoggieTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60345CFC254306DB00E24BD4 /* Debug */,
-				60345CFD254306DB00E24BD4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6073DF9A254343FC00AD06DA /* Build configuration list for PBXNativeTarget "LoggieAlamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6073DF96254343FC00AD06DA /* Debug */,
-				6073DF97254343FC00AD06DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6073DF9B254343FC00AD06DA /* Build configuration list for PBXNativeTarget "LoggieAlamofireTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6073DF98254343FC00AD06DA /* Debug */,
-				6073DF99254343FC00AD06DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
