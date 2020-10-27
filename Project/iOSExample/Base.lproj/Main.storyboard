@@ -74,6 +74,9 @@
                                             <constraint firstAttribute="height" constant="44" id="ico-5z-Rcj"/>
                                         </constraints>
                                         <state key="normal" title="GET"/>
+                                        <connections>
+                                            <action selector="performGetRequestAction:" destination="VLw-tB-6Ay" eventType="touchUpInside" id="ZM2-18-Nra"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoK-n9-rNl">
                                         <rect key="frame" x="0.0" y="44" width="314" height="44"/>
@@ -81,6 +84,9 @@
                                             <constraint firstAttribute="height" constant="44" id="2Hn-7c-Hvb"/>
                                         </constraints>
                                         <state key="normal" title="POST"/>
+                                        <connections>
+                                            <action selector="performPostRequestAction:" destination="VLw-tB-6Ay" eventType="touchUpInside" id="vdZ-J6-pd2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

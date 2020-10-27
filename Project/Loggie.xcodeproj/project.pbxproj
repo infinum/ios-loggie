@@ -15,6 +15,27 @@
 		60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */; };
 		60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */; };
 		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
+		60C28F7A2548681D00979EBE /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F5F2548681D00979EBE /* DataDecoder.swift */; };
+		60C28F7B2548681D00979EBE /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F602548681D00979EBE /* LoggieManager.swift */; };
+		60C28F7C2548681D00979EBE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F612548681D00979EBE /* Log.swift */; };
+		60C28F7D2548681D00979EBE /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F632548681D00979EBE /* LogListTableViewCell.swift */; };
+		60C28F7E2548681D00979EBE /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C28F642548681D00979EBE /* LogListTableViewCell.xib */; };
+		60C28F7F2548681D00979EBE /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F652548681D00979EBE /* LogListTableViewController.swift */; };
+		60C28F802548681D00979EBE /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */; };
+		60C28F812548681D00979EBE /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */; };
+		60C28F822548681D00979EBE /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */; };
+		60C28F832548681D00979EBE /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */; };
+		60C28F842548681D00979EBE /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C28F6C2548681D00979EBE /* LogDetails.storyboard */; };
+		60C28F852548681D00979EBE /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */; };
+		60C28F862548681D00979EBE /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */; };
+		60C28F872548681D00979EBE /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6F2548681D00979EBE /* LogDetailsSection.swift */; };
+		60C28F882548681D00979EBE /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F702548681D00979EBE /* Log+RequestDetails.swift */; };
+		60C28F892548681D00979EBE /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */; };
+		60C28F8A2548681D00979EBE /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F732548681D00979EBE /* BundleExtensions.swift */; };
+		60C28F8B2548681D00979EBE /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */; };
+		60C28F8C2548681D00979EBE /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F752548681D00979EBE /* URLRequest+Data.swift */; };
+		60C28F8D2548681D00979EBE /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F772548681D00979EBE /* LoggieURLProtocol.swift */; };
+		60C28F8E2548681D00979EBE /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F792548681D00979EBE /* EventMonitor.swift */; };
 		DA370A5158AEC6A63FBAB2DD /* Pods_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +50,27 @@
 		60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
 		60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
+		60C28F5F2548681D00979EBE /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		60C28F602548681D00979EBE /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
+		60C28F612548681D00979EBE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		60C28F632548681D00979EBE /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
+		60C28F642548681D00979EBE /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
+		60C28F652548681D00979EBE /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
+		60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
+		60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
+		60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
+		60C28F6C2548681D00979EBE /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
+		60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
+		60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
+		60C28F6F2548681D00979EBE /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
+		60C28F702548681D00979EBE /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
+		60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Loggie.swift"; sourceTree = "<group>"; };
+		60C28F732548681D00979EBE /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
+		60C28F752548681D00979EBE /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
+		60C28F772548681D00979EBE /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
+		60C28F792548681D00979EBE /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 		87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +121,7 @@
 		6073DFF82543463200AD06DA /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				60C28F5D2548681D00979EBE /* Source */,
 				6073DFF92543463200AD06DA /* AppDelegate.swift */,
 				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
 				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
@@ -90,6 +133,91 @@
 				6073E0072543463300AD06DA /* Info.plist */,
 			);
 			path = iOSExample;
+			sourceTree = "<group>";
+		};
+		60C28F5D2548681D00979EBE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F5E2548681D00979EBE /* Core */,
+				60C28F762548681D00979EBE /* URLSession */,
+				60C28F782548681D00979EBE /* LoggieAlamofire */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		60C28F5E2548681D00979EBE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F5F2548681D00979EBE /* DataDecoder.swift */,
+				60C28F602548681D00979EBE /* LoggieManager.swift */,
+				60C28F612548681D00979EBE /* Log.swift */,
+				60C28F622548681D00979EBE /* LogList */,
+				60C28F662548681D00979EBE /* LogDetails */,
+				60C28F712548681D00979EBE /* Utility */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		60C28F622548681D00979EBE /* LogList */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F632548681D00979EBE /* LogListTableViewCell.swift */,
+				60C28F642548681D00979EBE /* LogListTableViewCell.xib */,
+				60C28F652548681D00979EBE /* LogListTableViewController.swift */,
+			);
+			path = LogList;
+			sourceTree = "<group>";
+		};
+		60C28F662548681D00979EBE /* LogDetails */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F672548681D00979EBE /* Cells */,
+				60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */,
+				60C28F6C2548681D00979EBE /* LogDetails.storyboard */,
+				60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */,
+				60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */,
+				60C28F6F2548681D00979EBE /* LogDetailsSection.swift */,
+				60C28F702548681D00979EBE /* Log+RequestDetails.swift */,
+			);
+			path = LogDetails;
+			sourceTree = "<group>";
+		};
+		60C28F672548681D00979EBE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */,
+				60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */,
+				60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		60C28F712548681D00979EBE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */,
+				60C28F732548681D00979EBE /* BundleExtensions.swift */,
+				60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */,
+				60C28F752548681D00979EBE /* URLRequest+Data.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		60C28F762548681D00979EBE /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F772548681D00979EBE /* LoggieURLProtocol.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		60C28F782548681D00979EBE /* LoggieAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				60C28F792548681D00979EBE /* EventMonitor.swift */,
+			);
+			path = LoggieAlamofire;
 			sourceTree = "<group>";
 		};
 		6F242830E1C2DF382D8E5535 /* Pods */ = {
@@ -162,8 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C28F842548681D00979EBE /* LogDetails.storyboard in Resources */,
 				6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */,
 				6073E0032543463300AD06DA /* Assets.xcassets in Resources */,
+				60C28F7E2548681D00979EBE /* LogListTableViewCell.xib in Resources */,
 				6073E0012543463200AD06DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,11 +347,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C28F862548681D00979EBE /* LogDetailsViewController.swift in Sources */,
+				60C28F8C2548681D00979EBE /* URLRequest+Data.swift in Sources */,
+				60C28F882548681D00979EBE /* Log+RequestDetails.swift in Sources */,
+				60C28F8B2548681D00979EBE /* Data+FormattedJsonString.swift in Sources */,
+				60C28F822548681D00979EBE /* LogDetailsTableViewCell.swift in Sources */,
+				60C28F7A2548681D00979EBE /* DataDecoder.swift in Sources */,
 				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
+				60C28F892548681D00979EBE /* URLSessionConfiguration+Loggie.swift in Sources */,
+				60C28F8D2548681D00979EBE /* LoggieURLProtocol.swift in Sources */,
 				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
 				60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */,
+				60C28F7F2548681D00979EBE /* LogListTableViewController.swift in Sources */,
+				60C28F832548681D00979EBE /* Log+ResponseDetails.swift in Sources */,
+				60C28F802548681D00979EBE /* LogDetailsTextTableViewCell.swift in Sources */,
+				60C28F852548681D00979EBE /* Log+OverviewDetails.swift in Sources */,
+				60C28F8E2548681D00979EBE /* EventMonitor.swift in Sources */,
+				60C28F7D2548681D00979EBE /* LogListTableViewCell.swift in Sources */,
+				60C28F872548681D00979EBE /* LogDetailsSection.swift in Sources */,
+				60C28F812548681D00979EBE /* LogDetailsImageTableViewCell.swift in Sources */,
 				60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */,
 				60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */,
+				60C28F7C2548681D00979EBE /* Log.swift in Sources */,
+				60C28F7B2548681D00979EBE /* LoggieManager.swift in Sources */,
+				60C28F8A2548681D00979EBE /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

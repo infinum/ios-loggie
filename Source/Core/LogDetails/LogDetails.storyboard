@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Log Details View Controller-->
         <scene sceneID="HWr-Or-o43">
             <objects>
-                <viewController storyboardIdentifier="LogDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="LAi-bH-RyO" customClass="LogDetailsViewController" customModule="Loggie" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="LAi-bH-RyO" customClass="LogDetailsViewController" customModule="iOSExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lye-UY-26Q"/>
                         <viewControllerLayoutGuide type="bottom" id="Y6A-gw-2PL"/>
@@ -21,9 +20,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="34" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-sI-Ciu">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subtitleCell" id="pz0-Kw-UyR" customClass="LogDetailsTableViewCell" customModule="Loggie">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subtitleCell" id="pz0-Kw-UyR" customClass="LogDetailsTableViewCell" customModule="iOSExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pz0-Kw-UyR" id="Naf-1S-lUt">
@@ -61,7 +60,7 @@
                                             <outlet property="titleLabel" destination="oSM-8y-rzI" id="WOk-9h-oqh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="60" id="7zp-Fl-Jrd" customClass="LogDetailsTextTableViewCell" customModule="Loggie">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="60" id="7zp-Fl-Jrd" customClass="LogDetailsTextTableViewCell" customModule="iOSExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="89.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zp-Fl-Jrd" id="wdq-h2-SiA">
@@ -87,7 +86,7 @@
                                             <outlet property="textView" destination="4zq-Gk-OCb" id="hJU-fa-UNg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="7eT-QO-Mxz" customClass="LogDetailsImageTableViewCell" customModule="Loggie">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="7eT-QO-Mxz" customClass="LogDetailsImageTableViewCell" customModule="iOSExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="149.5" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eT-QO-Mxz" id="N8Y-dt-yWL">
@@ -157,4 +156,9 @@
             <point key="canvasLocation" x="-10.4" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
