@@ -19,40 +19,20 @@ public final class EventMonitor: Alamofire.EventMonitor {
     private var activeLogs: [Log] = []
     
     public init() {}
-    
-    public func requestDidFinish(_ request: Request) {
+
+    public func request(_ request: Request, didGatherMetrics metrics: URLSessionTaskMetrics) {
+        /// we're handling only `DataRequest`s for now
+        guard let dataRequest = request as? DataRequest else { return }
         
-    }
-    
-    public func request(_ request: Request, didResumeTask task: URLSessionTask) {
-        // will check this later
-        guard let urlRequest = request.request else { return }
-        let log: Log = .init(request: urlRequest)
-        log.startTime = Date()
-        activeLogs.append(log)
-    }
-    
-    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        guard
-            let urlRequest = task.currentRequest,
-            let log = activeLogs.first(where: { $0.request == urlRequest })
-        else { return }
-        
-        log.endTime = Date()
-        log.error = error
-        log.response = task.response as? HTTPURLResponse
-        LoggieManager.shared.add(log)
-    }
-    
-    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        guard
-            let urlRequest = dataTask.currentRequest,
-            let log = activeLogs.first(where: { $0.request == urlRequest })
-        else { return }
-        
-        log.endTime = Date()
-        log.data = data
-        log.response = dataTask.response as? HTTPURLResponse
-        LoggieManager.shared.add(log)
+        for metric in metrics.transactionMetrics {
+            let log = Log(request: metric.request)
+            log.startTime = metric.fetchStartDate ?? metric.connectStartDate ?? metric.requestStartDate
+            log.endTime = metric.responseEndDate ?? metric.requestEndDate
+            
+            log.data = dataRequest.data
+            log.error = dataRequest.error
+            log.response = metric.response as? HTTPURLResponse
+            LoggieManager.shared.add(log)
+        }
     }
 }
