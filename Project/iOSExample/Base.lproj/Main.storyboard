@@ -124,11 +124,11 @@
             </objects>
             <point key="canvasLocation" x="-294" y="-130"/>
         </scene>
-        <!--Item 2-->
+        <!--Alamofire-->
         <scene sceneID="bMq-w8-JqT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ydk-L3-4fF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="gJY-kc-6de"/>
+                    <tabBarItem key="tabBarItem" title="Alamofire" id="gJY-kc-6de"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MHI-by-aH8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -143,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="595.6521739130435" y="200.89285714285714"/>
         </scene>
-        <!--Item 1-->
+        <!--URLSession-->
         <scene sceneID="n43-mP-fp4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nER-Nv-KSs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="6yb-3K-GYa"/>
+                    <tabBarItem key="tabBarItem" title="URLSession" id="6yb-3K-GYa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Np9-Em-7V3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
