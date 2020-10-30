@@ -12,12 +12,6 @@ public final class EventMonitor: Alamofire.EventMonitor {
     
     public var queue: DispatchQueue { return .init(label: "com.infinum.loggie-event-monitor-queue") }
     
-    /// Logs currently being processed.
-    ///
-    /// After a request is performd, it's respective `Log` will be created & stored in this array.
-    /// After request completes successfully or fails with an error, `Log` will be updated & forwarded to the `LoggieManager`.
-    private var activeLogs: [Log] = []
-    
     public init() {}
 
     public func request(_ request: Request, didGatherMetrics metrics: URLSessionTaskMetrics) {

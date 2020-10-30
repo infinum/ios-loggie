@@ -26,7 +26,7 @@ private extension AlamofireExampleViewController {
 
     @IBAction func performGetRequestAction(_ sender: UIButton) {
         session
-            .request("https://jsonplaceholder.typicode.com/posts/", method: .get)
+            .request("https://jsonplaceholder.typicode.com/posts/1", method: .get)
             .responseJSON { (response: AFDataResponse<Any>) in
                 
             }
