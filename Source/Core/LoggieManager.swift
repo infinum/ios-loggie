@@ -38,14 +38,21 @@ public final class LoggieManager: NSObject {
     private let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
     
     /// An instance of `URLSession` which Loggie is using if there's no delegate to provide his own session.
-    private lazy var defaultURLSession: URLSession = .init(configuration: .default)
+    ///
+    /// Used only for `LoggieURLProtocol`.
+    lazy var defaultURLSession: URLSession = .init(configuration: .default)
     
     /// A delegate used to provide a `URLSession` instance, using which Loggie will perform data requests.
+    ///
+    /// This delegate is used **only** when you're working with `LoggieURLProtocol`, through `Loggie/URLSession` pod.
+    /// Assigning a value to this property when working with `EventMonitor` has no impact & isn't used at all,
+    /// but won't affect the usage anyhow.
     ///
     /// You should assign this delegate as soon as the app starts, so Loggie could use your, instead of Loggie's default, `URLSession` instance.
     public weak var delegate: LoggieDelegate?
     
-    /// An array containing all `Log`s being performed by Loggie since the call to
+    /// An array containing all `Log`s either being performed by Loggie through `LoggieURLProtocol`,
+    /// or observer by loggie through `EventMonitor`.
     public private(set) var logs: [Log] = []
     
     @objc(sharedManager)
@@ -70,17 +77,5 @@ public final class LoggieManager: NSObject {
             self.logs.append(log)
             NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
         }
-    }
-    
-    /// Registers a `LoggieURLProtocol` as a class that's capable of performing `URLRequest`s.
-    public static func prepare() {
-        URLProtocol.registerClass(LoggieURLProtocol.self);
-    }
-}
-
-extension LoggieManager {
-    
-    public func urlSessionFor(urlRequest: URLRequest) -> URLSession {
-        return delegate?.loggie(self, urlSessionForURLRequest: urlRequest) ?? defaultURLSession
     }
 }

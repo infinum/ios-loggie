@@ -30,7 +30,6 @@
 		60C28F862548681D00979EBE /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */; };
 		60C28F872548681D00979EBE /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6F2548681D00979EBE /* LogDetailsSection.swift */; };
 		60C28F882548681D00979EBE /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F702548681D00979EBE /* Log+RequestDetails.swift */; };
-		60C28F892548681D00979EBE /* URLSessionConfiguration+Loggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */; };
 		60C28F8A2548681D00979EBE /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F732548681D00979EBE /* BundleExtensions.swift */; };
 		60C28F8B2548681D00979EBE /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */; };
 		60C28F8C2548681D00979EBE /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F752548681D00979EBE /* URLRequest+Data.swift */; };
@@ -65,7 +64,6 @@
 		60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
 		60C28F6F2548681D00979EBE /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
 		60C28F702548681D00979EBE /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Loggie.swift"; sourceTree = "<group>"; };
 		60C28F732548681D00979EBE /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
 		60C28F752548681D00979EBE /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		60C28F712548681D00979EBE /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				60C28F722548681D00979EBE /* URLSessionConfiguration+Loggie.swift */,
 				60C28F732548681D00979EBE /* BundleExtensions.swift */,
 				60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */,
 				60C28F752548681D00979EBE /* URLRequest+Data.swift */,
@@ -354,7 +351,6 @@
 				60C28F822548681D00979EBE /* LogDetailsTableViewCell.swift in Sources */,
 				60C28F7A2548681D00979EBE /* DataDecoder.swift in Sources */,
 				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
-				60C28F892548681D00979EBE /* URLSessionConfiguration+Loggie.swift in Sources */,
 				60C28F8D2548681D00979EBE /* LoggieURLProtocol.swift in Sources */,
 				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
 				60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */,

@@ -73,3 +73,15 @@ public class LoggieURLProtocol: URLProtocol {
         dataTask = nil
     }
 }
+
+extension LoggieManager {
+    
+    /// Registers a `LoggieURLProtocol` as a class that's capable of performing `URLRequest`s.
+    public static func prepare() {
+        URLProtocol.registerClass(LoggieURLProtocol.self);
+    }
+    
+    fileprivate func urlSessionFor(urlRequest: URLRequest) -> URLSession {
+        return delegate?.loggie(self, urlSessionForURLRequest: urlRequest) ?? defaultURLSession
+    }
+}

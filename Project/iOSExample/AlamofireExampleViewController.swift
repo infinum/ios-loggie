@@ -27,13 +27,19 @@ private extension AlamofireExampleViewController {
     @IBAction func performGetRequestAction(_ sender: UIButton) {
         session
             .request("https://jsonplaceholder.typicode.com/posts/1", method: .get)
-            .responseJSON { (response: AFDataResponse<Any>) in
-                
-            }
+            .response { (response: AFDataResponse<Data?>) in }
     }
     
     @IBAction func performPostRequestAction(_ sender: UIButton) {
+        let params: [String: Any] = [
+            "title": "foo",
+            "body": "bar",
+            "userId": 1
+        ]
         
+        session
+            .request("https://jsonplaceholder.typicode.com/posts", method: .post, parameters: params)
+            .response { (response: AFDataResponse<Data?>) in }
     }
     
 }
