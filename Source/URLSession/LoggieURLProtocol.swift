@@ -31,10 +31,11 @@ public class LoggieURLProtocol: URLProtocol {
     }
 
     public override func startLoading() {
-        let request = LoggieURLProtocol.canonicalRequest(for: self.request)
+        var request = LoggieURLProtocol.canonicalRequest(for: self.request)
         
         if let mutableRequest = (request as NSURLRequest).mutableCopy() as? NSMutableURLRequest {
             LoggieURLProtocol.setProperty(true, forKey: LoggieURLProtocol.HeaderKey, in: mutableRequest)
+            request = mutableRequest as URLRequest
         }
         
         let log = Log(request: request)
@@ -74,14 +75,35 @@ public class LoggieURLProtocol: URLProtocol {
     }
 }
 
-extension LoggieManager {
+private extension LoggieManager {
     
-    /// Registers a `LoggieURLProtocol` as a class that's capable of performing `URLRequest`s.
-    public static func prepare() {
-        URLProtocol.registerClass(LoggieURLProtocol.self);
+    func urlSessionFor(urlRequest: URLRequest) -> URLSession {
+        return delegate?.loggie(self, urlSessionForURLRequest: urlRequest) ?? defaultURLSession
+    }
+}
+
+// MARK: - Loggie + URLSessionConfiguration
+
+public extension URLSessionConfiguration {
+    
+    /// `URLSessionConfiguration.default`, modified in a way that its `protocolClasses`
+    /// contains `LoggieURLProtocol` at the first index.
+    @objc(loggieSessionConfiguration)
+    static var loggie: URLSessionConfiguration {
+        return loggie(combinedWith: .default)
     }
     
-    fileprivate func urlSessionFor(urlRequest: URLRequest) -> URLSession {
-        return delegate?.loggie(self, urlSessionForURLRequest: urlRequest) ?? defaultURLSession
+    /// Returns the modified session configuration provided in the method, modified in a way that its `protocolClasses`
+    /// contains `LoggieURLProtocol` at the first index.
+    ///
+    /// If you just want to use simple form of configuration, use the provided `loggie` configuration.
+    @objc(loggieSessionConfigurationCombinedWith:)
+    static func loggie(combinedWith configuration: URLSessionConfiguration) -> URLSessionConfiguration {
+        if configuration.protocolClasses == nil {
+            configuration.protocolClasses = [LoggieURLProtocol.self]
+        } else {
+            configuration.protocolClasses?.insert(LoggieURLProtocol.self, at: 0)
+        }
+        return configuration
     }
 }

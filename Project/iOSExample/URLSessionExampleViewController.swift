@@ -9,13 +9,7 @@ import UIKit
 
 final class URLSessionExampleViewController: BaseExampleViewController {
     
-    private let session: URLSession = .shared
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        LoggieManager.prepare()
-    }
+    private let session: URLSession = .init(configuration: .loggie)
 }
 
 // MARK: - Actions
