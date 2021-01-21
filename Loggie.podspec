@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     sp.resource_bundles = {'LoggieResources' => ['Source/Core/**/*.{xib,storyboard}']}
     sp.resources = ['Source/Core/**/*.{xib,storyboard}']
     sp.frameworks = 'UIKit', 'Security'
-    sp.ios.deployment_target = '8.0'
+    sp.ios.deployment_target = '9.0'
   end
 
   s.subspec 'LoggieAlamofire' do |sp| 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.subspec 'URLSession' do |sp| 
     sp.source_files = 'Source/URLSession/**/*.{swift}'
     sp.dependency 'Loggie/Core'
-    sp.ios.deployment_target = '8.0'
+    sp.ios.deployment_target = '9.0'
   end
   
 end
