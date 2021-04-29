@@ -53,6 +53,15 @@ public class Log: NSObject {
         section.items.append(item)
         return section
     }
+
+    // Can be extended in the future
+    var searchableText: String {
+        var searchableText = request.url?.absoluteString ?? ""
+        if let statusCode = response?.statusCode {
+            searchableText.append(String(statusCode))
+        }
+        return searchableText
+    }
 }
 
 extension Log {

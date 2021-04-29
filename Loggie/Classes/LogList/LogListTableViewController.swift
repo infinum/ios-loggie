@@ -11,11 +11,20 @@ import UIKit
 public class LogListTableViewController: UITableViewController {
 
     private static let cellReuseIdentifier = "cell"
+    internal var logsDataSourceDelegate: LogsDataSourceDelegate!
 
+    @IBOutlet private var searchBar: UISearchBar!
+
+    private var isSearching = false
     private var logs = [Log]() {
         didSet {
+            guard isSearching == false else { return }
             tableView.reloadData()
         }
+    }
+    private var searchResult = [Log]()
+    private var dataSource: [Log] {
+        return isSearching ? searchResult : logs
     }
 
     public var filter: ((Log) -> Bool)? = nil {
@@ -50,29 +59,73 @@ public class LogListTableViewController: UITableViewController {
         tableView.register(cellNib, forCellReuseIdentifier: LogListTableViewController.cellReuseIdentifier)
     }
 
-    // MARK: - Table view data source
+    @IBAction func clearAction() {
+        logsDataSourceDelegate.clearLogs()
+        logs = []
+        searchResult = []
+    }
+}
+
+// MARK: - Table view data source
+
+extension LogListTableViewController {
 
     override public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return logs.count
+        return dataSource.count
     }
 
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: LogListTableViewController.cellReuseIdentifier, for: indexPath) as! LogListTableViewCell
-        cell.configure(with: logs[indexPath.row])
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: LogListTableViewController.cellReuseIdentifier,
+            for: indexPath
+        ) as! LogListTableViewCell
+
+        cell.configure(with: dataSource[indexPath.row])
         return cell
     }
+}
 
-    // MARK: - Table view delegate
+// MARK: - Table view delegate
+
+extension LogListTableViewController {
 
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showLogDetails(with: logs[indexPath.row])
+        showLogDetails(with: dataSource[indexPath.row])
     }
 
-    // MARK: - Private
+    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
+}
+// MARK: - Search bar delegate
+
+extension LogListTableViewController: UISearchBarDelegate {
+
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        isSearching = searchText.isEmpty == false
+        guard isSearching else {
+            searchResult = []
+            tableView.reloadData()
+            return
+        }
+        searchResult = logs.filter({ $0.searchableText.range(of: searchText, options: .caseInsensitive) != nil })
+        tableView.reloadData()
+    }
+
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+
+// MARK: - Private
+
+extension LogListTableViewController {
 
     private func updateLogs() {
         let _logs: [Log] = LoggieManager.shared.logs.reversed()
