@@ -54,13 +54,11 @@ public class Log: NSObject {
         return section
     }
 
-    // Can be extended in the future
-    var searchableText: String {
-        var searchableText = request.url?.absoluteString ?? ""
-        if let statusCode = response?.statusCode {
-            searchableText.append(String(statusCode))
-        }
-        return searchableText
+    var searchKeywords: [String] {
+        return [
+            request.url?.absoluteString,
+            response.flatMap { String($0.statusCode) }
+        ].compactMap { $0 }
     }
 }
 

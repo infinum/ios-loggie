@@ -14,19 +14,11 @@ public class LogListTableViewController: UITableViewController {
     internal var logsDataSourceDelegate: LogsDataSourceDelegate!
 
     @IBOutlet private var searchBar: UISearchBar!
-
-    private var isSearching = false
     private var logs = [Log]() {
         didSet {
-            guard isSearching == false else { return }
             tableView.reloadData()
         }
     }
-    private var searchResult = [Log]()
-    private var dataSource: [Log] {
-        return isSearching ? searchResult : logs
-    }
-
     public var filter: ((Log) -> Bool)? = nil {
         didSet {
             updateLogs()
@@ -62,7 +54,6 @@ public class LogListTableViewController: UITableViewController {
     @IBAction func clearAction() {
         logsDataSourceDelegate.clearLogs()
         logs = []
-        searchResult = []
     }
 }
 
@@ -75,7 +66,7 @@ extension LogListTableViewController {
     }
 
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return logs.count
     }
 
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,7 +75,7 @@ extension LogListTableViewController {
             for: indexPath
         ) as! LogListTableViewCell
 
-        cell.configure(with: dataSource[indexPath.row])
+        cell.configure(with: logs[indexPath.row])
         return cell
     }
 }
@@ -94,7 +85,7 @@ extension LogListTableViewController {
 extension LogListTableViewController {
 
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showLogDetails(with: dataSource[indexPath.row])
+        showLogDetails(with: logs[indexPath.row])
     }
 
     public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -103,19 +94,13 @@ extension LogListTableViewController {
         }
     }
 }
+
 // MARK: - Search bar delegate
 
 extension LogListTableViewController: UISearchBarDelegate {
 
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        isSearching = searchText.isEmpty == false
-        guard isSearching else {
-            searchResult = []
-            tableView.reloadData()
-            return
-        }
-        searchResult = logs.filter({ $0.searchableText.range(of: searchText, options: .caseInsensitive) != nil })
-        tableView.reloadData()
+        updateLogs()
     }
 
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -128,11 +113,24 @@ extension LogListTableViewController: UISearchBarDelegate {
 extension LogListTableViewController {
 
     private func updateLogs() {
-        let _logs: [Log] = LoggieManager.shared.logs.reversed()
+        var _logs: [Log] = LoggieManager.shared.logs.reversed()
+
         if let filter = filter {
-            logs = _logs.filter(filter)
-        } else {
-            logs = _logs
+            _logs = _logs.filter(filter)
+        }
+
+        if let text = searchBar?.text, text.isEmpty == false  {
+            _logs = _logs.filter(filter(by: text))
+        }
+
+        logs = _logs
+    }
+
+    private func filter(by searchText: String) -> (Log) -> Bool {
+        return { (log) in
+            log.searchKeywords.contains(where: {
+                $0.range(of: searchText, options: .caseInsensitive) != nil
+            })
         }
     }
 
