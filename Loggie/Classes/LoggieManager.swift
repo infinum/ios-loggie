@@ -22,13 +22,13 @@ public class LoggieAuthentication: NSObject {
     }
 }
 
-@objc public protocol LoggieClientCertificateDelegate: class {
+@objc public protocol LoggieClientCertificateDelegate: AnyObject {
     func clientCertificate(forChallenge challenge: URLAuthenticationChallenge, inSession session: URLSession) -> URLCredential?
 }
 
 public typealias AuthenticationBlock = (() -> (LoggieAuthentication?))
 
-internal protocol LogsDataSourceDelegate: class {
+internal protocol LogsDataSourceDelegate: AnyObject {
     func clearLogs()
 }
 

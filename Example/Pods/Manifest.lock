@@ -1,5 +1,5 @@
 PODS:
-  - Loggie (2.2.1)
+  - Loggie (2.3.0)
 
 DEPENDENCIES:
   - Loggie (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Loggie: a1b34778c199ff569599b3bebc7741a47604e2d4
+  Loggie: 12ed0ea1f90590b627bb2f4b8aeb983c112a7c8d
 
-PODFILE CHECKSUM: 76284fdb7b8a19b7259c52d2c783fe6a88371862
+PODFILE CHECKSUM: 2f98ef130f20cf251f9840fafd9ce33831f7a2f0
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.10.1
