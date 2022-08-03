@@ -19,7 +19,10 @@ let package = Package(
         .target(
             name: "Loggie",
             dependencies: [],
-            path: "Loggie/Classes"
+            path: "Loggie",
+            resources: [
+                .process("Assets")
+            ]
         ),
     ]
 )
