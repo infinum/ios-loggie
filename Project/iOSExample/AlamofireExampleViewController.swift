@@ -31,14 +31,19 @@ private extension AlamofireExampleViewController {
     }
     
     @IBAction func performPostRequestAction(_ sender: UIButton) {
-        let params: [String: Any] = [
+        let params: [String: String] = [
             "title": "foo",
             "body": "bar",
-            "userId": 1
+            "userId": "1"
         ]
         
         session
-            .request("https://jsonplaceholder.typicode.com/posts", method: .post, parameters: params)
+            .request(
+                "https://jsonplaceholder.typicode.com/posts",
+                method: .post,
+                parameters: params,
+                encoder: JSONParameterEncoder.default
+            )
             .response { (response: AFDataResponse<Data?>) in }
     }
     

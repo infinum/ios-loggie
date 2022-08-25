@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XId-ZL-y6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XId-ZL-y6M">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,13 +52,13 @@
                             <constraint firstItem="fPK-wh-qVR" firstAttribute="centerY" secondItem="Wdu-Ya-C9q" secondAttribute="centerY" id="S3N-gG-wAO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="EventMonitor" prompt="Alamofire Example using" id="82O-tp-ztd"/>
+                    <navigationItem key="navigationItem" title="EventMonitor" prompt="Alamofire Example" id="82O-tp-ztd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kx3-ta-vBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1505.7971014492755" y="200.89285714285714"/>
         </scene>
-        <!--LoggieURLProtocol-->
+        <!--URLProtocol-->
         <scene sceneID="xkj-Cg-d6R">
             <objects>
                 <viewController id="VLw-tB-6Ay" customClass="URLSessionExampleViewController" customModule="iOSExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +101,7 @@
                             <constraint firstItem="k4h-hb-NXT" firstAttribute="centerX" secondItem="cdV-zM-FbS" secondAttribute="centerX" id="qgI-hb-T0B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LoggieURLProtocol" prompt="URLSession Example using" id="IYR-sa-PRS"/>
+                    <navigationItem key="navigationItem" title="URLProtocol" prompt="URLSession Example" id="IYR-sa-PRS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkT-Kf-99e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
