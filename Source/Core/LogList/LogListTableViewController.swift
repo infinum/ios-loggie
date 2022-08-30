@@ -13,6 +13,7 @@ public class LogListTableViewController: UITableViewController {
     // MARK: - Properties
     
     private static let cellReuseIdentifier = "cell"
+    internal var logsDataSourceDelegate: LogsDataSourceDelegate!
 
     private var logs: [Log] = []
 
@@ -53,12 +54,19 @@ public class LogListTableViewController: UITableViewController {
     }
 
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: LogListTableViewController.cellReuseIdentifier, for: indexPath) as! LogListTableViewCell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: LogListTableViewController.cellReuseIdentifier,
+            for: indexPath
+        ) as! LogListTableViewCell
+
         cell.configure(with: logs[indexPath.row])
         return cell
     }
+}
 
-    // MARK: - Table view delegate
+// MARK: - Table view delegate
+
+extension LogListTableViewController {
 
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "LogDetails", bundle: .loggie)
@@ -67,14 +75,49 @@ public class LogListTableViewController: UITableViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
-    // MARK: - Private
+    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
+}
+
+// MARK: - Search bar delegate
+
+extension LogListTableViewController: UISearchBarDelegate {
+
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateLogs()
+    }
+
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+
+// MARK: - Private
+
+extension LogListTableViewController {
 
     private func updateLogs() {
-        let _logs: [Log] = LoggieManager.shared.logs.reversed()
+        var _logs: [Log] = LoggieManager.shared.logs.reversed()
+
         if let filter = filter {
-            logs = _logs.filter(filter)
-        } else {
-            logs = _logs
+            _logs = _logs.filter(filter)
+        }
+
+        if let text = searchBar?.text, text.isEmpty == false  {
+            _logs = _logs.filter(filter(by: text))
+        }
+
+        logs = _logs
+    }
+
+    private func filter(by searchText: String) -> (Log) -> Bool {
+        return { (log) in
+            log.searchKeywords.contains(where: {
+                $0.range(of: searchText, options: .caseInsensitive) != nil
+            })
         }
         
         if let searchText = self.searchText {
