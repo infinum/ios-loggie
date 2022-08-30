@@ -139,6 +139,17 @@ extension LogDetailsViewController: UITableViewDelegate {
         actionSheet.addAction(shareAction(for: indexPath))
         actionSheet.addAction(cancelAction(for: indexPath))
 
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            actionSheet.popoverPresentationController.flatMap {
+                // Set the source to the UIViewController's view.
+                $0.sourceView = self.view
+                // Pin to the bottom in the middle.
+                $0.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.maxY, width: 0, height: 0)
+                // Remove the arrow from the popover to mimic the iPhone action sheet.
+                $0.permittedArrowDirections = []
+            }
+        }
+        
         present(actionSheet, animated: true)
     }
 }
