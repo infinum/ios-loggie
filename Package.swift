@@ -7,22 +7,21 @@ let package = Package(
     name: "Loggie",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v11)
     ],
     products: [
         .library(
-            name: "Loggie",
-            targets: ["Loggie"]),
+            name: "Source",
+            targets: ["Source"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1"))
     ],
     targets: [
         .target(
-            name: "Loggie",
-            dependencies: [],
-            path: "./PodExample/Loggie",
-            resources: [
-            ]
+            name: "Source",
+            dependencies: ["Alamofire"],
+            path: "Source"
         ),
     ]
 )

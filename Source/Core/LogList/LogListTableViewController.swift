@@ -13,7 +13,6 @@ public class LogListTableViewController: UITableViewController {
     // MARK: - Properties
     
     private static let cellReuseIdentifier = "cell"
-    internal var logsDataSourceDelegate: LogsDataSourceDelegate!
 
     private var logs: [Log] = []
 
@@ -75,11 +74,6 @@ extension LogListTableViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
-    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if searchBar.isFirstResponder {
-            searchBar.resignFirstResponder()
-        }
-    }
 }
 
 // MARK: - Search bar delegate
@@ -104,10 +98,6 @@ extension LogListTableViewController {
 
         if let filter = filter {
             _logs = _logs.filter(filter)
-        }
-
-        if let text = searchBar?.text, text.isEmpty == false  {
-            _logs = _logs.filter(filter(by: text))
         }
 
         logs = _logs
@@ -178,15 +168,5 @@ private extension LogListTableViewController {
 
     @objc func closeButtonActionHandler() {
         dismiss(animated: true, completion: nil)
-    }
-}
-
-// MARK: - UISearchBarDelegate
-
-extension LogListTableViewController: UISearchBarDelegate {
-    
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchText = searchText.isEmpty ? nil : searchText.lowercased()
-        updateLogs()
     }
 }

@@ -6,18 +6,19 @@
 //
 
 import Alamofire
+import Foundation
 
 /// An event monitor through which Loggie is able to track requests being performed.
 public final class EventMonitor: Alamofire.EventMonitor {
     
     public var queue: DispatchQueue { return .init(label: "com.infinum.loggie-event-monitor-queue") }
-    
+
     public init() {}
 
     public func request(_ request: Request, didGatherMetrics metrics: URLSessionTaskMetrics) {
         /// we're handling only `DataRequest`s for now
         guard let dataRequest = request as? DataRequest, let urlRequest = dataRequest.request else { return }
-        
+
         for metric in metrics.transactionMetrics {
             guard let startTime = metric.requestStartDate, let endTime = metric.responseEndDate else { return }
 
