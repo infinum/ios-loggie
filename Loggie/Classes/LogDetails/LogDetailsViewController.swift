@@ -195,6 +195,16 @@ private extension LogDetailsViewController {
 
             if let shareItem = shareItem {
                 let shareController = UIActivityViewController(activityItems: [shareItem], applicationActivities: nil)
+                shareController.popoverPresentationController.flatMap {
+                    $0.sourceView = self.tableView
+                    if let frame = self.tableView.cellForRow(at: indexPath)?.frame {
+                        $0.sourceRect = frame
+                        $0.permittedArrowDirections = [.up]
+                    } else {
+                        $0.sourceRect = .init(origin: self.tableView.center, size: .zero)
+                        $0.permittedArrowDirections = []
+                    }
+                }
                 self.present(shareController, animated: true)
             }
 
