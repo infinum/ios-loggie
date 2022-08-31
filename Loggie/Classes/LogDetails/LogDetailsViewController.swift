@@ -80,6 +80,7 @@ class LogDetailsViewController: UIViewController {
             activityItems: activityItems,
             applicationActivities: nil
         )
+        activityController.popoverPresentationController?.barButtonItem = sender
         present(activityController, animated: true, completion: nil)
     }
 
@@ -139,13 +140,13 @@ extension LogDetailsViewController: UITableViewDelegate {
         actionSheet.addAction(shareAction(for: indexPath))
         actionSheet.addAction(cancelAction(for: indexPath))
 
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            actionSheet.popoverPresentationController.flatMap {
-                // Set the source to the UIViewController's view.
-                $0.sourceView = self.view
-                // Pin to the bottom in the middle.
-                $0.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.maxY, width: 0, height: 0)
-                // Remove the arrow from the popover to mimic the iPhone action sheet.
+        actionSheet.popoverPresentationController.flatMap {
+            $0.sourceView = tableView
+            if let frame = tableView.cellForRow(at: indexPath)?.frame {
+                $0.sourceRect = frame
+                $0.permittedArrowDirections = [.up]
+            } else {
+                $0.sourceRect = .init(origin: tableView.center, size: .zero)
                 $0.permittedArrowDirections = []
             }
         }
