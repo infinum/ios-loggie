@@ -140,6 +140,12 @@ extension LogDetailsViewController: UITableViewDelegate {
         actionSheet.addAction(shareAction(for: indexPath))
         actionSheet.addAction(cancelAction(for: indexPath))
 
+        setSourceView(
+            popover: actionSheet.popoverPresentationController,
+            sourceView: tableView,
+            sourceRect: tableView.cellForRow(at: indexPath)?.frame
+        )
+
         actionSheet.popoverPresentationController.flatMap {
             $0.sourceView = tableView
             if let frame = tableView.cellForRow(at: indexPath)?.frame {
@@ -195,16 +201,11 @@ private extension LogDetailsViewController {
 
             if let shareItem = shareItem {
                 let shareController = UIActivityViewController(activityItems: [shareItem], applicationActivities: nil)
-                shareController.popoverPresentationController.flatMap {
-                    $0.sourceView = self.tableView
-                    if let frame = self.tableView.cellForRow(at: indexPath)?.frame {
-                        $0.sourceRect = frame
-                        $0.permittedArrowDirections = [.up]
-                    } else {
-                        $0.sourceRect = .init(origin: self.tableView.center, size: .zero)
-                        $0.permittedArrowDirections = []
-                    }
-                }
+                self.setSourceView(
+                    popover: shareController.popoverPresentationController,
+                    sourceView: self.tableView,
+                    sourceRect: self.tableView.cellForRow(at: indexPath)?.frame
+                )
                 self.present(shareController, animated: true)
             }
 
@@ -216,5 +217,18 @@ private extension LogDetailsViewController {
         return UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] (action) in
             self?.tableView.deselectRow(at: indexPath, animated: true)
         })
+    }
+
+    func setSourceView(popover: UIPopoverPresentationController?, sourceView: UIView, sourceRect: CGRect?) {
+        popover.flatMap {
+            $0.sourceView = sourceView
+            if let sourceRect = sourceRect {
+                $0.sourceRect = sourceRect
+                $0.permittedArrowDirections = [.up]
+            } else {
+                $0.sourceRect = .init(origin: sourceView.center, size: .zero)
+                $0.permittedArrowDirections = []
+            }
+        }
     }
 }
