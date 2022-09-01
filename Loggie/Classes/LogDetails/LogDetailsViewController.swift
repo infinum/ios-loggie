@@ -146,17 +146,6 @@ extension LogDetailsViewController: UITableViewDelegate {
             sourceRect: tableView.cellForRow(at: indexPath)?.frame
         )
 
-        actionSheet.popoverPresentationController.flatMap {
-            $0.sourceView = tableView
-            if let frame = tableView.cellForRow(at: indexPath)?.frame {
-                $0.sourceRect = frame
-                $0.permittedArrowDirections = [.up]
-            } else {
-                $0.sourceRect = .init(origin: tableView.center, size: .zero)
-                $0.permittedArrowDirections = []
-            }
-        }
-        
         present(actionSheet, animated: true)
     }
 }
