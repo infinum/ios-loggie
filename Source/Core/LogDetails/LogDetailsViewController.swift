@@ -80,6 +80,7 @@ class LogDetailsViewController: UIViewController {
             activityItems: activityItems,
             applicationActivities: nil
         )
+        activityController.popoverPresentationController?.barButtonItem = sender
         present(activityController, animated: true, completion: nil)
     }
 
@@ -139,6 +140,12 @@ extension LogDetailsViewController: UITableViewDelegate {
         actionSheet.addAction(shareAction(for: indexPath))
         actionSheet.addAction(cancelAction(for: indexPath))
 
+        setSourceView(
+            popover: actionSheet.popoverPresentationController,
+            sourceView: tableView,
+            sourceRect: tableView.cellForRow(at: indexPath)?.frame
+        )
+
         present(actionSheet, animated: true)
     }
 }
@@ -183,6 +190,11 @@ private extension LogDetailsViewController {
 
             if let shareItem = shareItem {
                 let shareController = UIActivityViewController(activityItems: [shareItem], applicationActivities: nil)
+                self.setSourceView(
+                    popover: shareController.popoverPresentationController,
+                    sourceView: self.tableView,
+                    sourceRect: self.tableView.cellForRow(at: indexPath)?.frame
+                )
                 self.present(shareController, animated: true)
             }
 
@@ -194,5 +206,18 @@ private extension LogDetailsViewController {
         return UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] (action) in
             self?.tableView.deselectRow(at: indexPath, animated: true)
         })
+    }
+
+    func setSourceView(popover: UIPopoverPresentationController?, sourceView: UIView, sourceRect: CGRect?) {
+        popover.flatMap {
+            $0.sourceView = sourceView
+            if let sourceRect = sourceRect {
+                $0.sourceRect = sourceRect
+                $0.permittedArrowDirections = [.up]
+            } else {
+                $0.sourceRect = .init(origin: sourceView.center, size: .zero)
+                $0.permittedArrowDirections = []
+            }
+        }
     }
 }
