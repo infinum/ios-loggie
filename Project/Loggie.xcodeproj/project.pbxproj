@@ -15,26 +15,28 @@
 		60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */; };
 		60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */; };
 		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
-		60C28F7A2548681D00979EBE /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F5F2548681D00979EBE /* DataDecoder.swift */; };
-		60C28F7B2548681D00979EBE /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F602548681D00979EBE /* LoggieManager.swift */; };
-		60C28F7C2548681D00979EBE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F612548681D00979EBE /* Log.swift */; };
-		60C28F7D2548681D00979EBE /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F632548681D00979EBE /* LogListTableViewCell.swift */; };
-		60C28F7E2548681D00979EBE /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C28F642548681D00979EBE /* LogListTableViewCell.xib */; };
-		60C28F7F2548681D00979EBE /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F652548681D00979EBE /* LogListTableViewController.swift */; };
-		60C28F802548681D00979EBE /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */; };
-		60C28F812548681D00979EBE /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */; };
-		60C28F822548681D00979EBE /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */; };
-		60C28F832548681D00979EBE /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */; };
-		60C28F842548681D00979EBE /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C28F6C2548681D00979EBE /* LogDetails.storyboard */; };
-		60C28F852548681D00979EBE /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */; };
-		60C28F862548681D00979EBE /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */; };
-		60C28F872548681D00979EBE /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F6F2548681D00979EBE /* LogDetailsSection.swift */; };
-		60C28F882548681D00979EBE /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F702548681D00979EBE /* Log+RequestDetails.swift */; };
-		60C28F8A2548681D00979EBE /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F732548681D00979EBE /* BundleExtensions.swift */; };
-		60C28F8B2548681D00979EBE /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */; };
-		60C28F8C2548681D00979EBE /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F752548681D00979EBE /* URLRequest+Data.swift */; };
-		60C28F8D2548681D00979EBE /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F772548681D00979EBE /* LoggieURLProtocol.swift */; };
-		60C28F8E2548681D00979EBE /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28F792548681D00979EBE /* EventMonitor.swift */; };
+		C1FF431B28E5A80B002020FA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF42FE28E5A80A002020FA /* DataDecoder.swift */; };
+		C1FF431C28E5A80B002020FA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF42FF28E5A80A002020FA /* LoggieManager.swift */; };
+		C1FF431D28E5A80B002020FA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430028E5A80A002020FA /* Log.swift */; };
+		C1FF431E28E5A80B002020FA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */; };
+		C1FF431F28E5A80B002020FA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */; };
+		C1FF432028E5A80B002020FA /* LogListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */; };
+		C1FF432128E5A80B002020FA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430528E5A80A002020FA /* LogListTableViewController.swift */; };
+		C1FF432228E5A80B002020FA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */; };
+		C1FF432328E5A80B002020FA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */; };
+		C1FF432428E5A80B002020FA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */; };
+		C1FF432528E5A80B002020FA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */; };
+		C1FF432628E5A80B002020FA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430C28E5A80A002020FA /* LogDetails.storyboard */; };
+		C1FF432728E5A80B002020FA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */; };
+		C1FF432828E5A80B002020FA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */; };
+		C1FF432928E5A80B002020FA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */; };
+		C1FF432A28E5A80B002020FA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */; };
+		C1FF432B28E5A80B002020FA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431228E5A80A002020FA /* BundleExtensions.swift */; };
+		C1FF432C28E5A80B002020FA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */; };
+		C1FF432D28E5A80B002020FA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431428E5A80A002020FA /* URLRequest+Data.swift */; };
+		C1FF432E28E5A80B002020FA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */; };
+		C1FF432F28E5A80B002020FA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431828E5A80A002020FA /* EventMonitor.swift */; };
+		C1FF433028E5A80B002020FA /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1FF431A28E5A80A002020FA /* assets.xcassets */; };
 		DA370A5158AEC6A63FBAB2DD /* Pods_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,30 +51,32 @@
 		60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
 		60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
-		60C28F5F2548681D00979EBE /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
-		60C28F602548681D00979EBE /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
-		60C28F612548681D00979EBE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		60C28F632548681D00979EBE /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
-		60C28F642548681D00979EBE /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
-		60C28F652548681D00979EBE /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
-		60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
-		60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
-		60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
-		60C28F6C2548681D00979EBE /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
-		60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
-		60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
-		60C28F6F2548681D00979EBE /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
-		60C28F702548681D00979EBE /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		60C28F732548681D00979EBE /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
-		60C28F752548681D00979EBE /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
-		60C28F772548681D00979EBE /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
-		60C28F792548681D00979EBE /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 		87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSExample.debug.xcconfig"; path = "Target Support Files/Pods-iOSExample/Pods-iOSExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C1FF42FE28E5A80A002020FA /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		C1FF42FF28E5A80A002020FA /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
+		C1FF430028E5A80A002020FA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
+		C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
+		C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogListTableViewController.storyboard; sourceTree = "<group>"; };
+		C1FF430528E5A80A002020FA /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
+		C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
+		C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
+		C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
+		C1FF430C28E5A80A002020FA /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
+		C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
+		C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
+		C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
+		C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
+		C1FF431228E5A80A002020FA /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
+		C1FF431428E5A80A002020FA /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
+		C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
+		C1FF431828E5A80A002020FA /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		C1FF431A28E5A80A002020FA /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		CC2FB108141BEA675011125B /* Pods-LoggieAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.release.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 		F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSExample.release.xcconfig"; path = "Target Support Files/Pods-iOSExample/Pods-iOSExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +123,7 @@
 		6073DFF82543463200AD06DA /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
-				60C28F5D2548681D00979EBE /* Source */,
+				C1FF42FB28E5A80A002020FA /* Loggie */,
 				6073DFF92543463200AD06DA /* AppDelegate.swift */,
 				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
 				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
@@ -133,90 +137,6 @@
 			path = iOSExample;
 			sourceTree = "<group>";
 		};
-		60C28F5D2548681D00979EBE /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F5E2548681D00979EBE /* Core */,
-				60C28F762548681D00979EBE /* URLSession */,
-				60C28F782548681D00979EBE /* LoggieAlamofire */,
-			);
-			name = Source;
-			path = ../../Source;
-			sourceTree = "<group>";
-		};
-		60C28F5E2548681D00979EBE /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F5F2548681D00979EBE /* DataDecoder.swift */,
-				60C28F602548681D00979EBE /* LoggieManager.swift */,
-				60C28F612548681D00979EBE /* Log.swift */,
-				60C28F622548681D00979EBE /* LogList */,
-				60C28F662548681D00979EBE /* LogDetails */,
-				60C28F712548681D00979EBE /* Utility */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		60C28F622548681D00979EBE /* LogList */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F632548681D00979EBE /* LogListTableViewCell.swift */,
-				60C28F642548681D00979EBE /* LogListTableViewCell.xib */,
-				60C28F652548681D00979EBE /* LogListTableViewController.swift */,
-			);
-			path = LogList;
-			sourceTree = "<group>";
-		};
-		60C28F662548681D00979EBE /* LogDetails */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F672548681D00979EBE /* Cells */,
-				60C28F6B2548681D00979EBE /* Log+ResponseDetails.swift */,
-				60C28F6C2548681D00979EBE /* LogDetails.storyboard */,
-				60C28F6D2548681D00979EBE /* Log+OverviewDetails.swift */,
-				60C28F6E2548681D00979EBE /* LogDetailsViewController.swift */,
-				60C28F6F2548681D00979EBE /* LogDetailsSection.swift */,
-				60C28F702548681D00979EBE /* Log+RequestDetails.swift */,
-			);
-			path = LogDetails;
-			sourceTree = "<group>";
-		};
-		60C28F672548681D00979EBE /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F682548681D00979EBE /* LogDetailsTextTableViewCell.swift */,
-				60C28F692548681D00979EBE /* LogDetailsImageTableViewCell.swift */,
-				60C28F6A2548681D00979EBE /* LogDetailsTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		60C28F712548681D00979EBE /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F732548681D00979EBE /* BundleExtensions.swift */,
-				60C28F742548681D00979EBE /* Data+FormattedJsonString.swift */,
-				60C28F752548681D00979EBE /* URLRequest+Data.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		60C28F762548681D00979EBE /* URLSession */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F772548681D00979EBE /* LoggieURLProtocol.swift */,
-			);
-			path = URLSession;
-			sourceTree = "<group>";
-		};
-		60C28F782548681D00979EBE /* LoggieAlamofire */ = {
-			isa = PBXGroup;
-			children = (
-				60C28F792548681D00979EBE /* EventMonitor.swift */,
-			);
-			path = LoggieAlamofire;
-			sourceTree = "<group>";
-		};
 		6F242830E1C2DF382D8E5535 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +146,108 @@
 				F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1FF42FB28E5A80A002020FA /* Loggie */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF42FC28E5A80A002020FA /* Classes */,
+				C1FF431928E5A80A002020FA /* Assets */,
+			);
+			name = Loggie;
+			path = ../../Loggie;
+			sourceTree = "<group>";
+		};
+		C1FF42FC28E5A80A002020FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF42FD28E5A80A002020FA /* Core */,
+				C1FF431528E5A80A002020FA /* URLSession */,
+				C1FF431728E5A80A002020FA /* LoggieAlamofire */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C1FF42FD28E5A80A002020FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF42FE28E5A80A002020FA /* DataDecoder.swift */,
+				C1FF42FF28E5A80A002020FA /* LoggieManager.swift */,
+				C1FF430028E5A80A002020FA /* Log.swift */,
+				C1FF430128E5A80A002020FA /* LogList */,
+				C1FF430628E5A80A002020FA /* LogDetails */,
+				C1FF431128E5A80A002020FA /* Utility */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C1FF430128E5A80A002020FA /* LogList */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */,
+				C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */,
+				C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */,
+				C1FF430528E5A80A002020FA /* LogListTableViewController.swift */,
+			);
+			path = LogList;
+			sourceTree = "<group>";
+		};
+		C1FF430628E5A80A002020FA /* LogDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF430728E5A80A002020FA /* Cells */,
+				C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */,
+				C1FF430C28E5A80A002020FA /* LogDetails.storyboard */,
+				C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */,
+				C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */,
+				C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */,
+				C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */,
+			);
+			path = LogDetails;
+			sourceTree = "<group>";
+		};
+		C1FF430728E5A80A002020FA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */,
+				C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */,
+				C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C1FF431128E5A80A002020FA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF431228E5A80A002020FA /* BundleExtensions.swift */,
+				C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */,
+				C1FF431428E5A80A002020FA /* URLRequest+Data.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C1FF431528E5A80A002020FA /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		C1FF431728E5A80A002020FA /* LoggieAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF431828E5A80A002020FA /* EventMonitor.swift */,
+			);
+			path = LoggieAlamofire;
+			sourceTree = "<group>";
+		};
+		C1FF431928E5A80A002020FA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF431A28E5A80A002020FA /* assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +309,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60C28F842548681D00979EBE /* LogDetails.storyboard in Resources */,
 				6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */,
 				6073E0032543463300AD06DA /* Assets.xcassets in Resources */,
-				60C28F7E2548681D00979EBE /* LogListTableViewCell.xib in Resources */,
+				C1FF432028E5A80B002020FA /* LogListTableViewController.storyboard in Resources */,
+				C1FF431F28E5A80B002020FA /* LogListTableViewCell.xib in Resources */,
+				C1FF432628E5A80B002020FA /* LogDetails.storyboard in Resources */,
+				C1FF433028E5A80B002020FA /* assets.xcassets in Resources */,
 				6073E0012543463200AD06DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,29 +368,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60C28F862548681D00979EBE /* LogDetailsViewController.swift in Sources */,
-				60C28F8C2548681D00979EBE /* URLRequest+Data.swift in Sources */,
-				60C28F882548681D00979EBE /* Log+RequestDetails.swift in Sources */,
-				60C28F8B2548681D00979EBE /* Data+FormattedJsonString.swift in Sources */,
-				60C28F822548681D00979EBE /* LogDetailsTableViewCell.swift in Sources */,
-				60C28F7A2548681D00979EBE /* DataDecoder.swift in Sources */,
+				C1FF432828E5A80B002020FA /* LogDetailsViewController.swift in Sources */,
+				C1FF432A28E5A80B002020FA /* Log+RequestDetails.swift in Sources */,
+				C1FF432428E5A80B002020FA /* LogDetailsTableViewCell.swift in Sources */,
+				C1FF432D28E5A80B002020FA /* URLRequest+Data.swift in Sources */,
+				C1FF432E28E5A80B002020FA /* LoggieURLProtocol.swift in Sources */,
+				C1FF431B28E5A80B002020FA /* DataDecoder.swift in Sources */,
 				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
-				60C28F8D2548681D00979EBE /* LoggieURLProtocol.swift in Sources */,
+				C1FF432C28E5A80B002020FA /* Data+FormattedJsonString.swift in Sources */,
 				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
 				60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */,
-				60C28F7F2548681D00979EBE /* LogListTableViewController.swift in Sources */,
-				60C28F832548681D00979EBE /* Log+ResponseDetails.swift in Sources */,
-				60C28F802548681D00979EBE /* LogDetailsTextTableViewCell.swift in Sources */,
-				60C28F852548681D00979EBE /* Log+OverviewDetails.swift in Sources */,
-				60C28F8E2548681D00979EBE /* EventMonitor.swift in Sources */,
-				60C28F7D2548681D00979EBE /* LogListTableViewCell.swift in Sources */,
-				60C28F872548681D00979EBE /* LogDetailsSection.swift in Sources */,
-				60C28F812548681D00979EBE /* LogDetailsImageTableViewCell.swift in Sources */,
+				C1FF432128E5A80B002020FA /* LogListTableViewController.swift in Sources */,
+				C1FF432528E5A80B002020FA /* Log+ResponseDetails.swift in Sources */,
+				C1FF432228E5A80B002020FA /* LogDetailsTextTableViewCell.swift in Sources */,
+				C1FF432728E5A80B002020FA /* Log+OverviewDetails.swift in Sources */,
+				C1FF431E28E5A80B002020FA /* LogListTableViewCell.swift in Sources */,
+				C1FF432928E5A80B002020FA /* LogDetailsSection.swift in Sources */,
+				C1FF432328E5A80B002020FA /* LogDetailsImageTableViewCell.swift in Sources */,
 				60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */,
 				60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */,
-				60C28F7C2548681D00979EBE /* Log.swift in Sources */,
-				60C28F7B2548681D00979EBE /* LoggieManager.swift in Sources */,
-				60C28F8A2548681D00979EBE /* BundleExtensions.swift in Sources */,
+				C1FF432B28E5A80B002020FA /* BundleExtensions.swift in Sources */,
+				C1FF431D28E5A80B002020FA /* Log.swift in Sources */,
+				C1FF431C28E5A80B002020FA /* LoggieManager.swift in Sources */,
+				C1FF432F28E5A80B002020FA /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

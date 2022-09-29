@@ -1,6 +1,6 @@
 {
   "name": "Loggie",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "summary": "In-app network logging library.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "3.0.0"
+    "tag": "3.0.1"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "swift_versions": "5.0",
@@ -26,14 +26,14 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Source/Core/**/*.{swift}",
+      "source_files": "Loggie/Classes/Core/**/*.{swift}",
       "resource_bundles": {
         "LoggieResources": [
-          "Source/Core/**/*.{xib,storyboard}"
+          "Loggie/Classes/Core/**/*.{xib,storyboard}"
         ]
       },
       "resources": [
-        "Source/Core/**/*.{xib,storyboard}"
+        "Loggie/Classes/Core/**/*.{xib,storyboard}"
       ],
       "frameworks": [
         "UIKit",
@@ -45,7 +45,7 @@
     },
     {
       "name": "LoggieAlamofire",
-      "source_files": "Source/LoggieAlamofire/**/*.{swift}",
+      "source_files": "Loggie/Classes/LoggieAlamofire/**/*.{swift}",
       "dependencies": {
         "Loggie/Core": [
 
@@ -60,7 +60,7 @@
     },
     {
       "name": "URLSession",
-      "source_files": "Source/URLSession/**/*.{swift}",
+      "source_files": "Loggie/Classes/URLSession/**/*.{swift}",
       "dependencies": {
         "Loggie/Core": [
 

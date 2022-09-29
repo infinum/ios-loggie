@@ -6,9 +6,13 @@
     <img src="./icon.svg" width="300" max-width="50%" alt="Loggie"/>
 </p>
 
+## About
+
+**Loggie** is a simple in-app network logging library that gives the developers and the QA testers a possibility to log network. The library is handy for easily accessible list of network trafic.
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the PodExample directory first.
 
 ## Requirements
 

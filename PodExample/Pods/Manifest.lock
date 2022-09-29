@@ -1,18 +1,31 @@
 PODS:
-  - Loggie (3.0.0):
-    - Loggie/Core (= 3.0.0)
-  - Loggie/Core (3.0.0)
+  - Alamofire (5.6.2)
+  - Loggie (3.0.1):
+    - Loggie/Core (= 3.0.1)
+  - Loggie/Core (3.0.1)
+  - Loggie/LoggieAlamofire (3.0.1):
+    - Alamofire (~> 5.2)
+    - Loggie/Core
+  - Loggie/URLSession (3.0.1):
+    - Loggie/Core
 
 DEPENDENCIES:
   - Loggie (from `../`)
+  - Loggie/LoggieAlamofire (from `../`)
+  - Loggie/URLSession (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   Loggie:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Loggie: 1c5e1e51a17e0947c7bfb6b9ffff835951cc1a4c
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  Loggie: fcbf456bb4169ddc6d3189c99b69058655ced676
 
-PODFILE CHECKSUM: 2f98ef130f20cf251f9840fafd9ce33831f7a2f0
+PODFILE CHECKSUM: 32fe0f4863d5d780d483d021e91f92df3e9c4b10
 
 COCOAPODS: 1.11.3
