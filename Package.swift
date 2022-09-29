@@ -11,17 +11,17 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Source",
-            targets: ["Source"]),
+            name: "Loggie",
+            targets: ["Loggie"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1"))
     ],
     targets: [
         .target(
-            name: "Source",
+            name: "Loggie",
             dependencies: ["Alamofire"],
-            path: "Source"
+            path: "Loggie/Classes"
         ),
     ]
 )
