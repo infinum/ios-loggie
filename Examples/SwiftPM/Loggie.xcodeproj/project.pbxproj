@@ -41,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6073DFF72543463200AD06DA /* iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6073DFF72543463200AD06DA /* LoggieExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggieExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6073DFF92543463200AD06DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6073DFFB2543463200AD06DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6073E0002543463200AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		60345CDA254306DB00E24BD4 = {
 			isa = PBXGroup;
 			children = (
-				6073DFF82543463200AD06DA /* iOSExample */,
+				6073DFF82543463200AD06DA /* LoggieExample */,
 				60345CE5254306DB00E24BD4 /* Products */,
 				6F242830E1C2DF382D8E5535 /* Pods */,
 				395F5FE90D1E597531F03F24 /* Frameworks */,
@@ -115,12 +115,12 @@
 		60345CE5254306DB00E24BD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6073DFF72543463200AD06DA /* iOSExample.app */,
+				6073DFF72543463200AD06DA /* LoggieExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6073DFF82543463200AD06DA /* iOSExample */ = {
+		6073DFF82543463200AD06DA /* LoggieExample */ = {
 			isa = PBXGroup;
 			children = (
 				C1FF42FB28E5A80A002020FA /* Loggie */,
@@ -134,7 +134,7 @@
 				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
 				6073E0072543463300AD06DA /* Info.plist */,
 			);
-			path = iOSExample;
+			path = LoggieExample;
 			sourceTree = "<group>";
 		};
 		6F242830E1C2DF382D8E5535 /* Pods */ = {
@@ -155,7 +155,7 @@
 				C1FF431928E5A80A002020FA /* Assets */,
 			);
 			name = Loggie;
-			path = ../../Loggie;
+			path = ../../../Loggie;
 			sourceTree = "<group>";
 		};
 		C1FF42FC28E5A80A002020FA /* Classes */ = {
@@ -253,9 +253,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6073DFF62543463200AD06DA /* iOSExample */ = {
+		6073DFF62543463200AD06DA /* LoggieExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "iOSExample" */;
+			buildConfigurationList = 6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "LoggieExample" */;
 			buildPhases = (
 				3D1C1145912648569D77E9FA /* [CP] Check Pods Manifest.lock */,
 				6073DFF32543463200AD06DA /* Sources */,
@@ -267,9 +267,9 @@
 			);
 			dependencies = (
 			);
-			name = iOSExample;
+			name = LoggieExample;
 			productName = iOSExample;
-			productReference = 6073DFF72543463200AD06DA /* iOSExample.app */;
+			productReference = 6073DFF72543463200AD06DA /* LoggieExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +299,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6073DFF62543463200AD06DA /* iOSExample */,
+				6073DFF62543463200AD06DA /* LoggieExample */,
 			);
 		};
 /* End PBXProject section */
@@ -545,7 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSExample/Info.plist;
+				INFOPLIST_FILE = LoggieExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSExample/Info.plist;
+				INFOPLIST_FILE = LoggieExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "iOSExample" */ = {
+		6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "LoggieExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6073E0092543463300AD06DA /* Debug */,
