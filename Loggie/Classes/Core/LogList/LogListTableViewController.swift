@@ -109,18 +109,6 @@ extension LogListTableViewController {
                 $0.range(of: searchText, options: .caseInsensitive) != nil
             })
         }
-        
-        if let searchText = self.searchText {
-            logs = logs.filter { $0.request.url?.absoluteString.lowercased().contains(searchText) ?? false }
-        }
-        
-        if Thread.isMainThread {
-            tableView.reloadData()
-        } else {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
     }
 }
 

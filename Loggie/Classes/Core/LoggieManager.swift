@@ -72,7 +72,7 @@ public final class LoggieManager: NSObject {
     
     public func add(_ log: Log) {
         // Avoid changing logs array from multiple threads (race condition)
-        logsHandlingQueue.async { [weak self] in
+        logsHandlingQueue.async(flags: .barrier) { [weak self] in
             guard let self = self else { return }
             self.logs.append(log)
             NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
