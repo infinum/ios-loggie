@@ -12,7 +12,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the PodExample directory first.
+To run the example project, clone the repo, and run `pod install` from the Examples/Cocoapods directory first.
 
 ## Requirements
 
