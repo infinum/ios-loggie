@@ -23,7 +23,8 @@ let package = Package(
     targets: [
         .target(
             name: "Loggie",
-            dependencies: ["Alamofire"]
+            dependencies: ["Alamofire"],
+            path: "Loggie/Classes"
         ),
     ]
 )

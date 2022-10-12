@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import Loggie
 
 final class AlamofireExampleViewController: BaseExampleViewController {
     
