@@ -15,7 +15,10 @@ let package = Package(
             targets: ["Loggie"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.2"))
+        .package(
+		url: "https://github.com/Alamofire/Alamofire.git", 
+		.exact("5.2")
+	)
     ],
     targets: [
         .target(
