@@ -3,7 +3,7 @@
 [![Build Status](https://app.bitrise.io/app/f779303cc7c884f6/status.svg?token=9OxOU504sMcEOrzfNcbwvg&branch=master)](https://app.bitrise.io/app/f779303cc7c884f6) [![Version](https://img.shields.io/cocoapods/v/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie) [![License](https://img.shields.io/cocoapods/l/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie) [![Swift Package Manager](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) [![Platform](https://img.shields.io/cocoapods/p/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 
 <p align="center">
-    <img src="./icon.svg" width="300" max-width="50%" alt="Loggie"/>
+    <img src="./Resources/icon.svg" width="300" max-width="50%" alt="Loggie"/>
 </p>
 
 ## About

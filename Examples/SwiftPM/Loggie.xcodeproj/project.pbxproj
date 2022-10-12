@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,32 +12,10 @@
 		6073E0012543463200AD06DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073DFFF2543463200AD06DA /* Main.storyboard */; };
 		6073E0032543463300AD06DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0022543463300AD06DA /* Assets.xcassets */; };
 		6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0042543463300AD06DA /* LaunchScreen.storyboard */; };
-		60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */; };
-		60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */; };
 		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
-		C1FF431B28E5A80B002020FA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF42FE28E5A80A002020FA /* DataDecoder.swift */; };
-		C1FF431C28E5A80B002020FA /* LoggieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF42FF28E5A80A002020FA /* LoggieManager.swift */; };
-		C1FF431D28E5A80B002020FA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430028E5A80A002020FA /* Log.swift */; };
-		C1FF431E28E5A80B002020FA /* LogListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */; };
-		C1FF431F28E5A80B002020FA /* LogListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */; };
-		C1FF432028E5A80B002020FA /* LogListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */; };
-		C1FF432128E5A80B002020FA /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430528E5A80A002020FA /* LogListTableViewController.swift */; };
-		C1FF432228E5A80B002020FA /* LogDetailsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */; };
-		C1FF432328E5A80B002020FA /* LogDetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */; };
-		C1FF432428E5A80B002020FA /* LogDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */; };
-		C1FF432528E5A80B002020FA /* Log+ResponseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */; };
-		C1FF432628E5A80B002020FA /* LogDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FF430C28E5A80A002020FA /* LogDetails.storyboard */; };
-		C1FF432728E5A80B002020FA /* Log+OverviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */; };
-		C1FF432828E5A80B002020FA /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */; };
-		C1FF432928E5A80B002020FA /* LogDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */; };
-		C1FF432A28E5A80B002020FA /* Log+RequestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */; };
-		C1FF432B28E5A80B002020FA /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431228E5A80A002020FA /* BundleExtensions.swift */; };
-		C1FF432C28E5A80B002020FA /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */; };
-		C1FF432D28E5A80B002020FA /* URLRequest+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431428E5A80A002020FA /* URLRequest+Data.swift */; };
-		C1FF432E28E5A80B002020FA /* LoggieURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */; };
-		C1FF432F28E5A80B002020FA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF431828E5A80A002020FA /* EventMonitor.swift */; };
-		C1FF433028E5A80B002020FA /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1FF431A28E5A80A002020FA /* assets.xcassets */; };
-		DA370A5158AEC6A63FBAB2DD /* Pods_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */; };
+		C1D615A328F6D631006C7EA1 /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */; };
+		C1D615A428F6D631006C7EA1 /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */; };
+		C1D615A728F6D9F9006C7EA1 /* Loggie in Frameworks */ = {isa = PBXBuildFile; productRef = C1D615A628F6D9F9006C7EA1 /* Loggie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,37 +26,9 @@
 		6073E0022543463300AD06DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6073E0052543463300AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6073E0072543463300AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
-		60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
-		6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
-		87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggieAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSExample.debug.xcconfig"; path = "Target Support Files/Pods-iOSExample/Pods-iOSExample.debug.xcconfig"; sourceTree = "<group>"; };
-		C1FF42FE28E5A80A002020FA /* DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
-		C1FF42FF28E5A80A002020FA /* LoggieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieManager.swift; sourceTree = "<group>"; };
-		C1FF430028E5A80A002020FA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
-		C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
-		C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogListTableViewController.storyboard; sourceTree = "<group>"; };
-		C1FF430528E5A80A002020FA /* LogListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
-		C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
-		C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
-		C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
-		C1FF430C28E5A80A002020FA /* LogDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
-		C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
-		C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsViewController.swift; sourceTree = "<group>"; };
-		C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
-		C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		C1FF431228E5A80A002020FA /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
-		C1FF431428E5A80A002020FA /* URLRequest+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
-		C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggieURLProtocol.swift; sourceTree = "<group>"; };
-		C1FF431828E5A80A002020FA /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		C1FF431A28E5A80A002020FA /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
-		CC2FB108141BEA675011125B /* Pods-LoggieAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggieAlamofire.release.xcconfig"; path = "Target Support Files/Pods-LoggieAlamofire/Pods-LoggieAlamofire.release.xcconfig"; sourceTree = "<group>"; };
-		F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSExample.release.xcconfig"; path = "Target Support Files/Pods-iOSExample/Pods-iOSExample.release.xcconfig"; sourceTree = "<group>"; };
+		C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
+		C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,29 +36,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA370A5158AEC6A63FBAB2DD /* Pods_iOSExample.framework in Frameworks */,
+				C1D615A728F6D9F9006C7EA1 /* Loggie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		395F5FE90D1E597531F03F24 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				87083BFE7824D6A96D569E08 /* Pods_LoggieAlamofire.framework */,
-				8F5181ED79B8F9831F167286 /* Pods_iOSExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		60345CDA254306DB00E24BD4 = {
 			isa = PBXGroup;
 			children = (
 				6073DFF82543463200AD06DA /* LoggieExample */,
 				60345CE5254306DB00E24BD4 /* Products */,
-				6F242830E1C2DF382D8E5535 /* Pods */,
-				395F5FE90D1E597531F03F24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,131 +62,17 @@
 		6073DFF82543463200AD06DA /* LoggieExample */ = {
 			isa = PBXGroup;
 			children = (
-				C1FF42FB28E5A80A002020FA /* Loggie */,
+				C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */,
 				6073DFF92543463200AD06DA /* AppDelegate.swift */,
-				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
-				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
-				60C28ED42548617800979EBE /* URLSessionExampleViewController.swift */,
-				60C28ECD2548610000979EBE /* AlamofireExampleViewController.swift */,
-				6073DFFF2543463200AD06DA /* Main.storyboard */,
 				6073E0022543463300AD06DA /* Assets.xcassets */,
-				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
+				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
 				6073E0072543463300AD06DA /* Info.plist */,
+				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
+				6073DFFF2543463200AD06DA /* Main.storyboard */,
+				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
+				C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */,
 			);
 			path = LoggieExample;
-			sourceTree = "<group>";
-		};
-		6F242830E1C2DF382D8E5535 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6E6003CE72BEB344355671CC /* Pods-LoggieAlamofire.debug.xcconfig */,
-				CC2FB108141BEA675011125B /* Pods-LoggieAlamofire.release.xcconfig */,
-				BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */,
-				F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		C1FF42FB28E5A80A002020FA /* Loggie */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF42FC28E5A80A002020FA /* Classes */,
-				C1FF431928E5A80A002020FA /* Assets */,
-			);
-			name = Loggie;
-			path = ../../../Loggie;
-			sourceTree = "<group>";
-		};
-		C1FF42FC28E5A80A002020FA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF42FD28E5A80A002020FA /* Core */,
-				C1FF431528E5A80A002020FA /* URLSession */,
-				C1FF431728E5A80A002020FA /* LoggieAlamofire */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C1FF42FD28E5A80A002020FA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF42FE28E5A80A002020FA /* DataDecoder.swift */,
-				C1FF42FF28E5A80A002020FA /* LoggieManager.swift */,
-				C1FF430028E5A80A002020FA /* Log.swift */,
-				C1FF430128E5A80A002020FA /* LogList */,
-				C1FF430628E5A80A002020FA /* LogDetails */,
-				C1FF431128E5A80A002020FA /* Utility */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		C1FF430128E5A80A002020FA /* LogList */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF430228E5A80A002020FA /* LogListTableViewCell.swift */,
-				C1FF430328E5A80A002020FA /* LogListTableViewCell.xib */,
-				C1FF430428E5A80A002020FA /* LogListTableViewController.storyboard */,
-				C1FF430528E5A80A002020FA /* LogListTableViewController.swift */,
-			);
-			path = LogList;
-			sourceTree = "<group>";
-		};
-		C1FF430628E5A80A002020FA /* LogDetails */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF430728E5A80A002020FA /* Cells */,
-				C1FF430B28E5A80A002020FA /* Log+ResponseDetails.swift */,
-				C1FF430C28E5A80A002020FA /* LogDetails.storyboard */,
-				C1FF430D28E5A80A002020FA /* Log+OverviewDetails.swift */,
-				C1FF430E28E5A80A002020FA /* LogDetailsViewController.swift */,
-				C1FF430F28E5A80A002020FA /* LogDetailsSection.swift */,
-				C1FF431028E5A80A002020FA /* Log+RequestDetails.swift */,
-			);
-			path = LogDetails;
-			sourceTree = "<group>";
-		};
-		C1FF430728E5A80A002020FA /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF430828E5A80A002020FA /* LogDetailsTextTableViewCell.swift */,
-				C1FF430928E5A80A002020FA /* LogDetailsImageTableViewCell.swift */,
-				C1FF430A28E5A80A002020FA /* LogDetailsTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		C1FF431128E5A80A002020FA /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF431228E5A80A002020FA /* BundleExtensions.swift */,
-				C1FF431328E5A80A002020FA /* Data+FormattedJsonString.swift */,
-				C1FF431428E5A80A002020FA /* URLRequest+Data.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		C1FF431528E5A80A002020FA /* URLSession */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF431628E5A80A002020FA /* LoggieURLProtocol.swift */,
-			);
-			path = URLSession;
-			sourceTree = "<group>";
-		};
-		C1FF431728E5A80A002020FA /* LoggieAlamofire */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF431828E5A80A002020FA /* EventMonitor.swift */,
-			);
-			path = LoggieAlamofire;
-			sourceTree = "<group>";
-		};
-		C1FF431928E5A80A002020FA /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				C1FF431A28E5A80A002020FA /* assets.xcassets */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,17 +82,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6073E0082543463300AD06DA /* Build configuration list for PBXNativeTarget "LoggieExample" */;
 			buildPhases = (
-				3D1C1145912648569D77E9FA /* [CP] Check Pods Manifest.lock */,
 				6073DFF32543463200AD06DA /* Sources */,
 				6073DFF42543463200AD06DA /* Frameworks */,
 				6073DFF52543463200AD06DA /* Resources */,
-				060BF417B7E2FBC14D30B2C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LoggieExample;
+			packageProductDependencies = (
+				C1D615A628F6D9F9006C7EA1 /* Loggie */,
+			);
 			productName = iOSExample;
 			productReference = 6073DFF72543463200AD06DA /* LoggieExample.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 60345CDA254306DB00E24BD4;
+			packageReferences = (
+				C1D615A528F6D9F9006C7EA1 /* XCRemoteSwiftPackageReference "iOS-Loggie" */,
+			);
 			productRefGroup = 60345CE5254306DB00E24BD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,86 +140,22 @@
 			files = (
 				6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */,
 				6073E0032543463300AD06DA /* Assets.xcassets in Resources */,
-				C1FF432028E5A80B002020FA /* LogListTableViewController.storyboard in Resources */,
-				C1FF431F28E5A80B002020FA /* LogListTableViewCell.xib in Resources */,
-				C1FF432628E5A80B002020FA /* LogDetails.storyboard in Resources */,
-				C1FF433028E5A80B002020FA /* assets.xcassets in Resources */,
 				6073E0012543463200AD06DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		060BF417B7E2FBC14D30B2C6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOSExample/Pods-iOSExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOSExample/Pods-iOSExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSExample/Pods-iOSExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D1C1145912648569D77E9FA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		6073DFF32543463200AD06DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1FF432828E5A80B002020FA /* LogDetailsViewController.swift in Sources */,
-				C1FF432A28E5A80B002020FA /* Log+RequestDetails.swift in Sources */,
-				C1FF432428E5A80B002020FA /* LogDetailsTableViewCell.swift in Sources */,
-				C1FF432D28E5A80B002020FA /* URLRequest+Data.swift in Sources */,
-				C1FF432E28E5A80B002020FA /* LoggieURLProtocol.swift in Sources */,
-				C1FF431B28E5A80B002020FA /* DataDecoder.swift in Sources */,
 				6073DFFA2543463200AD06DA /* AppDelegate.swift in Sources */,
-				C1FF432C28E5A80B002020FA /* Data+FormattedJsonString.swift in Sources */,
 				6073DFFC2543463200AD06DA /* SceneDelegate.swift in Sources */,
+				C1D615A328F6D631006C7EA1 /* URLSessionExampleViewController.swift in Sources */,
+				C1D615A428F6D631006C7EA1 /* AlamofireExampleViewController.swift in Sources */,
 				60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */,
-				C1FF432128E5A80B002020FA /* LogListTableViewController.swift in Sources */,
-				C1FF432528E5A80B002020FA /* Log+ResponseDetails.swift in Sources */,
-				C1FF432228E5A80B002020FA /* LogDetailsTextTableViewCell.swift in Sources */,
-				C1FF432728E5A80B002020FA /* Log+OverviewDetails.swift in Sources */,
-				C1FF431E28E5A80B002020FA /* LogListTableViewCell.swift in Sources */,
-				C1FF432928E5A80B002020FA /* LogDetailsSection.swift in Sources */,
-				C1FF432328E5A80B002020FA /* LogDetailsImageTableViewCell.swift in Sources */,
-				60C28ED52548617800979EBE /* URLSessionExampleViewController.swift in Sources */,
-				60C28ECE2548610000979EBE /* AlamofireExampleViewController.swift in Sources */,
-				C1FF432B28E5A80B002020FA /* BundleExtensions.swift in Sources */,
-				C1FF431D28E5A80B002020FA /* Log.swift in Sources */,
-				C1FF431C28E5A80B002020FA /* LoggieManager.swift in Sources */,
-				C1FF432F28E5A80B002020FA /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +305,6 @@
 		};
 		6073E0092543463300AD06DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEDEDB6DBF77C59D3AFC28F1 /* Pods-iOSExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -559,7 +323,6 @@
 		};
 		6073E00A2543463300AD06DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0DD33030211B2994EB6F992 /* Pods-iOSExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -598,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1D615A528F6D9F9006C7EA1 /* XCRemoteSwiftPackageReference "iOS-Loggie" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/infinum/iOS-Loggie";
+			requirement = {
+				branch = "feature/project-structure";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1D615A628F6D9F9006C7EA1 /* Loggie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1D615A528F6D9F9006C7EA1 /* XCRemoteSwiftPackageReference "iOS-Loggie" */;
+			productName = Loggie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60345CDB254306DB00E24BD4 /* Project object */;
 }

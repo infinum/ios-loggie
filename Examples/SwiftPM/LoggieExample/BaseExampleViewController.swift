@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Loggie
 
 class BaseExampleViewController: UIViewController {
     
