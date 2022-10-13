@@ -66,6 +66,7 @@ public final class LoggieManager: NSObject {
         
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.backgroundColor = .white
         viewController.present(navigationController, animated: true, completion: nil)
         return navigationController
     }
