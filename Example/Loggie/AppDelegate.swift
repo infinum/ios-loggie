@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+// Uncomment this if you want to see the SwiftUI implementation
+//        if #available(iOS 13.0.0, *) {
+//            let vc = UIHostingController(rootView: SwiftUIView())
+//            window?.rootViewController = vc
+//            window?.makeKeyAndVisible()
+//        }
+
         return true
     }
 

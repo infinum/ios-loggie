@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension Notification.Name {
     static let LoggieDidUpdateLogs = Notification.Name("co.infinum.loggie-did-update-logs")
@@ -72,6 +73,26 @@ public class LoggieManager: NSObject, LogsDataSourceDelegate {
         }
 
         viewController.present(navigationController, animated: true, completion: nil)
+        return navigationController
+    }
+
+    public func showLogs() -> UINavigationController {
+        let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
+            .instantiateViewController(withIdentifier: "LogListTableViewController")
+            as! LogListTableViewController
+        vc.filter = nil
+        vc.logsDataSourceDelegate = self
+
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.isTranslucent = false
+
+        if #available(iOS 15.0, *) {
+            let appearence = UINavigationBarAppearance()
+            appearence.configureWithOpaqueBackground()
+            navigationController.navigationBar.standardAppearance = appearence
+            navigationController.navigationBar.scrollEdgeAppearance = appearence
+        }
+
         return navigationController
     }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02ED2BF973013FCEDCF2673A4C31AC8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8E1F128D5C7FFEA3BE07508B15460E /* Foundation.framework */; };
 		075C8C4299F2D71F8C1C56FD86A38AA0 /* LogListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE277D72E9A591425E846B60343981 /* LogListTableViewController.storyboard */; };
+		0D3E63F228F95AE000944E5F /* LogListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E63F128F95AE000944E5F /* LogListTableView.swift */; };
 		0DFBFB3DAF9A49F7DBF1964947E73751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8E1F128D5C7FFEA3BE07508B15460E /* Foundation.framework */; };
 		2208C89A77D6032B2425C9C736BFB2BB /* Data+FormattedJsonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A233392CBB8DE41A2083E3686D475D73 /* Data+FormattedJsonString.swift */; };
 		257DACEF3C722359163485AB1F55AA85 /* LogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07B72C076538D3F692EBCE0F361400 /* LogDetailsViewController.swift */; };
@@ -72,13 +73,14 @@
 
 /* Begin PBXFileReference section */
 		0219EAFDF941B494DE179479C04F8C01 /* Pods-Loggie_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loggie_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D3E63F128F95AE000944E5F /* LogListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListTableView.swift; sourceTree = "<group>"; };
 		10ABF184FE058154A522E562003555A6 /* LogListTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
 		15ED1F8CEEDB47BA3B45352591689DC7 /* Loggie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Loggie-dummy.m"; sourceTree = "<group>"; };
 		1B1ADAD0F29F2C87DD0411019904BE04 /* Pods-Loggie_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		251B806292D81FAEEC6EA0A8B8B7F310 /* LogDetailsImageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsImageTableViewCell.swift; sourceTree = "<group>"; };
 		2C3BCF23CD1C29206DC311391CB8927B /* Loggie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loggie.debug.xcconfig; sourceTree = "<group>"; };
 		2E6BE2B0AAE0FB764E78BB9AE85AA907 /* BundleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		30BB31930F232A6B15A5594C41B480F2 /* Loggie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Loggie.framework; path = Loggie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30BB31930F232A6B15A5594C41B480F2 /* Loggie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loggie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C348587DF47C66872ABB4786EEB8AD /* URLRequest+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URLRequest+Data.swift"; sourceTree = "<group>"; };
 		36A05017D91904A8B92C1CDB5D8ABE4C /* Loggie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Loggie-Info.plist"; sourceTree = "<group>"; };
 		39C5200B306B64B8E6F8F3B2F3B56D1A /* Pods-Loggie_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loggie_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -87,11 +89,11 @@
 		3F7F7381B6C407CE3762BC0E2321929F /* LogDetailsTextTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsTextTableViewCell.swift; sourceTree = "<group>"; };
 		414B1099AC104D724AEFA8477B3C033E /* Loggie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loggie.release.xcconfig; sourceTree = "<group>"; };
 		45578856AA199946B990B4E636C13ED6 /* LoggieURLProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggieURLProtocol.swift; path = Loggie/Classes/LoggieURLProtocol.swift; sourceTree = "<group>"; };
-		456312C12F45705AC81EDFF2F589C24A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		456312C12F45705AC81EDFF2F589C24A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4CC5047B50605B3CEE70523813CD3FD6 /* Pods-Loggie_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4CD0C551BC1CA118D4AEF889FD37294F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		4D247CC87CF04E9836E4D92CCD3E8536 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		50E7EE2D2051365B781C4B578DE54B4D /* Pods_Loggie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loggie_Tests.framework; path = "Pods-Loggie_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E7EE2D2051365B781C4B578DE54B4D /* Pods_Loggie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loggie_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5203BC8594D823D4BBA567A2A14C4DD1 /* Pods-Loggie_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Loggie_Example.modulemap"; sourceTree = "<group>"; };
 		586CC6EE86FCF3903E1A548AE68482BC /* LogDetails.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LogDetails.storyboard; sourceTree = "<group>"; };
 		59F29CF114AEFDBD5DE36567CA38BBC4 /* ServerTrustPolicyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicyManager.swift; path = Loggie/Classes/ServerTrustPolicyManager.swift; sourceTree = "<group>"; };
@@ -106,27 +108,27 @@
 		8C48C8F4603C25E9238CFF928F302E99 /* LogListTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LogListTableViewCell.xib; sourceTree = "<group>"; };
 		8D003067A8A180F922E4F1DAB0D84D7C /* Pods-Loggie_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loggie_Tests-dummy.m"; sourceTree = "<group>"; };
 		8F9AA84FE74E6813E6668661D0FB263C /* Log+RequestDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+RequestDetails.swift"; sourceTree = "<group>"; };
-		934E866BEEC0DE6389DDA63CE54ACFB9 /* LoggieResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LoggieResources.bundle; path = "Loggie-LoggieResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		934E866BEEC0DE6389DDA63CE54ACFB9 /* LoggieResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggieResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9469FB73077F00690A6DEDB39007BEC5 /* Pods-Loggie_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loggie_Example-frameworks.sh"; sourceTree = "<group>"; };
 		98ECA215BBDBA82D03DA5D0EDC97CDE7 /* Pods-Loggie_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B073B5368F323E73DC0D53A14237267 /* Pods-Loggie_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loggie_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9C41D44159B9B0206C840338D1D7A427 /* Pods-Loggie_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loggie_Tests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A233392CBB8DE41A2083E3686D475D73 /* Data+FormattedJsonString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+FormattedJsonString.swift"; sourceTree = "<group>"; };
 		A50F579A10C40738ACDE81DBF1134EC6 /* Log+ResponseDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+ResponseDetails.swift"; sourceTree = "<group>"; };
 		AC0E504EB6B79DEDF7D8CA463BADA834 /* Pods-Loggie_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loggie_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ACEB19ECE8CCD18D7D9AF75155DA19DA /* Pods_Loggie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loggie_Example.framework; path = "Pods-Loggie_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACEB19ECE8CCD18D7D9AF75155DA19DA /* Pods_Loggie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loggie_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E143F058687D42E76496AFC74EB42A /* Pods-Loggie_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loggie_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B9A733C2951960A43C614871656D887F /* LogListTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogListTableViewCell.swift; sourceTree = "<group>"; };
 		C2A5E84A714C7B1519885B50E83229F3 /* LogDetailsTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		C5C55239AE4D7367B06D253738BB35DD /* Pods-Loggie_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loggie_Example-dummy.m"; sourceTree = "<group>"; };
-		C6CD8E9BD74AD126CA51F44B8CB95C98 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C6CD8E9BD74AD126CA51F44B8CB95C98 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7E33FC25DECB427496F75AD8965F042 /* Loggie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loggie-umbrella.h"; sourceTree = "<group>"; };
 		CBC28A223AF0787A02F507055E51A905 /* Pods-Loggie_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loggie_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CEABEEF2F0E43E70592944631DEA317A /* Loggie-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loggie-prefix.pch"; sourceTree = "<group>"; };
 		CEC42AF5836261DD1CA98505DE0D38BE /* LogDetailsSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailsSection.swift; sourceTree = "<group>"; };
 		D4F3EF78969BCE6A35D900E8AF26076D /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Loggie/Classes/Log.swift; sourceTree = "<group>"; };
-		EA1E6335DAC7747E4371B46C36F3D818 /* Loggie.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Loggie.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EA1E6335DAC7747E4371B46C36F3D818 /* Loggie.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Loggie.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F39713370E51AC0D7943E6B1FBE1D794 /* Pods-Loggie_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loggie_Example-Info.plist"; sourceTree = "<group>"; };
 		F949601EB134246F7EC22323566252E1 /* ResourceBundle-LoggieResources-Loggie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LoggieResources-Loggie-Info.plist"; sourceTree = "<group>"; };
 		FC0248A0D8CF2CF9636529F17967B671 /* Log+OverviewDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Log+OverviewDetails.swift"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				8C48C8F4603C25E9238CFF928F302E99 /* LogListTableViewCell.xib */,
 				5CDE277D72E9A591425E846B60343981 /* LogListTableViewController.storyboard */,
 				10ABF184FE058154A522E562003555A6 /* LogListTableViewController.swift */,
+				0D3E63F128F95AE000944E5F /* LogListTableView.swift */,
 			);
 			name = LogList;
 			path = Loggie/Classes/LogList;
@@ -350,7 +353,6 @@
 				C2A5E84A714C7B1519885B50E83229F3 /* LogDetailsTableViewCell.swift */,
 				3F7F7381B6C407CE3762BC0E2321929F /* LogDetailsTextTableViewCell.swift */,
 			);
-			name = Cells;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -556,6 +558,7 @@
 				5E0BE7C53B6ECC771420501041A8EDC0 /* LoggieURLProtocol.swift in Sources */,
 				63B1C080419C9CA7FCB5D7E3F1E9F391 /* LogListTableViewCell.swift in Sources */,
 				EDD052F09BF7158CA72CB07735466527 /* LogListTableViewController.swift in Sources */,
+				0D3E63F228F95AE000944E5F /* LogListTableView.swift in Sources */,
 				A34DB1AF0FFA9914752463C3DB3F9008 /* ServerTrustPolicyManager.swift in Sources */,
 				78F9A7D4B89F188F5C118CA3679D0820 /* URLRequest+Data.swift in Sources */,
 				D6DECC02E754E037DD611924069196BB /* URLSessionConfiguration+Loggie.swift in Sources */,
@@ -912,8 +915,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
