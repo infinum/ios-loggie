@@ -56,31 +56,21 @@ public class LoggieManager: NSObject, LogsDataSourceDelegate {
     @discardableResult
     @objc(showLogsFromViewController:filter:)
     public func showLogs(from viewController: UIViewController, filter: ((Log) -> Bool)? = nil) -> UINavigationController {
-        let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
-            .instantiateViewController(withIdentifier: "LogListTableViewController")
-            as! LogListTableViewController
-        vc.filter = filter
-        vc.logsDataSourceDelegate = self
-
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.navigationBar.isTranslucent = false
-
-        if #available(iOS 15.0, *) {
-            let appearence = UINavigationBarAppearance()
-            appearence.configureWithOpaqueBackground()
-            navigationController.navigationBar.standardAppearance = appearence
-            navigationController.navigationBar.scrollEdgeAppearance = appearence
-        }
-
+        let navigationController = loggieNavigationController(filter: filter)
         viewController.present(navigationController, animated: true, completion: nil)
         return navigationController
     }
 
-    public func showLogs() -> UINavigationController {
+    public func showLogs(filter: ((Log) -> Bool)? = nil) -> UINavigationController {
+        let navigationController = loggieNavigationController(filter: filter)
+        return navigationController
+    }
+
+    func loggieNavigationController(filter: ((Log) -> Bool)?) -> UINavigationController {
         let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
             .instantiateViewController(withIdentifier: "LogListTableViewController")
             as! LogListTableViewController
-        vc.filter = nil
+        vc.filter = filter
         vc.logsDataSourceDelegate = self
 
         let navigationController = UINavigationController(rootViewController: vc)

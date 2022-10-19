@@ -13,16 +13,16 @@ import WebKit
 @available(iOS 13.0.0, *)
 struct SwiftUIView: View {
 
-    @State private var showingImagePicker = false
+    @State private var showingLogs = false
 
     var body: some View {
         VStack {
             SwiftUIWebView()
             Button("Show logs") {
-                showingImagePicker = true
+                showingLogs = true
             }
         }
-        .sheet(isPresented: $showingImagePicker) {
+        .sheet(isPresented: $showingLogs) {
             LogListTableView()
         }
     }
