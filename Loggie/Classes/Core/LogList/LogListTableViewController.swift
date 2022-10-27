@@ -49,8 +49,8 @@ public class LogListTableViewController: UITableViewController {
     private func setupTableView() {
         tableView.rowHeight = 70
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        let cellNib = UINib(nibName: "LogListTableViewCell", bundle: .loggie)
-        tableView.register(cellNib, forCellReuseIdentifier: LogListTableViewController.cellReuseIdentifier)
+        tableView.registerCell(type: LogListTableViewCell.self,
+                               identifier: LogListTableViewController.cellReuseIdentifier)
     }
 
     @IBAction func clearAction() {
@@ -137,8 +137,8 @@ extension LogListTableViewController {
     }
 
     private func showLogDetails(with log: Log) {
-        let storyboard = UIStoryboard(name: "LogDetails", bundle: .loggie)
-        let viewController = storyboard.instantiateInitialViewController() as! LogDetailsViewController
+        let storyboard = UIStoryboard().storyboard(for: UIStoryboard.LoggieIdentifier.logDetails)
+        guard let viewController = storyboard.instantiateInitialViewController() as? LogDetailsViewController else { return }
         viewController.log = log
         navigationController?.pushViewController(viewController, animated: true)
     }

@@ -77,9 +77,9 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     }
 
     func loggieNavigationController(filter: ((Log) -> Bool)?) -> UINavigationController {
-        let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
+        guard let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
                     .instantiateViewController(withIdentifier: "LogListTableViewController")
-                    as! LogListTableViewController
+                as? LogListTableViewController else { return UINavigationController() }
         vc.filter = filter
         vc.logsDataSourceDelegate = self
 
