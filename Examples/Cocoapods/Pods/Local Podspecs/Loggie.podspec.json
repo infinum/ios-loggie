@@ -1,6 +1,6 @@
 {
   "name": "Loggie",
-  "version": "3.0.1",
+  "version": "2.4.0",
   "summary": "In-app network logging library.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "3.0.1"
+    "tag": "2.4.0"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "swift_versions": "5.0",

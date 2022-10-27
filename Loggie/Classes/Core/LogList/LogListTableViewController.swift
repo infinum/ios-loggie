@@ -10,27 +10,32 @@ import UIKit
 
 public class LogListTableViewController: UITableViewController {
 
-    // MARK: - Properties
-    
     private static let cellReuseIdentifier = "cell"
+    internal var logsDataSourceDelegate: LogsDataSourceDelegate!
 
-    private var logs: [Log] = []
-
+    @IBOutlet private var searchBar: UISearchBar!
+    private var logs = [Log]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     public var filter: ((Log) -> Bool)? = nil {
         didSet {
             updateLogs()
         }
     }
-    
-    private var searchText: String?
-    
+
     // MARK: - Lifecycle
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Logs"
-        setupUI()
+        setupTableView()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .stop,
+            target: self,
+            action: #selector(closeButtonActionHandler)
+        )
 
         NotificationCenter.default.addObserver(
             self,
@@ -38,11 +43,25 @@ public class LogListTableViewController: UITableViewController {
             name: .LoggieDidUpdateLogs,
             object: nil
         )
-        
         updateLogs()
     }
 
-    // MARK: - Table view data source
+    private func setupTableView() {
+        tableView.rowHeight = 70
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        let cellNib = UINib(nibName: "LogListTableViewCell", bundle: .loggie)
+        tableView.register(cellNib, forCellReuseIdentifier: LogListTableViewController.cellReuseIdentifier)
+    }
+
+    @IBAction func clearAction() {
+        logsDataSourceDelegate.clearLogs()
+        logs = []
+    }
+}
+
+// MARK: - Table view data source
+
+extension LogListTableViewController {
 
     override public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -68,12 +87,14 @@ public class LogListTableViewController: UITableViewController {
 extension LogListTableViewController {
 
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "LogDetails", bundle: .loggie)
-        let viewController = storyboard.instantiateInitialViewController() as! LogDetailsViewController
-        viewController.log = logs[indexPath.row]
-        navigationController?.pushViewController(viewController, animated: true)
+        showLogDetails(with: logs[indexPath.row])
     }
 
+    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
 }
 
 // MARK: - Search bar delegate
@@ -100,6 +121,10 @@ extension LogListTableViewController {
             _logs = _logs.filter(filter)
         }
 
+        if let text = searchBar?.text, text.isEmpty == false  {
+            _logs = _logs.filter(filter(by: text))
+        }
+
         logs = _logs
     }
 
@@ -110,51 +135,19 @@ extension LogListTableViewController {
             })
         }
     }
-}
 
-// MARK: - UI
+    private func showLogDetails(with log: Log) {
+        let storyboard = UIStoryboard(name: "LogDetails", bundle: .loggie)
+        let viewController = storyboard.instantiateInitialViewController() as! LogDetailsViewController
+        viewController.log = log
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
-private extension LogListTableViewController {
-    
-    func setupUI() {
-        setupDismissButton()
-        setupSearchBar()
-        setupTableView()
-    }
-    
-    func setupDismissButton() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .stop,
-            target: self,
-            action: #selector(closeButtonActionHandler)
-        )
-    }
-    
-    func setupSearchBar() {
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
-        searchBar.placeholder = "Search by URL"
-        searchBar.delegate = self
-        tableView.tableHeaderView = searchBar
-    }
-    
-    func setupTableView() {
-        tableView.rowHeight = 70
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
-        
-        let cellNib = UINib(nibName: "LogListTableViewCell", bundle: .loggie)
-        tableView.register(cellNib, forCellReuseIdentifier: LogListTableViewController.cellReuseIdentifier)
-    }
-}
-
-// MARK: - Actions
-
-private extension LogListTableViewController {
-    
-    @objc func loggieDidUpdateLogs() {
+    @objc private func loggieDidUpdateLogs() {
         updateLogs()
     }
 
-    @objc func closeButtonActionHandler() {
+    @objc private func closeButtonActionHandler() {
         dismiss(animated: true, completion: nil)
     }
 }

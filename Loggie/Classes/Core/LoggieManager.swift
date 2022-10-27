@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension Notification.Name {
     static let LoggieDidUpdateLogs = Notification.Name("com.infinum.loggie-did-update-logs")
@@ -29,8 +30,12 @@ public protocol LoggieDelegate {
     func loggie(_ loggie: LoggieManager, urlSessionForURLRequest urlRequest: URLRequest) -> URLSession
 }
 
+internal protocol LogsDataSourceDelegate: AnyObject {
+    func clearLogs()
+}
+
 @objcMembers
-public final class LoggieManager: NSObject {
+public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     
     // MARK: - Properties
     
@@ -61,13 +66,27 @@ public final class LoggieManager: NSObject {
     @discardableResult
     @objc(showLogsFromViewController:filter:)
     public func showLogs(from viewController: UIViewController, filter: ((Log) -> Bool)? = nil) -> UINavigationController {
-        let vc = LogListTableViewController()
+        let navigationController = loggieNavigationController(filter: filter)
+        viewController.present(navigationController, animated: true, completion: nil)
+        return navigationController
+    }
+
+    public func showLogs(filter: ((Log) -> Bool)? = nil) -> UINavigationController {
+        let navigationController = loggieNavigationController(filter: filter)
+        return navigationController
+    }
+
+    func loggieNavigationController(filter: ((Log) -> Bool)?) -> UINavigationController {
+        let vc: LogListTableViewController = UIStoryboard(name: "LogListTableViewController", bundle: .loggie)
+                    .instantiateViewController(withIdentifier: "LogListTableViewController")
+                    as! LogListTableViewController
         vc.filter = filter
-        
+        vc.logsDataSourceDelegate = self
+
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.backgroundColor = .white
-        viewController.present(navigationController, animated: true, completion: nil)
+
         return navigationController
     }
     
@@ -77,6 +96,14 @@ public final class LoggieManager: NSObject {
             guard let self = self else { return }
             self.logs.append(log)
             NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
+        }
+    }
+
+    func clearLogs() {
+        // Avoid changing logs array from multiple threads (race condition)
+        logsHandlingQueue.async(flags: .barrier) { [weak self] in
+            guard let self = self else { return }
+            self.logs = []
         }
     }
 }

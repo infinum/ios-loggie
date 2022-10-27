@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (5.6.2)
-  - Loggie (3.0.1):
-    - Loggie/Core (= 3.0.1)
-  - Loggie/Core (3.0.1)
-  - Loggie/LoggieAlamofire (3.0.1):
+  - Loggie (2.4.0):
+    - Loggie/Core (= 2.4.0)
+  - Loggie/Core (2.4.0)
+  - Loggie/LoggieAlamofire (2.4.0):
     - Alamofire (~> 5.2)
     - Loggie/Core
-  - Loggie/URLSession (3.0.1):
+  - Loggie/URLSession (2.4.0):
     - Loggie/Core
 
 DEPENDENCIES:
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
-  Loggie: fcbf456bb4169ddc6d3189c99b69058655ced676
+  Loggie: 514ed61bf507f96b4de678149a22ba84876af4a6
 
 PODFILE CHECKSUM: 41d8225babe23823d1f04eac9b7b078c3cfc0269
 
