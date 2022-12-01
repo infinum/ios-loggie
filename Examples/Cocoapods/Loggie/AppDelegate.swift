@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
 // Uncomment this if you want to see the SwiftUI implementation
-//        if #available(iOS 13.0.0, *) {
-//            let vc = UIHostingController(rootView: SwiftUIView())
-//            window?.rootViewController = vc
-//            window?.makeKeyAndVisible()
-//        }
+        if #available(iOS 13.0.0, *) {
+            let vc = UIHostingController(rootView: SwiftUIView())
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+        }
 
         return true
     }

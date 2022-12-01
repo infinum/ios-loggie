@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum LogDetailsItem {
+enum LogDetailsItem: Hashable {
 
     case subtitle(String?, String?)
     case text(String?)

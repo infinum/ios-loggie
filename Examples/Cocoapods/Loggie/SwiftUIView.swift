@@ -23,7 +23,7 @@ struct SwiftUIView: View {
             }
         }
         .sheet(isPresented: $showingLogs) {
-            LogListTableView()
+            LogListView(logs: LoggieManager.shared.logs)
         }
     }
 }
