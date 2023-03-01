@@ -49,8 +49,10 @@ public class LogListTableViewController: UITableViewController {
     private func setupTableView() {
         tableView.rowHeight = 70
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        tableView.registerCell(type: LogListTableViewCell.self,
-                               identifier: LogListTableViewController.cellReuseIdentifier)
+        tableView.registerCell(
+            type: LogListTableViewCell.self,
+            identifier: LogListTableViewController.cellReuseIdentifier
+        )
     }
 
     @IBAction func clearAction() {

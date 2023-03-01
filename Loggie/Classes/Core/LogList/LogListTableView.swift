@@ -19,8 +19,7 @@ public struct LogListTableView: UIViewControllerRepresentable {
     public typealias UIViewControllerType = UINavigationController
 
     public func makeUIViewController(context: Context) -> UINavigationController {
-        let nav = LoggieManager.shared.showLogs(filter: filter)
-        return nav
+        return LoggieManager.shared.showLogs(filter: filter)
     }
 
     public func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}

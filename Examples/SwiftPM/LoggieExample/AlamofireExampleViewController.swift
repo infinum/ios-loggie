@@ -15,10 +15,6 @@ final class AlamofireExampleViewController: BaseExampleViewController {
         return .init(eventMonitors: [EventMonitor()])
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 }
 
 // MARK: - Actions

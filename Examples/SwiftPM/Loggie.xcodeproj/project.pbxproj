@@ -62,15 +62,15 @@
 		6073DFF82543463200AD06DA /* LoggieExample */ = {
 			isa = PBXGroup;
 			children = (
-				C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */,
 				6073DFF92543463200AD06DA /* AppDelegate.swift */,
-				6073E0022543463300AD06DA /* Assets.xcassets */,
+				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
 				60C28EE0254861F200979EBE /* BaseExampleViewController.swift */,
+				C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */,
+				C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */,
+				6073E0022543463300AD06DA /* Assets.xcassets */,
 				6073E0072543463300AD06DA /* Info.plist */,
 				6073E0042543463300AD06DA /* LaunchScreen.storyboard */,
 				6073DFFF2543463200AD06DA /* Main.storyboard */,
-				6073DFFB2543463200AD06DA /* SceneDelegate.swift */,
-				C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */,
 			);
 			path = LoggieExample;
 			sourceTree = "<group>";
@@ -368,7 +368,7 @@
 			repositoryURL = "https://github.com/infinum/iOS-Loggie";
 			requirement = {
 				kind = revision;
-				revision = d61ae599b4a88e2000a967363dcfe5ce07eaf42d;
+				revision = 9dd671ebf8bff99de6ab87a4f4710b3d87e29325;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
