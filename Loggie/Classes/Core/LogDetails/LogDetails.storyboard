@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LAi-bH-RyO">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Log Details View Controller-->
         <scene sceneID="HWr-Or-o43">
             <objects>
-                <viewController storyboardIdentifier="LogDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="LAi-bH-RyO" customClass="LogDetailsViewController" customModule="iOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="LAi-bH-RyO" customClass="LogDetailsViewController" customModule="Loggie" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lye-UY-26Q"/>
                         <viewControllerLayoutGuide type="bottom" id="Y6A-gw-2PL"/>
