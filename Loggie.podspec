@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/infinum/iOS-Loggie.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/FilipBec'
   s.swift_version    = '5.0'
-
+  
+  s.ios.deployment_target = '10.0'
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |sp| 
