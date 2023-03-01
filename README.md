@@ -55,7 +55,7 @@ URLProtocol.registerClass(LoggieURLProtocol.self)
 [NSURLProtocol registerClass:[LoggieURLProtocol class]];
 ```
 
-**2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`**
+**2. If you use `NSURLSession` (or AFNetworking/Alamofire) make sure that you use `loggieSessionConfiguration`:**
 
 ```swift
 // Swift
