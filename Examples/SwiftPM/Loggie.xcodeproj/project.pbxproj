@@ -368,7 +368,7 @@
 			repositoryURL = "https://github.com/infinum/iOS-Loggie";
 			requirement = {
 				kind = revision;
-				revision = 11a2a7c7a9455707f81a6acec63957674fb13bd5;
+				revision = 7c59880074ed07d87e2c144c12e61d6bb1395951;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
