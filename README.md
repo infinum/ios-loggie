@@ -29,6 +29,12 @@ it, simply add the following line to your Podfile:
 pod 'Loggie'
 ```
 
+By default, network debugging will be available for the `URLSession`. If you want to use Loggie with Alamofire, please use:
+
+```ruby
+pod 'Loggie/Alamofire'
+```
+
 ### Swift Package Manager
 If you are using SPM for your dependency manager, add this to the dependencies in your `Package.swift` file:
 ```swift
