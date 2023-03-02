@@ -3,12 +3,10 @@ use_frameworks!
 
 target 'Loggie_Example' do
   pod 'Loggie', :path => '../../'
-  pod 'Loggie/LoggieAlamofire', :path => '../../'
-  pod 'Loggie/URLSession', :path => '../../'
+  pod 'Loggie/Alamofire', :path => '../../'
 end
 
 target 'Loggie_Tests' do
   pod 'Loggie', :path => '../../'
-  pod 'Loggie/LoggieAlamofire', :path => '../../'
-  pod 'Loggie/URLSession', :path => '../../'
+  pod 'Loggie/Alamofire', :path => '../../'
 end

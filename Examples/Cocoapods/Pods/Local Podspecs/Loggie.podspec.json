@@ -1,6 +1,6 @@
 {
   "name": "Loggie",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "summary": "In-app network logging library.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
   "license": {
@@ -12,17 +12,14 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "2.4.0"
+    "tag": "2.4.1"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "swift_versions": "5.0",
-  "default_subspecs": "Core",
   "platforms": {
-    "osx": null,
-    "ios": null,
-    "tvos": null,
-    "watchos": null
+    "ios": "10.0"
   },
+  "default_subspecs": "URLSession",
   "subspecs": [
     {
       "name": "Core",
@@ -44,8 +41,8 @@
       }
     },
     {
-      "name": "LoggieAlamofire",
-      "source_files": "Loggie/Classes/LoggieAlamofire/**/*.{swift}",
+      "name": "Alamofire",
+      "source_files": "Loggie/Classes/Alamofire/**/*.{swift}",
       "dependencies": {
         "Loggie/Core": [
 
