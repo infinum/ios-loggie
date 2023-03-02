@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Loggie'
-  s.version          = '2.4.0'
+  s.version          = '2.4.1'
   s.summary          = 'In-app network logging library.'
   s.homepage         = 'https://github.com/infinum/iOS-Loggie.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.0'
   
   s.ios.deployment_target = '10.0'
-  s.default_subspec = 'Core'
+  s.default_subspec = 'URLSession'
 
   s.subspec 'Core' do |sp| 
     sp.source_files = 'Loggie/Classes/Core/**/*.{swift}'
@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
     sp.ios.deployment_target = '10.0'
   end
 
-  s.subspec 'LoggieAlamofire' do |sp| 
-    sp.source_files = 'Loggie/Classes/LoggieAlamofire/**/*.{swift}'
+  s.subspec 'Alamofire' do |sp| 
+    sp.source_files = 'Loggie/Classes/Alamofire/**/*.{swift}'
     sp.dependency 'Loggie/Core'
     sp.dependency 'Alamofire', '~> 5.2'
     sp.ios.deployment_target = '10.0'
