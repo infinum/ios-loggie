@@ -17,9 +17,13 @@ public final class EventMonitor: Alamofire.EventMonitor {
 
     public func request(_ request: Request, didGatherMetrics metrics: URLSessionTaskMetrics) {
         /// we're handling only `DataRequest`s for now
-        guard let dataRequest = request as? DataRequest, let urlRequest = dataRequest.request else { return }
-        guard let metric = metrics.transactionMetrics.last else { return }
-        guard let startTime = metric.requestStartDate, let endTime = metric.responseEndDate else { return }
+        guard
+            let dataRequest = request as? DataRequest,
+            let urlRequest = dataRequest.request,
+            let metric = metrics.transactionMetrics.last,
+            let startTime = metric.requestStartDate,
+            let endTime = metric.responseEndDate
+        else { return }
 
         let log = Log(request: urlRequest)
         log.startTime = startTime
