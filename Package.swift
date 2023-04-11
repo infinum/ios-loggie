@@ -7,7 +7,7 @@ let package = Package(
     name: "Loggie",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v11)
     ],
     products: [
         .library(
@@ -15,7 +15,7 @@ let package = Package(
             targets: ["Loggie"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.4"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.2.0"))
     ],
     targets: [
         .target(
