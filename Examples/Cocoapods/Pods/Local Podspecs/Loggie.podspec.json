@@ -1,6 +1,6 @@
 {
   "name": "Loggie",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "summary": "In-app network logging library.",
   "homepage": "https://github.com/infinum/iOS-Loggie.git",
   "license": {
@@ -12,12 +12,12 @@
   },
   "source": {
     "git": "https://github.com/infinum/iOS-Loggie.git",
-    "tag": "2.4.1"
+    "tag": "2.4.2"
   },
   "social_media_url": "https://twitter.com/FilipBec",
   "swift_versions": "5.0",
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
   "default_subspecs": "URLSession",
   "subspecs": [
@@ -37,7 +37,7 @@
         "Security"
       ],
       "platforms": {
-        "ios": "10.0"
+        "ios": "11.0"
       }
     },
     {
@@ -52,7 +52,7 @@
         ]
       },
       "platforms": {
-        "ios": "10.0"
+        "ios": "11.0"
       }
     },
     {
@@ -64,7 +64,7 @@
         ]
       },
       "platforms": {
-        "ios": "10.0"
+        "ios": "11.0"
       }
     }
   ],
