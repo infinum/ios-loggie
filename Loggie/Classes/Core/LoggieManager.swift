@@ -40,7 +40,7 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     // MARK: - Properties
     
     /// A **serial** queue, on which Loggie is appending new logs & posting a notification that `logs` have changed.
-    let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
+    private let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
     
     /// An instance of `URLSession` which Loggie is using if there's no delegate to provide his own session.
     ///
@@ -58,7 +58,11 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     
     /// An array containing all `Log`s either being performed by Loggie through `LoggieURLProtocol`,
     /// or observer by loggie through `EventMonitor`.
-    public private(set) var logs: [Log] = []
+    private var _logs: [Log] = []
+
+    public var logs: [Log] {
+        logsHandlingQueue.sync { _logs }
+    }
     
     @objc(sharedManager)
     public static let shared = LoggieManager()
@@ -94,8 +98,8 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
         // Avoid changing logs array from multiple threads (race condition)
         logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
-            self.logs.append(log)
-            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
+            self._logs.append(log)
+            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: nil)
         }
     }
 
@@ -103,7 +107,7 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
         // Avoid changing logs array from multiple threads (race condition)
         logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
-            self.logs = []
+            self._logs = []
         }
     }
 }

@@ -28,6 +28,7 @@
 		6073E0052543463300AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6073E0072543463300AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
+		A49ADF872A4C0A1F0056545F /* iOS-Loggie */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "iOS-Loggie"; path = ../..; sourceTree = "<group>"; };
 		C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
 		EED4EABE2A6FC95A00E24E9A /* iOS-Loggie */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "iOS-Loggie"; path = ../..; sourceTree = "<group>"; };
