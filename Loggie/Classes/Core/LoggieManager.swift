@@ -40,7 +40,7 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     // MARK: - Properties
     
     /// A **serial** queue, on which Loggie is appending new logs & posting a notification that `logs` have changed.
-    private let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
+    let logsHandlingQueue: DispatchQueue = .init(label: "com.infinum.loggie-logs-handling-queue")
     
     /// An instance of `URLSession` which Loggie is using if there's no delegate to provide his own session.
     ///
@@ -92,7 +92,7 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     
     public func add(_ log: Log) {
         // Avoid changing logs array from multiple threads (race condition)
-        logsHandlingQueue.async(flags: .barrier) { [weak self] in
+        logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
             self.logs.append(log)
             NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
@@ -101,7 +101,7 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
 
     func clearLogs() {
         // Avoid changing logs array from multiple threads (race condition)
-        logsHandlingQueue.async(flags: .barrier) { [weak self] in
+        logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
             self.logs = []
         }
