@@ -918,22 +918,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		32EEE73D344EDF0E072B94F0C6C5FD5D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CA1EF3564B339888BF5549BC964EBB3 /* Loggie.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Loggie";
-				IBSC_MODULE = Loggie;
-				INFOPLIST_FILE = "Target Support Files/Loggie/ResourceBundle-LoggieResources-Loggie-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = LoggieResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		4054A5DE2D2ED0EC8D3FBCFCF3A31AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98ECA215BBDBA82D03DA5D0EDC97CDE7 /* Pods-Loggie_Tests.debug.xcconfig */;
@@ -968,10 +952,11 @@
 			};
 			name = Debug;
 		};
-		408B1EE6753AB20E8C4B4221F3204164 /* Release */ = {
+		6D90D57AA3DE06C55D0B062400B7AB48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07BCFDC8C7C2E652D7C67C929D495393 /* Loggie.release.xcconfig */;
+			baseConfigurationReference = 3CA1EF3564B339888BF5549BC964EBB3 /* Loggie.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Loggie";
 				IBSC_MODULE = Loggie;
 				INFOPLIST_FILE = "Target Support Files/Loggie/ResourceBundle-LoggieResources-Loggie-Info.plist";
@@ -982,7 +967,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		6DFF53E08D12E91B9E867AA78BC556C8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1346,6 +1331,23 @@
 			};
 			name = Debug;
 		};
+		FC343D598C48FCE09F79968796ED2112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07BCFDC8C7C2E652D7C67C929D495393 /* Loggie.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Loggie";
+				IBSC_MODULE = Loggie;
+				INFOPLIST_FILE = "Target Support Files/Loggie/ResourceBundle-LoggieResources-Loggie-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = LoggieResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1388,8 +1390,8 @@
 		6F529DAC8C283184AA14E0D85AF99108 /* Build configuration list for PBXNativeTarget "Loggie-LoggieResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				32EEE73D344EDF0E072B94F0C6C5FD5D /* Debug */,
-				408B1EE6753AB20E8C4B4221F3204164 /* Release */,
+				6D90D57AA3DE06C55D0B062400B7AB48 /* Debug */,
+				FC343D598C48FCE09F79968796ED2112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
