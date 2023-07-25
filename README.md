@@ -39,7 +39,7 @@ pod 'Loggie/Alamofire'
 If you are using SPM for your dependency manager, add this to the dependencies in your `Package.swift` file:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/infinum/iOS-Loggie.git")
+    .package(url: "https://github.com/infinum/ios-loggie.git")
 ]
 ```
 
