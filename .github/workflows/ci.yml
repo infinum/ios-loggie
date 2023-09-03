@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
         id: build_spm_example
         run: |
           xcodebuild clean build \
-            -project "Examples/SPM/Loggie.xcodeproj" \
+            -project "Examples/SwiftPM/Loggie.xcodeproj" \
             -scheme "iOSExample" \
             -sdk iphoneos \
             -destination "platform=${{ env.DESTINATION_PLATFORM }},name=${{ env.DESTINATION_NAME }}" \
