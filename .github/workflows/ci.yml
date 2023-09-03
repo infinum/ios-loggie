@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        id: checkout_code
+        uses: actions/checkout@v3
+
+      - name: Set up destination
+        id: set_up_destination
+        run: |
+          device=$(xcrun simctl list devices | grep -oE 'iPhone.*?[^\(]+' | tail -1 | awk '{$1=$1;print}' | sed -e "s/ Simulator$//")
+          echo "DESTINATION_NAME=$device" >> $GITHUB_ENV
+          echo "DESTINATION_PLATFORM=iOS Simulator" >> $GITHUB_ENV
+
+      - name: Build package
+        id: build_package
+        run: |
+          xcodebuild clean build \
+            -scheme "Loggie" \
+            -sdk iphoneos \
+            -destination "platform=${{ env.DESTINATION_PLATFORM }},name=${{ env.DESTINATION_NAME }}" \
+          | xcpretty --color && exit ${PIPESTATUS[0]}
+
+      - name: Build Cocoapods example
+        id: build_cocoapods_example
+        run: |
+          xcodebuild clean build \
+            -workspace "Examples/Cocoapods/Loggie.xcworkspace" \
+            -scheme "Loggie-Example" \
+            -sdk iphoneos \
+            -destination "platform=${{ env.DESTINATION_PLATFORM }},name=${{ env.DESTINATION_NAME }}" \
+          | xcpretty --color && exit ${PIPESTATUS[0]}
+
+      - name: Build SPM example
+        id: build_spm_example
+        run: |
+          xcodebuild clean build \
+            -project "Examples/SPM/Loggie.xcodeproj" \
+            -scheme "iOSExample" \
+            -sdk iphoneos \
+            -destination "platform=${{ env.DESTINATION_PLATFORM }},name=${{ env.DESTINATION_NAME }}" \
+          | xcpretty --color && exit ${PIPESTATUS[0]}
