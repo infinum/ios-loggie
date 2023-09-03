@@ -13,9 +13,9 @@
 		6073E0032543463300AD06DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0022543463300AD06DA /* Assets.xcassets */; };
 		6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0042543463300AD06DA /* LaunchScreen.storyboard */; };
 		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
-		C16FBC0528F6F3C3000B31BC /* Loggie in Frameworks */ = {isa = PBXBuildFile; productRef = C16FBC0428F6F3C3000B31BC /* Loggie */; };
 		C1D615A328F6D631006C7EA1 /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */; };
 		C1D615A428F6D631006C7EA1 /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */; };
+		EED4EAC12A6FC96400E24E9A /* Loggie in Frameworks */ = {isa = PBXBuildFile; productRef = EED4EAC02A6FC96400E24E9A /* Loggie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +29,7 @@
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
 		C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
+		EED4EABE2A6FC95A00E24E9A /* iOS-Loggie */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "iOS-Loggie"; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C16FBC0528F6F3C3000B31BC /* Loggie in Frameworks */,
+				EED4EAC12A6FC96400E24E9A /* Loggie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +47,10 @@
 		60345CDA254306DB00E24BD4 = {
 			isa = PBXGroup;
 			children = (
+				EED4EABD2A6FC95900E24E9A /* Packages */,
 				6073DFF82543463200AD06DA /* LoggieExample */,
 				60345CE5254306DB00E24BD4 /* Products */,
+				EED4EABF2A6FC96400E24E9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +78,21 @@
 			path = LoggieExample;
 			sourceTree = "<group>";
 		};
+		EED4EABD2A6FC95900E24E9A /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EED4EABE2A6FC95A00E24E9A /* iOS-Loggie */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EED4EABF2A6FC96400E24E9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,7 +110,7 @@
 			);
 			name = LoggieExample;
 			packageProductDependencies = (
-				C16FBC0428F6F3C3000B31BC /* Loggie */,
+				EED4EAC02A6FC96400E24E9A /* Loggie */,
 			);
 			productName = iOSExample;
 			productReference = 6073DFF72543463200AD06DA /* LoggieExample.app */;
@@ -122,7 +140,6 @@
 			);
 			mainGroup = 60345CDA254306DB00E24BD4;
 			packageReferences = (
-				C16FBC0328F6F3C3000B31BC /* XCRemoteSwiftPackageReference "iOS-Loggie" */,
 			);
 			productRefGroup = 60345CE5254306DB00E24BD4 /* Products */;
 			projectDirPath = "";
@@ -362,21 +379,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C16FBC0328F6F3C3000B31BC /* XCRemoteSwiftPackageReference "iOS-Loggie" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/infinum/iOS-Loggie";
-			requirement = {
-				kind = revision;
-				revision = 0f926471710d55ee299711f06b211d380594783e;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		C16FBC0428F6F3C3000B31BC /* Loggie */ = {
+		EED4EAC02A6FC96400E24E9A /* Loggie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C16FBC0328F6F3C3000B31BC /* XCRemoteSwiftPackageReference "iOS-Loggie" */;
 			productName = Loggie;
 		};
 /* End XCSwiftPackageProductDependency section */

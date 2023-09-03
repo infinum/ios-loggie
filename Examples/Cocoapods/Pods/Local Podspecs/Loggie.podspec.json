@@ -2,7 +2,7 @@
   "name": "Loggie",
   "version": "2.4.2",
   "summary": "In-app network logging library.",
-  "homepage": "https://github.com/infinum/iOS-Loggie.git",
+  "homepage": "https://github.com/infinum/ios-loggie.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -11,7 +11,7 @@
     "Filip Beć": "filip.bec@gmail.com"
   },
   "source": {
-    "git": "https://github.com/infinum/iOS-Loggie.git",
+    "git": "https://github.com/infinum/ios-loggie.git",
     "tag": "2.4.2"
   },
   "social_media_url": "https://twitter.com/FilipBec",
