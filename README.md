@@ -1,6 +1,6 @@
 # Loggie
 
-[!Build Status](https://github.com/OWNER/REPOSITORY/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml/badge.svg)](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/cocoapods/v/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 [![License](https://img.shields.io/cocoapods/l/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 [![Swift Package Manager](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
