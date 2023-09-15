@@ -146,7 +146,12 @@ extension LogListTableViewController {
     }
 
     @objc private func loggieDidUpdateLogs() {
-        updateLogs()
+        // This function is not called from the main thread.
+        // because of that we need to Dispatch here to update the UI on the main thread.
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.updateLogs()
+        }
     }
 
     @objc private func closeButtonActionHandler() {

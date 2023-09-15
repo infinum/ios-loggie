@@ -13,6 +13,7 @@
 		6073E0032543463300AD06DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0022543463300AD06DA /* Assets.xcassets */; };
 		6073E0062543463300AD06DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E0042543463300AD06DA /* LaunchScreen.storyboard */; };
 		60C28EE1254861F200979EBE /* BaseExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C28EE0254861F200979EBE /* BaseExampleViewController.swift */; };
+		A49ADF862A4C097C0056545F /* Loggie in Frameworks */ = {isa = PBXBuildFile; productRef = A49ADF852A4C097C0056545F /* Loggie */; };
 		C1D615A328F6D631006C7EA1 /* URLSessionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */; };
 		C1D615A428F6D631006C7EA1 /* AlamofireExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */; };
 		EED4EAC12A6FC96400E24E9A /* Loggie in Frameworks */ = {isa = PBXBuildFile; productRef = EED4EAC02A6FC96400E24E9A /* Loggie */; };
@@ -27,6 +28,7 @@
 		6073E0052543463300AD06DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6073E0072543463300AD06DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60C28EE0254861F200979EBE /* BaseExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExampleViewController.swift; sourceTree = "<group>"; };
+		A49ADF872A4C0A1F0056545F /* iOS-Loggie */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "iOS-Loggie"; path = ../..; sourceTree = "<group>"; };
 		C1D615A128F6D631006C7EA1 /* URLSessionExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExampleViewController.swift; sourceTree = "<group>"; };
 		C1D615A228F6D631006C7EA1 /* AlamofireExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExampleViewController.swift; sourceTree = "<group>"; };
 		EED4EABE2A6FC95A00E24E9A /* iOS-Loggie */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "iOS-Loggie"; path = ../..; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED4EAC12A6FC96400E24E9A /* Loggie in Frameworks */,
+				A49ADF862A4C097C0056545F /* Loggie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +112,7 @@
 			);
 			name = LoggieExample;
 			packageProductDependencies = (
-				EED4EAC02A6FC96400E24E9A /* Loggie */,
+				A49ADF852A4C097C0056545F /* Loggie */,
 			);
 			productName = iOSExample;
 			productReference = 6073DFF72543463200AD06DA /* LoggieExample.app */;
@@ -140,6 +142,7 @@
 			);
 			mainGroup = 60345CDA254306DB00E24BD4;
 			packageReferences = (
+				A49ADF842A4C097C0056545F /* XCRemoteSwiftPackageReference "iOS-Loggie" */,
 			);
 			productRefGroup = 60345CE5254306DB00E24BD4 /* Products */;
 			projectDirPath = "";
@@ -379,9 +382,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A49ADF842A4C097C0056545F /* XCRemoteSwiftPackageReference "iOS-Loggie" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/infinum/iOS-Loggie";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		EED4EAC02A6FC96400E24E9A /* Loggie */ = {
+		A49ADF852A4C097C0056545F /* Loggie */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A49ADF842A4C097C0056545F /* XCRemoteSwiftPackageReference "iOS-Loggie" */;
 			productName = Loggie;
 		};
 /* End XCSwiftPackageProductDependency section */

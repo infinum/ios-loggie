@@ -58,7 +58,11 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     
     /// An array containing all `Log`s either being performed by Loggie through `LoggieURLProtocol`,
     /// or observer by loggie through `EventMonitor`.
-    public private(set) var logs: [Log] = []
+    private var _logs: [Log] = []
+
+    public var logs: [Log] {
+        logsHandlingQueue.sync { _logs }
+    }
     
     @objc(sharedManager)
     public static let shared = LoggieManager()
@@ -92,18 +96,18 @@ public final class LoggieManager: NSObject, LogsDataSourceDelegate {
     
     public func add(_ log: Log) {
         // Avoid changing logs array from multiple threads (race condition)
-        logsHandlingQueue.async(flags: .barrier) { [weak self] in
+        logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
-            self.logs.append(log)
-            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: self.logs)
+            self._logs.append(log)
+            NotificationCenter.default.post(name: .LoggieDidUpdateLogs, object: nil)
         }
     }
 
     func clearLogs() {
         // Avoid changing logs array from multiple threads (race condition)
-        logsHandlingQueue.async(flags: .barrier) { [weak self] in
+        logsHandlingQueue.async { [weak self] in
             guard let self = self else { return }
-            self.logs = []
+            self._logs = []
         }
     }
 }
