@@ -1,3 +1,7 @@
+# Loggie is deprecated
+
+We suggest to migrate to [Pulse](https://github.com/kean/pulse). Pulse is more powerful and flexible then Loggie.
+
 # Loggie
 
 [![Build Status](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml/badge.svg)](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml)
