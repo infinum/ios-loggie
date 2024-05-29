@@ -4,8 +4,6 @@
 > 
 > Loggie is __deprecated__ and __no longer maintained__. We suggest migrating to [Pulse](https://github.com/kean/pulse) as an alternative. Pulse is more powerful and flexible then Loggie.
 
-[![CI Status](https://img.shields.io/travis/infinum/ios-loggie.svg?style=flat)](https://travis-ci.org/infinum/ios-loggie)
-
 [![Build Status](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml/badge.svg)](https://github.com/infinum/ios-loggie/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/cocoapods/v/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
 [![License](https://img.shields.io/cocoapods/l/Loggie.svg?style=flat)](http://cocoapods.org/pods/Loggie)
